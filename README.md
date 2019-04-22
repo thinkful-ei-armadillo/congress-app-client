@@ -1,3 +1,18 @@
 # CONGRESS CLIENT
-- What are they doing?
-- Why are they doing that?
+
+## Deployed Links
+
+### Client:
+
+### Server:
+
+## Tech Stack
+
+### Client:
+
+- React
+- ZEIT Now
+
+### Server:
+- Node.js
+- Express
