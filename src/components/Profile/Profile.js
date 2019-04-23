@@ -3,7 +3,11 @@ import React from "react";
 function Profile(props) {
 	return (
 		<div>
-			{/* <img src={'wikipedia'}></img> */}
+			<img
+				src={`https://theunitedstates.io/images/congress/225x275/${
+					props.member.id
+				}.jpg`}
+			/>
 			{"Image Link"}
 			<p className="title">{props.member.title}</p>
 			<p className="name">
