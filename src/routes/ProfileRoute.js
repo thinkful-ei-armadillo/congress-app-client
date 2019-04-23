@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Profile from "../components/Profile/Profile";
 import MemberApiService from "../services/member-api-service";
+import SmallProfile from "../components/Profile/SmallProfile";
 
 export default class ProfileRoute extends Component {
 	constructor(props) {
@@ -21,6 +22,7 @@ export default class ProfileRoute extends Component {
 		) : (
 			<section className="member-profile-container">
 				<Profile member={this.state.member} />
+				<SmallProfile member={this.state.member} />
 			</section>
 		);
 	}

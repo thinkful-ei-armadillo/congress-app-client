@@ -17,7 +17,7 @@ const MemberApiService = {
 			`https://api.propublica.org/congress/v1/members/senate/${state}/current.json`,
 			{
 				headers: {
-					"X-API-Key": "1N3dptH1qHuNWHZmeTZ5YsKbGx34eHEe4sSYDwLW"
+					"X-API-Key": config.TOKEN_KEY
 				}
 			}
 		).then(res => console.log(res));
