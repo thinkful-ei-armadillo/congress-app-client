@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MemberApiService from "../../services/member-api-service";
+import SmallProfile from "../Profile/SmallProfile";
 
 export default function StateSearch(props) {
 	const [members, setMembers] = useState(null);
@@ -71,7 +72,7 @@ export default function StateSearch(props) {
 			<button type="submit" value="submit">
 				Search
 			</button>
-			{members && <ul>{members.forEach(<li>Small Member Component</li>)}</ul>}
+			{members && <ul>{members.forEach(<li><SmallProfile /></li>)}</ul>}
 		</form>
 	);
 }
