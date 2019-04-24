@@ -30,7 +30,7 @@ const MemberApiService = {
   getSenators(state) {
     // 'https://api.propublica.org/congress/v1/members/{chamber}/{state}/{district}/current.json';
     return fetch(
-      `https://api.propublica.org/congress/v1/members/senate/${state}/current.json`,
+      `${config.API_ENDPOINT}/members&state=${state}`,
       {
         headers: {
           'X-API-Key': config.TOKEN_KEY
