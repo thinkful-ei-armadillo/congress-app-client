@@ -1,12 +1,15 @@
-import config from "../config";
+import config from '../config';
 
 const MemberApiService = {
-  getMember(id) {
-    return fetch(
-      /* NEED ENDPOINT */ {
-        headers: {}
-      }
-    ).then(res =>
+  getMembers(params) {
+    let url = `${config.API_ENDPOINT}/members/search`;
+    if (params.query) {
+      url += `?query=${encodeURIComponent(params.query)}`;
+    }
+
+    return fetch(url, {
+      method: 'GET'
+    }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
@@ -17,7 +20,7 @@ const MemberApiService = {
       `https://api.propublica.org/congress/v1/members/senate/${state}/current.json`,
       {
         headers: {
-          "X-API-Key": config.TOKEN_KEY
+          'X-API-Key': config.TOKEN_KEY
         }
       }
     ).then(res => console.log(res));
