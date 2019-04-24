@@ -1,5 +1,6 @@
 import React from "react";
-import "./profile.css";
+import { Link } from "react-router-dom";
+import "./Profile.css";
 
 function MediumProfile(props) {
 	return (
@@ -12,24 +13,24 @@ function MediumProfile(props) {
 				}.jpg`}
 			/>
 			<p className="title">{props.short_title}</p>
-			<p className="name">
-				{props.first_name}
-				{props.middle_name}
-				{props.last_name}
-				{props.suffix} ({props.party})
-			</p>
+			<Link to={`/member/${props.id}`} className="name">
+				{props.member.first_name}
+				{props.member.middle_name}
+				{props.member.last_name}
+				{props.member.suffix} ({props.member.party})
+			</Link>
 			<section className="member-social-media">
-				<p className="phonenum">{props.phone}</p>
-				<p className="faxnum">{props.fax}</p>
+				<p className="phonenum">{props.member.phone}</p>
+				<p className="faxnum">{props.member.fax}</p>
 			</section>
 			<section className="stats">
 				<p className="missed_votes_pct">
 					{" "}
-					Missed Voting Opportunities %: {props.missed_votes_pct}
+					Missed Voting Opportunities %: {props.member.missed_votes_pct}
 				</p>
 				<p className="votes_with_party_pct">
 					{" "}
-					Votes with Party %: {props.votes_with_party_pct}
+					Votes with Party %: {props.member.votes_with_party_pct}
 				</p>
 			</section>
 		</div>

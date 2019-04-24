@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import Profile from "../components/Profile/Profile";
+
 import MemberApiService from "../services/member-api-service";
+import Profile from "../components/Profile/Profile";
+import MediumProfile from "../components/Profile/MediumProfile";
 import SmallProfile from "../components/Profile/SmallProfile";
 
 export default class ProfileRoute extends Component {
