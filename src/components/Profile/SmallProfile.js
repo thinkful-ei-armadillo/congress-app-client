@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./Profile.css";
 
 function SmallProfile(props) {
+	console.log(props.member.first_name);
+	let firstInitial = props.member.first_name.charAt(0);
 	return (
 		<div>
 			<img
@@ -14,7 +16,7 @@ function SmallProfile(props) {
 			/>
 			<p className="title">{props.member.short_title}</p>
 			<p className="name">
-				{props.member.first_name.charAt(0)}
+				{firstInitial}
 				{"."}
 				{props.member.last_name}
 				{props.member.suffix} ({props.member.party})

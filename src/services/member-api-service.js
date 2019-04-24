@@ -2,7 +2,7 @@ import config from "../config";
 
 const MemberApiService = {
 	getMemberbyID(id) {
-		return fetch(`localhost:8000/api/members/${id}`).then(res =>
+		return fetch(`http://localhost:8000/api/members/${id}`).then(res =>
 			!res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
 		);
 	},

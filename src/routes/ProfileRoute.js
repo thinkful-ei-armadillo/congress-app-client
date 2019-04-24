@@ -12,20 +12,20 @@ export default class ProfileRoute extends Component {
 			member: {}
 		};
 	}
-	componentDidMount() {
+	async componentDidMount() {
 		let memberID = this.props.match.params.id;
-		MemberApiService.getMemberbyID(memberID).then(member =>
+		await MemberApiService.getMemberbyID(memberID).then(member =>
 			this.setState({ member })
 		);
 	}
 	render() {
-		return this.state.member ? (
+		return !this.state.member ? (
 			"Now Loading..."
 		) : (
 			<section className="member-profile-container">
 				<Profile member={this.state.member} />
 				<MediumProfile member={this.state.member} />
-				<SmallProfile member={this.state.member} />
+				{/* <SmallProfile member={this.state.member} /> */}
 			</section>
 		);
 	}
