@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import MemberSearch from '../Member/MemberSearch';
 import StateSearch from '../Member/StateSearch';
 import LeaderBoard from '../LeaderBoard/LeaderBoard';
+import CongressStatus from '../CongressStatus/CongressStatus';
 
 function Dashboard(props) {
   return (
@@ -10,9 +11,7 @@ function Dashboard(props) {
       <MemberSearch />
       <StateSearch />
       <LeaderBoard />
-      <div>
-        <p>What's happening on the floor?</p>
-      </div>
+      <CongressStatus />
     </div>
   );
 }
