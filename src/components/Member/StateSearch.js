@@ -4,12 +4,11 @@ import SmallProfile from "../Profile/SmallProfile";
 
 export default function StateSearch(props) {
 	const [members, setMembers] = useState(null);
+	const [option, setOption] = useState("AL")
 
 	const submitForm = e => {
 		e.preventDefault();
-		console.log(e.target.value);
-		const search = e.target.value;
-		MemberApiService.getSenators(search).then(members => {
+		MemberApiService.getSenators(option).then(members => {
 			setMembers(members);
 		});
 	};
@@ -17,7 +16,9 @@ export default function StateSearch(props) {
 	return (
 		<form onSubmit={submitForm}>
 			<label htmlFor="search">Search for a State's Representatives</label>
-			<select>
+			<h2>Option Value: {option}</h2>
+			<select onChange={e=>setOption(e.target.value)} value={option}>
+				<option value="">Select a State</option>
 				<option value="AL">Alabama</option>
 				<option value="AK">Alaska</option>
 				<option value="AZ">Arizona</option>
@@ -69,7 +70,7 @@ export default function StateSearch(props) {
 				<option value="WI">Wisconsin</option>
 				<option value="WY">Wyoming</option>
 			</select>
-			<button type="submit" value="submit">
+			<button type="submit">
 				Search
 			</button>
 			{members && <ul>{members.forEach(<li><SmallProfile /></li>)}</ul>}
