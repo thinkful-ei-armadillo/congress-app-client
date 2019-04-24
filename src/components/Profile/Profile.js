@@ -1,4 +1,5 @@
 import React from "react";
+import "./profile.css";
 
 function Profile(props) {
 	return (
@@ -8,8 +9,7 @@ function Profile(props) {
 					props.member.id
 				}.jpg`}
 			/>
-			{"Image Link"}
-			<p className="title">{props.member.title}</p>
+			<p className="title">{props.member.short_title}</p>
 			<p className="name">
 				{props.member.first_name}
 				{props.member.middle_name}

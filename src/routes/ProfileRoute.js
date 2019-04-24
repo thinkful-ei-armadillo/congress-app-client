@@ -11,8 +11,8 @@ export default class ProfileRoute extends Component {
 		};
 	}
 	componentDidMount() {
-		// potentially pass down member id or name here from the link sending us to this page?
-		MemberApiService.getMember(`------`).then(member =>
+		let memberID = this.props.match.params.id;
+		MemberApiService.getMember(memberID).then(member =>
 			this.setState({ member })
 		);
 	}
@@ -22,6 +22,7 @@ export default class ProfileRoute extends Component {
 		) : (
 			<section className="member-profile-container">
 				<Profile member={this.state.member} />
+				<MediumProfile member={this.state.member} />
 				<SmallProfile member={this.state.member} />
 			</section>
 		);

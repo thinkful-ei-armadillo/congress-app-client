@@ -1,7 +1,7 @@
 import React from "react";
 import "./profile.css";
 
-function SmallProfile(props) {
+function MediumProfile(props) {
 	return (
 		<div>
 			<img
@@ -18,6 +18,10 @@ function SmallProfile(props) {
 				{props.last_name}
 				{props.suffix} ({props.party})
 			</p>
+			<section className="member-social-media">
+				<p className="phonenum">{props.phone}</p>
+				<p className="faxnum">{props.fax}</p>
+			</section>
 			<section className="stats">
 				<p className="missed_votes_pct">
 					{" "}
@@ -32,4 +36,4 @@ function SmallProfile(props) {
 	);
 }
 
-export default SmallProfile;
+export default MediumProfile;
