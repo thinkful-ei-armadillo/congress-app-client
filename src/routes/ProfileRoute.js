@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import Profile from "../components/Profile/Profile";
+
 import MemberApiService from "../services/member-api-service";
+import Profile from "../components/Profile/Profile";
+import MediumProfile from "../components/Profile/MediumProfile";
 import SmallProfile from "../components/Profile/SmallProfile";
 
 export default class ProfileRoute extends Component {
@@ -11,18 +13,19 @@ export default class ProfileRoute extends Component {
 		};
 	}
 	componentDidMount() {
-		// potentially pass down member id or name here from the link sending us to this page?
-		MemberApiService.getMember(`------`).then(member =>
+		let memberID = this.props.match.params.id;
+		MemberApiService.getMemberbyID(memberID).then(member =>
 			this.setState({ member })
 		);
 	}
 	render() {
-		return this.state.member ? (
+		return !this.state.member ? (
 			"Now Loading..."
 		) : (
 			<section className="member-profile-container">
 				<Profile member={this.state.member} />
-				<SmallProfile member={this.state.member} />
+				<MediumProfile member={this.state.member} />
+				{/* <SmallProfile member={this.state.member} /> */}
 			</section>
 		);
 	}

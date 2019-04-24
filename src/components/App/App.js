@@ -16,7 +16,7 @@ function App() {
           )*/}
 				<Switch>
 					<Route exact path={"/"} component={DashboardRoute} />
-					<Route path={"/profile"} component={ProfileRoute} />
+					<Route path={"/profile/:id"} component={ProfileRoute} />
 					<Route component={NotFoundRoute} />
 				</Switch>
 			</main>
