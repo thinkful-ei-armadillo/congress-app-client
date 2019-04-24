@@ -5,6 +5,8 @@ function Profile(props) {
 	return (
 		<div>
 			<img
+				className="profile-picture"
+				alt="Photo of Congressperson"
 				src={`https://theunitedstates.io/images/congress/225x275/${
 					props.member.id
 				}.jpg`}

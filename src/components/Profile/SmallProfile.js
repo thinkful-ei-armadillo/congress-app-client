@@ -13,8 +13,8 @@ function SmallProfile(props) {
 			/>
 			<p className="title">{props.short_title}</p>
 			<p className="name">
-				{props.first_name}
-				{props.middle_name}
+				{props.first_name.charAt(0)}
+				{"."}
 				{props.last_name}
 				{props.suffix} ({props.party})
 			</p>
@@ -22,10 +22,6 @@ function SmallProfile(props) {
 				<p className="missed_votes_pct">
 					{" "}
 					Missed Voting Opportunities %: {props.missed_votes_pct}
-				</p>
-				<p className="votes_with_party_pct">
-					{" "}
-					Votes with Party %: {props.votes_with_party_pct}
 				</p>
 			</section>
 		</div>
