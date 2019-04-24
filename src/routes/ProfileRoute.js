@@ -12,9 +12,9 @@ export default class ProfileRoute extends Component {
 			member: {}
 		};
 	}
-	async componentDidMount() {
+	componentDidMount() {
 		let memberID = this.props.match.params.id;
-		await MemberApiService.getMemberbyID(memberID).then(member =>
+		MemberApiService.getMemberbyID(memberID).then(member =>
 			this.setState({ member })
 		);
 	}
