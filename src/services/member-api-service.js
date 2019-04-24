@@ -1,7 +1,7 @@
 import config from "../config";
 
 const MemberApiService = {
-	getMember(id) {
+	getMember(id, house) {
 		let getEndpoint =
 			"https://api.propublica.org/congress/v1/{congress}/{chamber}/members.json";
 		return fetch(getEndpoint + id, {
