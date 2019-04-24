@@ -5,7 +5,6 @@ import MemberListItem from './MemberListItem';
 
 export default class MemberListPage extends Component {
   renderMembers() {
-    debugger;
     if (this.props.members === null) {
       return <div>Please Search for Members</div>;
     } else {

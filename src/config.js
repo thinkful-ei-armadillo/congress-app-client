@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: "https://api.propublica.org/congress/v1",
+  API_ENDPOINT: 'http://localhost:8000/api',
   TOKEN_KEY: process.env.REACT_APP_API_KEY
 };

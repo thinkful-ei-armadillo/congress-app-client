@@ -10,7 +10,6 @@ export default function MemberSearch(props) {
     const { search } = e.target;
     const params = { query: search.value };
     MemberApiService.getMembers(params).then(members => {
-      debugger;
       setMembers(members);
     });
   };
