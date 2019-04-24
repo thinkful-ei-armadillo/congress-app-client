@@ -17,7 +17,6 @@ const MemberApiService = {
 	// },
 
 	getSenators(state) {
-		// 'https://api.propublica.org/congress/v1/members/{chamber}/{state}/{district}/current.json';
 		return fetch(
 			`${config.API_ENDPOINT}/members/senate/${state}/current.json`,
 			{
