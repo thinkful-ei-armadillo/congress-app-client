@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import MemberApiService from "../../services/member-api-service";
-import SmallProfile from "../Profile/SmallProfile";
 import MemberListPage from "../MemberListPage/MemberListPage"
 
 export default function StateSearch(props) {
