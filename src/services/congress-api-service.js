@@ -1,12 +1,15 @@
-import config from "../config";
+import config from '../config';
 
 const CongressApiService = {
   getBills() {
-    fetch(`${config.API_ENDPOINT}/bills/`, {
-      method: "GET"
+    return fetch(`${config.API_ENDPOINT}/bills`, {
+      method: 'GET'
     }).then(res => {
-      debugger;
-      return !res.ok ? res.json().then(e => Promise.reject(e)) : res.json();
+      if (!res.ok) {
+        return res.json().then(e => Promise.reject(e));
+      } else {
+        return res.json();
+      }
     });
   }
 };
