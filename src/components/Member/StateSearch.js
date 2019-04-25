@@ -1,39 +1,25 @@
 import React, { useState } from "react";
 import MemberApiService from "../../services/member-api-service";
 import SmallProfile from "../Profile/SmallProfile";
+import MemberListPage from "../MemberListPage/MemberListPage"
 
 export default function StateSearch(props) {
 	const [members, setMembers] = useState(null);
-	// const [option, setOption] = useState("AL")
-
-	const submitForm = e => {
-		e.preventDefault();
-		const	state = e.target.value;
-    // const params = { query: state };
-		MemberApiService.getMembersByState(state).then(members => {
-			setMembers(members);
-		});
-	};
 
 	const setStateSearch = (e) => {
 		const	state = e.target.value;
-    // const params = { query: state };
-		MemberApiService.getMembersByState(state).then(members => {
+		MemberApiService.getMembersByState(state)
+		.then(members => {
+			console.log(members)
 			setMembers(members);
 	});
 };
 
 	return (
 		<>
-			<form 
-			// onSubmit={submitForm}
-			>
+			<form>
 				<label htmlFor="search">Search for a State's Representatives</label>
-				{/* <h2>Option Value: {option}</h2> */}
-				<select 
-				// onChange={e=>setOption(e.target.value)} value={option}
-				onChange={(e) => setStateSearch(e)}
-				>
+				<select onChange={(e) => setStateSearch(e)}>
 					<option value="">Select a State</option>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
@@ -86,12 +72,9 @@ export default function StateSearch(props) {
 					<option value="WI">Wisconsin</option>
 					<option value="WY">Wyoming</option>
 				</select>
-				{/* <button type="submit">
-					Search
-				</button> */}
 			</form>
 			<div>
-				{members && <ul>{members.forEach(<li><SmallProfile /></li>)}</ul>}
+			<MemberListPage members={members} />
 			</div>
 		</>
 	);
