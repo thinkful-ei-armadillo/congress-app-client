@@ -23,7 +23,7 @@ const MemberApiService = {
         res.json().then(e => Promise.reject(e));
       }
       else {
-        res.json()
+        return res.json()
       }  
     });
   },
