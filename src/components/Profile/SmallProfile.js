@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./Profile.css";
 
 function SmallProfile(props) {
-	console.log(props.member.first_name);
 	let firstInitial = props.member.first_name.charAt(0);
 	return (
 		<div>

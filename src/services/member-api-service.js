@@ -7,9 +7,25 @@ const MemberApiService = {
 		);
 	},
 
-	getMembersByState(params) {
-		let url = `${config.API_ENDPOINT}/members`;
-		console.log(params);
+  getMembersByState(params) {
+    let url = `${config.API_ENDPOINT}/members`;
+    console.log(params);
+    
+    if (params) {
+      url += `?query=${encodeURIComponent(params)}`;
+    }
+    console.log(url)
+    return fetch(url, {
+      method: 'GET'
+    }).then(res => {
+      if (!res.ok) {
+        res.json().then(e => Promise.reject(e));
+      }
+      else {
+        return res.json()
+      }  
+    });
+  },
 
 		if (params) {
 			url += `?query=${encodeURIComponent(params)}`;
