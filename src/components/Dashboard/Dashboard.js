@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MemberSearch from "../Member/MemberSearch";
 import StateSearch from "../Member/StateSearch";
-import LeaderBoard from "../LeaderBoard/LeaderBoard";
+import Leaderboard from "../Leaderboard/Leaderboard";
 
 function Dashboard(props) {
 	return (
@@ -17,7 +17,7 @@ function Dashboard(props) {
 			{/* leaderboard shows sets of 3, at first 1 list */}
 			{/* 3 SmallProfiles showing stat related to leaderboard */}
 			{/* show more than one leaderboard in the future */}
-			<LeaderBoard />
+			<Leaderboard />
 			<div>
 				<p>What's happening on the floor?</p>
 			</div>
