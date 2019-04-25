@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MemberApiService from '../../services/member-api-service';
 import MediumProfile from '../Profile/MediumProfile';
+import MemberSearch from '../Member/MemberSearch';
 
 export default function CompareMembers(props) {
 	const [members, setMembers] = useState(null);
@@ -16,9 +17,8 @@ export default function CompareMembers(props) {
 
   return (
     <React.Fragment>
-      {members && members.map(member =>
-          <MediumProfile member={member} />
-      )}
+        <MemberSearch />
+        <MemberSearch />
     </React.Fragment>
   );
 }

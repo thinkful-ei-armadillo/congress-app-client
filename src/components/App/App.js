@@ -18,7 +18,7 @@ function App() {
 				<Switch>
 					<Route exact path={"/"} component={DashboardRoute} />
 					<Route path={"/profile/:id"} component={ProfileRoute} />
-					<Route path={"/compare/:id"} component={CompareMembersRoute} />
+					<Route path={"/compare"} component={CompareMembersRoute} />
 					<Route component={NotFoundRoute} />
 				</Switch>
 			</main>

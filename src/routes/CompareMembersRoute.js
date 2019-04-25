@@ -1,22 +1,13 @@
 import React, { useState, useEffect } from "react";
 import MemberApiService from "../services/member-api-service";
 import MediumProfile from "../components/Profile/MediumProfile";
+import CompareMembers from "../components/CompareMembers/CompareMembers";
 
 export default function CompareMembersRoute (props) {
-    const [member, setMember] = useState(null);
-
-    useEffect(()=>{
-        let memberID = props.match.params.id;
-		MemberApiService.getMemberbyID(memberID).then(member =>
-			setMember(member)
-		);
-    })
 	
-    return !member ? (
-        "Now Loading..."
-    ) : (
+    return (
         <section className="member-profile-container">
-            <MediumProfile member={member} />
+            <CompareMembers />
         </section>
     );
 	}
