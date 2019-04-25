@@ -22,4 +22,5 @@ export default function MemberSearch(props) {
       </form>
       <MemberListPage members={members} />
     </React.Fragment>
-  );
+	)
+}
