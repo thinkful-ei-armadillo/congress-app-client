@@ -1,14 +1,11 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
 function CompareMemberListItem(props) {
 	let { member } = props;
 	return (
-		<React.Fragment>
-			<p onClick={props.setMemberToDisplay(member)}>
-				{member.first_name} {member.last_name}, {member.title}
-			</p>
-		</React.Fragment>
+		<p onClick={() => props.setDisplay(member)}>
+			{member.first_name} {member.last_name}, {member.title}
+		</p>
 	);
 }
 

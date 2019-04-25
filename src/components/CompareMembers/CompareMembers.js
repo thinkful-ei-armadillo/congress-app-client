@@ -17,16 +17,18 @@ export default function CompareMembers(props) {
 		});
 	};
 
+	const setDisplay = member => {
+		setMembers(null);
+		setMemberToDisplay(member);
+	};
+
 	if (memberToDisplay) {
 		return (
 			<React.Fragment>
 				<form onSubmit={submitForm}>
 					<input type="text" name="search" placeholder="Congressmen" />
 				</form>
-				<CompareMemberListPage
-					members={members}
-					setMemberToDisplay={setMemberToDisplay}
-				/>
+				<CompareMemberListPage members={members} setDisplay={setDisplay} />
 				<MediumProfile member={memberToDisplay} />
 			</React.Fragment>
 		);
@@ -36,10 +38,7 @@ export default function CompareMembers(props) {
 				<form onSubmit={submitForm}>
 					<input type="text" name="search" placeholder="Congressmen" />
 				</form>{" "}
-				<CompareMemberListPage
-					members={members}
-					setMemberToDisplay={setMemberToDisplay}
-				/>
+				<CompareMemberListPage members={members} setDisplay={setDisplay} />
 			</React.Fragment>
 		);
 	}

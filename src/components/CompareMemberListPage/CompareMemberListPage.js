@@ -12,7 +12,7 @@ function CompareMemberListPage(props) {
 				<CompareMemberListItem
 					key={member.id}
 					member={member}
-					setMemberToDisplay={props.setMemberToDisplay}
+					setDisplay={props.setDisplay}
 				/>
 			</div>
 		));
