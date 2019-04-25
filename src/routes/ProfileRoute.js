@@ -2,14 +2,12 @@ import React, { Component } from "react";
 
 import MemberApiService from "../services/member-api-service";
 import Profile from "../components/Profile/Profile";
-import MediumProfile from "../components/Profile/MediumProfile";
-import SmallProfile from "../components/Profile/SmallProfile";
 
 export default class ProfileRoute extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			member: {}
+			member: null
 		};
 	}
 	componentDidMount() {
@@ -24,8 +22,6 @@ export default class ProfileRoute extends Component {
 		) : (
 			<section className="member-profile-container">
 				<Profile member={this.state.member} />
-				<MediumProfile member={this.state.member} />
-				{/* <SmallProfile member={this.state.member} /> */}
 			</section>
 		);
 	}
