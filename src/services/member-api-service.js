@@ -1,11 +1,33 @@
 import config from '../config';
 
 const MemberApiService = {
+  
   getMemberbyID(id) {
     return fetch(`http://localhost:8000/api/members/${id}`).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
+
+  getMembersByState(params) {
+    let url = `${config.API_ENDPOINT}/members`;
+    console.log(params);
+    
+    if (params) {
+      url += `?query=${encodeURIComponent(params)}`;
+    }
+    console.log(url)
+    return fetch(url, {
+      method: 'GET'
+    }).then(res => {
+      if (!res.ok) {
+        res.json().then(e => Promise.reject(e));
+      }
+      else {
+        res.json()
+      }  
+    });
+  },
+
   // getMember(id) {
   // 	let getEndpoint =
   // 		"https://api.propublica.org/congress/v1/{congress}/{chamber}/members.json";
@@ -15,6 +37,7 @@ const MemberApiService = {
   // 		!res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
   // );
   // },
+
   getMembers(params) {
     let url = `${config.API_ENDPOINT}/members/search`;
     if (params.query) {
@@ -27,17 +50,6 @@ const MemberApiService = {
     );
   },
 
-  getSenators(state) {
-    // 'https://api.propublica.org/congress/v1/members/{chamber}/{state}/{district}/current.json';
-    return fetch(
-      `${config.API_ENDPOINT}/members&state=${state}`,
-      {
-        headers: {
-          'X-API-Key': config.TOKEN_KEY
-        }
-      }
-    ).then(res => console.log(res));
-  }
 };
 
 export default MemberApiService;
