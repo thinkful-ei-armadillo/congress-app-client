@@ -1,16 +1,14 @@
 import config from "../config";
 
 const CongressApiService = {
-    getBills() {
-		fetch(
-			`${config.API_ENDPOINT}/116/both/bills/active.json`,
-			{
-				headers: {
-					"X-API-Key": config.TOKEN_KEY
-				}
-			}
-		).then(res => console.log(res));
-	}
-}
+  getBills() {
+    fetch(`${config.API_ENDPOINT}/bills/`, {
+      method: "GET"
+    }).then(res => {
+      debugger;
+      return !res.ok ? res.json().then(e => Promise.reject(e)) : res.json();
+    });
+  }
+};
 
 export default CongressApiService;

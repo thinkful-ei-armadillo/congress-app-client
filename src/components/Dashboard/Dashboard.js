@@ -1,8 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import MemberSearch from '../Member/MemberSearch';
-import StateSearch from '../Member/StateSearch';
-import Leaderboard from '../LeaderBoard/LeaderBoard';
+import React from "react";
+import { Link } from "react-router-dom";
+import MemberSearch from "../Member/MemberSearch";
+import StateSearch from "../Member/StateSearch";
+import Leaderboard from "../LeaderBoard/LeaderBoard";
+import CongressStatus from "../CongressStatus/CongressStatus";
 
 function Dashboard(props) {
   return (
@@ -18,9 +19,7 @@ function Dashboard(props) {
       {/* 3 SmallProfiles showing stat related to leaderboard */}
       {/* show more than one leaderboard in the future */}
       <Leaderboard />
-      <div>
-        <p>What's happening on the floor?</p>
-      </div>
+      <CongressStatus />
     </div>
   );
 }
