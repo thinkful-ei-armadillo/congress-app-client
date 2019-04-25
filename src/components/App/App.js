@@ -73,7 +73,7 @@ class App extends Component {
               />
             <PrivateRoute
                 exact
-                path={'/'}
+                path={'/dashboard'}
                 component={PrivateDashboardRoute}
               />
 						<Route path={"/profile/:id"} component={ProfileRoute} />

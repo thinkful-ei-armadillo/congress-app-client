@@ -13,7 +13,7 @@ export default class LoginPage extends Component {
 
   handleLoginSuccess = () => {
     const { location, history } = this.props
-    const destination = (location.state || {}).from || '/'
+    const destination = (location.state || {}).from || '/dashboard'
     history.push(destination)
   }
 
@@ -25,7 +25,7 @@ export default class LoginPage extends Component {
           onLoginSuccess={this.handleLoginSuccess}
         /><br/>
         <h3>For testing, you may use this demo user:</h3>
-        <p>u: demo <br/> pw: Demo123!</p>
+        <p>u: demo123 <br/> pw: Demo123!</p>
       </Section>
     )
   }

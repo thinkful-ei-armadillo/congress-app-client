@@ -31,6 +31,7 @@ export default class Header extends Component {
           to='/login'>
           Log In
         </Link>
+        {'  '}
         <Link
           to='/register'>
           Register
@@ -45,7 +46,9 @@ export default class Header extends Component {
         <nav className="sticky-top">
           <div className="navbar-flex">
             <h3>
-              <Link to="/">Congress.io</Link>
+            {TokenService.hasAuthToken() 
+              ? <Link to="/dashboard">Congress.io</Link> 
+              : <Link to="/">Congress.io</Link>}
             </h3>
             <div className='user-buttons'>
             {TokenService.hasAuthToken()
