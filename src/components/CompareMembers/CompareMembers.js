@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import MemberApiService from '../../services/member-api-service';
-import MemberListPage from '../MemberListPage/MemberListPage';
+import MediumProfile from '../Profile/MediumProfile';
 
-export default function MemberSearch(props) {
+export default function CompareMembers(props) {
 	const [members, setMembers] = useState(null);
 
 	const submitForm = e => {
@@ -17,10 +16,9 @@ export default function MemberSearch(props) {
 
   return (
     <React.Fragment>
-      <form onSubmit={submitForm}>
-        <input type="text" name="search" placeholder="Congressmen" />
-      </form>
-      <MemberListPage members={members} />
+      {members && members.map(member =>
+          <MediumProfile member={member} />
+      )}
     </React.Fragment>
   );
 }

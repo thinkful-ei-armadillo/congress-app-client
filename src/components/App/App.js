@@ -5,6 +5,7 @@ import DashboardRoute from "../../routes/DashboardRoute";
 import NotFoundRoute from "../../routes/NotFoundRoute";
 import "./App.css";
 import ProfileRoute from "../../routes/ProfileRoute";
+import CompareMembersRoute from "../../routes/CompareMembersRoute";
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				<Switch>
 					<Route exact path={"/"} component={DashboardRoute} />
 					<Route path={"/profile/:id"} component={ProfileRoute} />
+					<Route path={"/compare/:id"} component={CompareMembersRoute} />
 					<Route component={NotFoundRoute} />
 				</Switch>
 			</main>
