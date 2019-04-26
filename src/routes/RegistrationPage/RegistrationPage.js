@@ -5,14 +5,16 @@ import RegistrationForm from '../../components/RegistrationForm/RegistrationForm
 
 export default class RegistrationPage extends Component {
   static defaultProps = {
+    location: {},
     history: {
       push: () => {},
     },
   }
 
   handleRegistrationSuccess = user => {
-    const { history } = this.props
-    history.push('/login')
+    const { location, history } = this.props
+    const destination = (location.state || {}).from || '/login'
+    history.push(destination)
   }
 
   render() {

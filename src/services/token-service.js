@@ -27,6 +27,13 @@ const TokenService = {
   readJwtToken() {
     return TokenService.parseJwt(TokenService.getAuthToken())
   },
+  parseAuthToken() {
+    const authToken = TokenService.getAuthToken()
+    if (authToken)
+      return TokenService.parseJwt(authToken)
+    else
+      return undefined
+  },
   _getMsUntilExpiry(payload) {
     /*
       payload is from the JWT
