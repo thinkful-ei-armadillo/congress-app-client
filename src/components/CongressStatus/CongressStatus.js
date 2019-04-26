@@ -17,7 +17,7 @@ export default function CongressStatus(props) {
       return (
         <li>
           Bill information w/ sponsor id, short_title, and title:
-          {/* <MediumProfile member={bill.member} /> */}
+          <MediumProfile member={bill.member} />
           <p>{bill.title}</p>
           <p>{bill.latest_major_action}</p>
         </li>
