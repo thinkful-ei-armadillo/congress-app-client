@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from "react";
-import MemberApiService from "../services/member-api-service";
-import MediumProfile from "../components/Profile/MediumProfile";
-import CompareMembers from "../components/CompareMembers/CompareMembers";
+import React, { useState, useEffect } from 'react';
+import MemberApiService from '../services/member-api-service';
+import MediumProfile from '../components/Profile/MediumProfile';
+import CompareMembers from '../components/CompareMembers/CompareMembers';
 
 export default function CompareMembersRoute(props) {
-	return (
-		<section className="member-profile-container">
-			<CompareMembers />
-			<CompareMembers />
-		</section>
-	);
+  console.log('you are here @ CompareMembersRoute');
+  debugger;
+  return (
+    <section className="member-profile-container">
+      {props.location.state && (
+        <CompareMembers member={props.location.state.member} />
+      )}
+      {props.location.state === undefined && <CompareMembers />}
+      <CompareMembers />
+    </section>
+  );
 }

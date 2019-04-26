@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Profile.css';
 
 function MediumProfile(props) {
+  debugger;
   return (
     <div>
       <img
@@ -20,8 +21,8 @@ function MediumProfile(props) {
       <p className="title">{props.short_title}</p>
       <Link to={`/profile/${props.member.id}`} className="name">
         {props.member.first_name}
-        {props.member.middle_name}
-        {props.member.last_name}
+        {' '}{props.member.middle_name}
+        {' '}{props.member.last_name}
         {props.member.suffix} ({props.member.party})
       </Link>
       <section className="member-social-media">
