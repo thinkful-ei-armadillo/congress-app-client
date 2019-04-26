@@ -1,7 +1,7 @@
 import React from "react";
 import MemberSearch from "../Member/MemberSearch";
 import StateSearch from "../Member/StateSearch";
-import Leaderboard from "../Leaderboard/Leaderboard";
+import Leaderboard from "../LeaderBoard/LeaderBoard";
 import CongressStatus from "../CongressStatus/CongressStatus";
 import "./Dashboard.css";
 
@@ -22,7 +22,7 @@ function Dashboard(props) {
 			{/* leaderboard shows sets of 3, at first 1 list */}
 			{/* 3 SmallProfiles showing stat related to leaderboard */}
 			{/* show more than one leaderboard in the future */}
-			<Leaderboard />
+			<LeaderBoard />
 			<br />
 			<br />
 			<CongressStatus />
