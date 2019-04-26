@@ -4,9 +4,11 @@ import MediumProfile from "../components/Profile/MediumProfile";
 import CompareMembers from "../components/CompareMembers/CompareMembers";
 
 export default function CompareMembersRoute(props) {
+	console.log('you are here @ CompareMembersRoute')
+	console.log('CompareMembersRoute', props)
 	return (
 		<section className="member-profile-container">
-			<CompareMembers />
+			<CompareMembers props={props.location.state.member}/>
 			<CompareMembers />
 		</section>
 	);

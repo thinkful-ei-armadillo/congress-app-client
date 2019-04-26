@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MemberApiService from "../../services/member-api-service";
 import MediumProfile from "../Profile/MediumProfile";
 import MemberSearch from "../Member/MemberSearch";
 import CompareMemberListPage from "../CompareMemberListPage/CompareMemberListPage";
+import MemberContext from "../../contexts/MemberContext";
 
 export default function CompareMembers(props) {
+	// static contextType = MemberContext;
 	const [members, setMembers] = useState(null);
 	const [memberToDisplay, setMemberToDisplay] = useState(null);
 
@@ -21,6 +23,18 @@ export default function CompareMembers(props) {
 		setMembers(null);
 		setMemberToDisplay(member);
 	};
+
+	// useEffect(()=>{
+	// 	MemberApiService.getMemberbyID(props).then(member => {
+	// 		setMembers(member);
+	// 	});
+	// },[])
+	
+	if(props && memberToDisplay === null){
+		const member = {member: {...props}};
+		console.log('CompareMembers', props)
+		setMemberToDisplay(member);
+	}
 
 	if (memberToDisplay) {
 		return (
