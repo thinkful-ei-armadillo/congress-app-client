@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./Profile.css";
 
 function SmallProfile(props) {
@@ -8,7 +8,7 @@ function SmallProfile(props) {
 		<div>
 			<img
 				className="profile-picture"
-				alt="Photo of Congressperson"
+				alt={props.member.alt}
 				src={`https://theunitedstates.io/images/congress/225x275/${
 					props.member.id
 				}.jpg`}

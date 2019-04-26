@@ -9,12 +9,12 @@ export default function Leaderboard(props) {
 		MemberApiService.getTop3s().then(res => setTop3(res));
 	}, []);
 	return top3 ? (
-		<div>
+		<div className='LeaderBoard'>
 			<p>We are the leaders, getting our job done!</p>
 			<p>Highest Missed Votes % Among All Members</p>
 			{top3.map((member, index) => {
 				return (
-					<div>
+					<div key={member.id}>
 						<span className="rank">#{index + 1}</span>
 						<SmallProfile member={member} />
 					</div>

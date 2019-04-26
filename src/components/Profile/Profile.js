@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./Profile.css";
 
 function Profile(props) {
@@ -7,7 +7,7 @@ function Profile(props) {
 		<div>
 			<img
 				className="profile-picture"
-				alt="Photo of Congressperson"
+				alt={props.member.alt}
 				src={`https://theunitedstates.io/images/congress/225x275/${
 					props.member.id
 				}.jpg`}
@@ -24,15 +24,15 @@ function Profile(props) {
 				{/* maybe these should be icons, or just social media widgets or something */}
 				<a
 					className="twitter"
-					src={`https://twitter.com/${props.member.twitter_account}`}
+					href={`https://twitter.com/${props.member.twitter_account}`}
 				/>
 				<a
 					className="youtube"
-					src={`https://youtube.com/${props.member.youtube_account}`}
+					href={`https://youtube.com/${props.member.youtube_account}`}
 				/>
 				<a
 					className="facebook"
-					src={`https://facebook.com/${props.member.facebook_account}`}
+					href={`https://facebook.com/${props.member.facebook_account}`}
 				/>
 				<p className="phonenum">{props.member.phone}</p>
 				<p className="faxnum">{props.member.fax}</p>
