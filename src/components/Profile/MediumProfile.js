@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Profile.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Profile.css";
 
 function MediumProfile(props) {
   return (
