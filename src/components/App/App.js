@@ -78,6 +78,7 @@ class App extends Component {
                 component={PrivateDashboardRoute}
               />
 						<Route path={"/profile/:id"} component={ProfileRoute} />
+            <Route path={'/compare'} component={CompareMembersRoute} />
 						<Route component={NotFoundRoute} />
 					</Switch>
 				</main>
