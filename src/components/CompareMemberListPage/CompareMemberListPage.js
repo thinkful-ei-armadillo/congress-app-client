@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import MemberApiService from "../../services/member-api-service";
-import { Link } from "react-router-dom";
+import React from "react";
+// import MemberApiService from "../../services/member-api-service";
+// import { Link } from "react-router-dom";
 import CompareMemberListItem from "./CompareMemberListItem";
 
 function CompareMemberListPage(props) {

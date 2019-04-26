@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MemberApiService from "../../services/member-api-service";
 import MemberListPage from "../MemberListPage/MemberListPage"
+import './StateSearch.css';
 
 export default function StateSearch(props) {
 	const [members, setMembers] = useState(null);
@@ -17,8 +18,8 @@ export default function StateSearch(props) {
 	return (
 		<>
 			<form>
-				<label htmlFor="search">Search for a State's Representatives</label>
-				<select onChange={(e) => setStateSearch(e)}>
+				<label htmlFor="state-search">Search for a State's Representatives</label><br />
+				<select onChange={(e) => setStateSearch(e)} id='state-search'>
 					<option value="">Select a State</option>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
@@ -72,7 +73,7 @@ export default function StateSearch(props) {
 					<option value="WY">Wyoming</option>
 				</select>
 			</form>
-			<div>
+			<div><br />
 			<MemberListPage members={members} />
 			</div>
 		</>
