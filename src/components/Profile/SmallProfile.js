@@ -28,7 +28,7 @@ function SmallProfile(props) {
 			<section className="stats">
 				<p className="missed_votes_pct">
 					{" "}
-					Missed Voting Opportunities %: {props.member.missed_votes_pct}
+					Missed {props.member.missed_votes_pct} %
 				</p>
 			</section>
 		</div>
