@@ -14,11 +14,10 @@ export default function CongressStatus(props) {
 
   const renderBills = () => {
     return bills.map(bill => {
-      debugger;
       return (
         <li>
           Bill information w/ sponsor id, short_title, and title:
-          {/*<MediumProfile props={bill.sponsor_id} />*/}
+          <MediumProfile member={bill.member} />
           <p>{bill.title}</p>
           <p>{bill.latest_major_action}</p>
         </li>
