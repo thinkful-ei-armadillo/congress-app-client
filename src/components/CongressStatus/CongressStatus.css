@@ -1,0 +1,19 @@
+.congress-status-component ul {
+  max-height: 500px;
+  overflow: scroll;
+  border-top: 1px solid #ccc;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.bill-list li:last-child {
+  border-bottom: none;
+}
+
+.bill-list li {
+  border-bottom: 1px solid #ccc;
+}
+
+.congress-status-component {
+  border: 1px solid #ccc;
+}
