@@ -14,6 +14,14 @@
   border-bottom: 1px solid #ccc;
 }
 
+.bill-info {
+  text-align: left;
+  padding: 25px;
+}
+.bill-info div {
+  padding: 6px;
+}
+
 .congress-status-component {
   border: 1px solid #ccc;
 }
