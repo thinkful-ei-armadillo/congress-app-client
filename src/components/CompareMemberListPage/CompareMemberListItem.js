@@ -1,14 +1,18 @@
-import React from "react";
+import React from 'react';
 
 function CompareMemberListItem(props) {
-	let { member } = props;
-	return (
-		<a href='#'>
-		<p onClick={() => props.setDisplay(member)}>
-			{member.first_name} {member.last_name}, {member.title}
-		</p>
-		</ a>
-	);
+  let { member } = props;
+  const clickMember = e => {
+    e.preventDefault();
+    props.setDisplay(member);
+  };
+  return (
+    <a onClick={e => clickMember(e)} href="#">
+      <p>
+        {member.first_name} {member.last_name}, {member.title}
+      </p>
+    </a>
+  );
 }
 
 export default CompareMemberListItem;
