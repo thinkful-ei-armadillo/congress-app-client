@@ -1,0 +1,10 @@
+.oneBlock {
+  display: flex;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.compareForm,
+.compareSearch {
+  display: inline-block;
+}
