@@ -16,6 +16,10 @@ nav {
   margin-left: 50px;
 }
 
+#title > a {
+  text-decoration-line: none;
+}
+
 .logged-in-header > a {
   font-size: 18px;
 }
@@ -23,12 +27,11 @@ nav {
 .logged-out-header > a {
   font-size: 18px;
   margin-left: 5px;
-  margin-right: 5px;
 }
 
 .logged-in-header, .logged-out-header {
   text-align: right;
-  margin-right: 30px;
+  margin-right: 50px;
 }
 
 #login-button {

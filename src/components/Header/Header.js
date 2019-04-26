@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import TokenService from "../../services/token-service";
 import IdleService from "../../services/idle-service";
+import UserContext from '../../contexts/UserContext'
 import "./Header.css";
 
 export default class Header extends Component {
+  static contextType = UserContext;
+
   handleLogoutClick = () => {
     window.sessionStorage.clear();
     TokenService.clearCallbackBeforeExpiry();
@@ -12,8 +15,10 @@ export default class Header extends Component {
   };
 
   renderLogoutLink() {
+    console.log(this.context);
     return (
       <div className="logged-in-header">
+        Welcome, {this.context.user.username}{'  '}
         <Link onClick={this.handleLogoutClick} to="/" id="logout-button">
           Logout
         </Link>

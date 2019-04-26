@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import MemberSearch from "../Member/MemberSearch";
 import StateSearch from "../Member/StateSearch";
 import LeaderBoard from "../LeaderBoard/LeaderBoard";
 import Following from '../Following/Following';
+import './Dashboard.css';
 
-function Dashboard(props) {
+function PrivateDashboard(props) {
 	return (
-		<div>
+		<div className='dashboard'>
 			{/* member search will render results component on top of dashboard? */}
 			<MemberSearch /><br /><br />
 			{/* State search component modifies its contents based on dropdown selection */}
@@ -22,10 +22,10 @@ function Dashboard(props) {
 			{/* show more than one leaderboard in the future */}
 			<LeaderBoard /><br /><br />
 			<div>
-				<p>What's happening on the floor?</p>
+				<p>What's happening on the floor? [placeholder text]</p>
 			</div>
 		</div>
 	);
 }
 
-export default Dashboard;
+export default PrivateDashboard;

@@ -1,4 +1,5 @@
-import React, { Fragment, useState, useEffect, Component } from "react";
+import React, { Component } from "react";
+// not used:  Fragment, useState, useEffect, 
 import { Route, Switch } from "react-router-dom";
 import Header from "../Header/Header";
 import PrivateRoute from '../Utils/PrivateRoute'
@@ -13,7 +14,7 @@ import AuthApiService from '../../services/auth-api-service'
 import IdleService from '../../services/idle-service'
 import "./App.css";
 import ProfileRoute from "../../routes/ProfileRoute";
-import CompareMembersRoute from "../../routes/CompareMembersRoute";
+// import CompareMembersRoute from "../../routes/CompareMembersRoute";
 
 class App extends Component {
 
