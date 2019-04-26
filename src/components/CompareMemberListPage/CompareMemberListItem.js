@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import "./CompareMemberListItem.css";
 
 function CompareMemberListItem(props) {
   let { member } = props;
