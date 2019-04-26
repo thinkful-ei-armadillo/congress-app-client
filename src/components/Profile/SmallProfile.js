@@ -9,6 +9,11 @@ function SmallProfile(props) {
 			<img
 				className="profile-picture"
 				alt={props.member.alt}
+				onError={e => {
+					e.target.onerror = null;
+					e.target.src =
+						"https://t3.ftcdn.net/jpg/01/87/10/40/240_F_187104027_8i2JbFDBB5jB7R65Ce464yRs4gfNbR3Z.jpg";
+				}}
 				src={`https://theunitedstates.io/images/congress/225x275/${
 					props.member.id
 				}.jpg`}

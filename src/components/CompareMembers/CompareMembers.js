@@ -30,10 +30,9 @@ export default function CompareMembers(props) {
 	// 	});
 	// },[])
 
-	if (props && memberToDisplay === null) {
-		debugger;
-		setMemberToDisplay(props.member);
-	}
+  if (props && memberToDisplay === null) {
+    setMemberToDisplay(props.member);
+  }
 
 	if (memberToDisplay) {
 		return (

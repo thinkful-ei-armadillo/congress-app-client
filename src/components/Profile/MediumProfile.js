@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Profile.css";
 
 function MediumProfile(props) {
-	debugger;
+	
 	return (
 		<div>
 			<img
