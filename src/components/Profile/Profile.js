@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
+import TwitterLogo from "../../assets/Twitter_Social_Icon_Circle_White.png";
+import FacebookLogo from "../../assets/flogo-HexRBG-Wht-58.png";
+import YoutubeLogo from "../../assets/youtube_social_icon_dark.png";
 
 function Profile(props) {
 	let { handle } = props.member;
-	console.log(handle);
 	return (
 		<div>
 			<img
@@ -20,29 +22,39 @@ function Profile(props) {
 				}.jpg`}
 			/>
 			<p className="name">
-				{props.member.short_title}{' '} 
-				{props.member.first_name} {props.member.middle_name}{" "}
-				{props.member.last_name}
+				{props.member.short_title} {props.member.first_name}{" "}
+				{props.member.middle_name} {props.member.last_name}
 				{props.member.suffix} ({props.member.party})
 			</p>
 			<p className="dob">Born: {props.member.date_of_birth}</p>
 			<section className="member-social-media">
-				{/* maybe these should be icons, or just social media widgets or something */}
-				<a
-					className="twitter"
-					href={`https://twitter.com/${props.member.twitter_account}`}>
-					Twitter
-				</a>
-				<a
-					className="youtube"
-					href={`https://youtube.com/${props.member.youtube_account}`}>
-					Youtube
-				</a>
-				<a
-					className="facebook"
-					href={`https://facebook.com/${props.member.facebook_account}`}>
-					Facebook
-				</a>
+				{!props.member.twitter_account ? (
+					""
+				) : (
+					<a
+						className="twitter"
+						href={`https://twitter.com/${props.member.twitter_account}`}>
+						<img src={TwitterLogo} alt="twitter-logo" />
+					</a>
+				)}
+				{!props.member.youtube_account ? (
+					""
+				) : (
+					<a
+						className="youtube"
+						href={`https://youtube.com/${props.member.youtube_account}`}>
+						<img src={YoutubeLogo} alt="youtube-logo" />
+					</a>
+				)}
+				{!props.member.facebook_account ? (
+					""
+				) : (
+					<a
+						className="facebook"
+						href={`https://facebook.com/${props.member.facebook_account}`}>
+						<img src={FacebookLogo} alt="facebook-logo" />
+					</a>
+				)}
 				<p className="phonenum">{props.member.phone}</p>
 				<p className="faxnum">{props.member.fax}</p>
 			</section>
