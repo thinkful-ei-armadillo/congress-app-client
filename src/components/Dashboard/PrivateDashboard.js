@@ -1,7 +1,7 @@
 import React from "react";
 import MemberSearch from "../Member/MemberSearch";
 import StateSearch from "../Member/StateSearch";
-import LeaderBoard from "../Leaderboard/Leaderboard";
+import LeaderBoard from "../LeaderBoard/LeaderBoard";
 import Following from "../Following/Following";
 import "./Dashboard.css";
 
