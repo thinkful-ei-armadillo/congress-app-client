@@ -1,5 +1,4 @@
 .oneBlock {
-  display: flex;
   padding: 10px;
   margin: 0 auto;
 }
@@ -7,4 +6,10 @@
 .compareForm,
 .compareSearch {
   display: inline-block;
+}
+
+.compare-text-input {
+  width: 200px;
+  font-size: 16px;
+  padding: 4px;
 }

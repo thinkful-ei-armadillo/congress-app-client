@@ -1,4 +1,4 @@
-.compare-member-profile-container {
+#compare-member-profile-container {
   display: flex;
   /* min-height: calc(100vh - 80px); */
   margin: 0 auto;

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import MemberApiService from "../../services/member-api-service";
 import MediumProfile from "../Profile/MediumProfile";
-import MemberSearch from "../Member/MemberSearch";
 import CompareMemberListPage from "../CompareMemberListPage/CompareMemberListPage";
-import MemberContext from "../../contexts/MemberContext";
+import './CompareMembers.css'
 
 export default function CompareMembers(props) {
-  // static contextType = MemberContext;
+  
   const [members, setMembers] = useState(null);
   const [memberToDisplay, setMemberToDisplay] = useState(null);
 
@@ -24,12 +23,6 @@ export default function CompareMembers(props) {
     setMemberToDisplay(member);
   };
 
-  // useEffect(()=>{
-  // 	MemberApiService.getMemberbyID(props).then(member => {
-  // 		setMembers(member);
-  // 	});
-  // },[])
-
   if (props && memberToDisplay === null) {
     setMemberToDisplay(props.member);
   }
@@ -39,11 +32,11 @@ export default function CompareMembers(props) {
       <React.Fragment>
         <div className="oneBlock">
           <form className="compareForm" onSubmit={submitForm}>
-            <input type="text" name="search" placeholder="Congressmen" />
+            <input type="text" name="search" placeholder="Congressmen"  className='compare-text-input'/>
           </form>
-          <br />
-          <CompareMemberListPage members={members} setDisplay={setDisplay} />
-          <br />
+          <br /><br />
+          <CompareMemberListPage members={members} setDisplay={setDisplay}/>
+          <br /><br />
           <MediumProfile member={memberToDisplay} />
         </div>
       </React.Fragment>
@@ -53,8 +46,8 @@ export default function CompareMembers(props) {
       <React.Fragment>
         <div className="oneBlock">
           <form onSubmit={submitForm}>
-            <input type="text" name="search" placeholder="Congressmen" />
-          </form>{" "}
+            <input type="text" name="search" placeholder="Congressmen" className='compare-text-input'/>
+          </form><br />
           <CompareMemberListPage members={members} setDisplay={setDisplay} />
         </div>
       </React.Fragment>
