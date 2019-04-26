@@ -31,7 +31,6 @@ export default function CompareMembers(props) {
   // },[])
 
   if (props && memberToDisplay === null) {
-    debugger;
     setMemberToDisplay(props.member);
   }
 
