@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MemberSearch from "../Member/MemberSearch";
 import StateSearch from "../Member/StateSearch";
-import Leaderboard from "../Leaderboard/Leaderboard";
+import Leaderboard from "../LeaderBoard/LeaderBoard";
 
 function Dashboard(props) {
 	return (

@@ -4,11 +4,11 @@ import AuthApiService from '../../services/auth-api-service'
 // import './RegistrationForm.css'
 
 export default class RegistrationForm extends Component {
-  static defaultProps = {
-    onRegistrationSuccess: () => {
-      this.props.history.push(`/`);
-    }
-  }
+  // static defaultProps = {
+  //   onRegistrationSuccess: () => {
+  //     this.props.history.push(`/`);
+  //   }
+  // }
 
   state = { error: null }
 
@@ -27,7 +27,7 @@ export default class RegistrationForm extends Component {
             nick_name.value = ''
             user_name.value = ''
             password.value = ''
-            this.props.onRegistrationSuccess()
+            this.props.onRegistrationSuccess(user)
           })
           .catch(res => {
                   this.setState({ error: res.error })
