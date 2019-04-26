@@ -6,7 +6,7 @@ import FacebookLogo from "../../assets/flogo-HexRBG-Wht-58.png";
 import YoutubeLogo from "../../assets/youtube_social_icon_dark.png";
 
 function Profile(props) {
-	let { handle } = props.member;
+	// let { handle } = props.member;
 	return (
 		<div>
 			<img
