@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CongressApiService from '../../services/congress-api-service';
 import MediumProfile from '../Profile/MediumProfile';
-import MemberApiService from '../../services/member-api-service';
 import Moment from 'react-moment';
 import './CongressStatus.css';
 

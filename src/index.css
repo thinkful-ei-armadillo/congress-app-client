@@ -13,8 +13,8 @@ code {
     monospace;
 }
 
-img{
+img {
   border-radius: 10%;
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  margin-top: 2px;
 }

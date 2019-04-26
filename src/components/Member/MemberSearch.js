@@ -18,7 +18,7 @@ export default function MemberSearch(props) {
   return (
     <React.Fragment>
       <form onSubmit={submitForm}>
-        <input type="text" name="search" placeholder="Congress Member" id='searchbar'/>
+        <input type="text" name="search" placeholder="Member of Congress" id='searchbar'/>
       </form><br />
       <MemberListPage members={members} />
     </React.Fragment>

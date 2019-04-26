@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Profile.css";
+import "./MediumProfile.css";
 
 function MediumProfile(props) {
   return (
-    <div>
+    <div className='medium-profile'>
       <img
-        className="profile-picture"
-        alt="Photo of Congressperson"
+        className="medium-profile-picture"
+        alt={`${props.member.first_name} ${props.member.last_name}`}
         onError={e => {
           e.target.onerror = null;
           e.target.src =

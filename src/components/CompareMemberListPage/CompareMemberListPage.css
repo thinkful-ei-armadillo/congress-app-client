@@ -1,4 +1,7 @@
 .compareSearch {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 200;
+  font-style: italic;
   margin: 0 auto;
+  margin-bottom: 15px;
 }
