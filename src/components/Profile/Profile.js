@@ -19,8 +19,8 @@ function Profile(props) {
 					props.member.id
 				}.jpg`}
 			/>
-			<p className="title">{props.member.short_title}</p>
 			<p className="name">
+				{props.member.short_title}{' '} 
 				{props.member.first_name} {props.member.middle_name}{" "}
 				{props.member.last_name}
 				{props.member.suffix} ({props.member.party})

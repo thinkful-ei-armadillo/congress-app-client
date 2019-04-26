@@ -18,8 +18,8 @@ function SmallProfile(props) {
 					props.member.id
 				}.jpg`}
 			/>
-			<p className="title">{props.member.short_title}</p>
 			<p className="name">
+				{props.member.short_title}{' '} 
 				{firstInitial}
 				{"."}
 				{props.member.last_name}

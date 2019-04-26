@@ -7,7 +7,8 @@ export default class MemberListItem extends Component {
     return (
       <React.Fragment>
         <Link to={`/profile/${member.id}`}>
-          {member.first_name} {member.last_name}, {member.title}
+          {member.short_title}{' '} 
+          {member.first_name} {member.last_name}
         </Link>
       </React.Fragment>
     );
