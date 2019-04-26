@@ -8,9 +8,7 @@ function MediumProfile(props) {
       <img
         className="profile-picture"
         alt="Photo of Congressperson"
-        src={`https://theunitedstates.io/images/congress/225x275/${
-          props.member.id
-        }.jpg`}
+        src={`https://theunitedstates.io/images/congress/225x275/${props.member.id}.jpg`}
       />
       <p className="title">{props.short_title}</p>
       <Link to={`/member/${props.id}`} className="name">
