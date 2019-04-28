@@ -1,14 +1,14 @@
 .LeaderBoard {
-    max-width: 200px;
-    overflow: scroll;
-    border: 1px solid #ccc;
-    padding-left: 0px;
-    margin-bottom: 0px;
-  }
-  
-  .MemberContainer {
-    border-top: 1px solid #ccc;
-    text-align: center;
-    padding: 2%;
-  }
-  
+	max-width: 200px;
+	min-width: 120px;
+	overflow: scroll;
+	border: 1px solid #ccc;
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+
+.MemberContainer {
+	border-top: 1px solid #ccc;
+	text-align: center;
+	padding: 2%;
+}
