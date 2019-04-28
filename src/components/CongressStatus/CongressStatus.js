@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import CongressApiService from '../../services/congress-api-service';
-import MediumProfile from '../Profile/MediumProfile';
-import MemberApiService from '../../services/member-api-service';
-import Moment from 'react-moment';
-import './CongressStatus.css';
+import React, { useState, useEffect } from "react";
+import CongressApiService from "../../services/congress-api-service";
+import MediumProfile from "../Profile/MediumProfile";
+import Moment from "react-moment";
+import "./CongressStatus.css";
 
 export default function CongressStatus(props) {
-  const [bills, setBills] = useState(null);
+	const [bills, setBills] = useState(null);
 
-  useEffect(() => {
-    CongressApiService.getBills().then(data => {
-      setBills(data);
-    });
-  }, []);
-  /*
+	useEffect(() => {
+		CongressApiService.getBills().then(data => {
+			setBills(data);
+		});
+	}, []);
+	/*
    <b>Date:</b> <Moment format="YYYY/MM/DD">{event.date}</Moment>
           </div>
         </section>
@@ -23,41 +22,41 @@ export default function CongressStatus(props) {
             {event.date_created}
           </Moment>{' '}*/
 
-  const renderBills = () => {
-    return bills.map(bill => {
-      console.log(bill);
-      return (
-        <li className="bill-info">
-          <div className="bill-title">
-            <b>Title: </b>
-            {bill.title}
-          </div>
-          <div className="bill-introduced">
-            <b>Introduced: </b>
-            <Moment fromNow ago>
-              {bill.introduced_date}
-            </Moment>{' '}
-            ago
-          </div>
-          <div className="bill-status">
-            <b>Status: </b>
-            {bill.latest_major_action}
-          </div>
-          <div className="bill-sponsor">
-            <b>Sponsor</b>
+	const renderBills = () => {
+		return bills.map(bill => {
+			console.log(bill);
+			return (
+				<li className="bill-info">
+					<div className="bill-title">
+						<b>Title: </b>
+						{bill.title}
+					</div>
+					<div className="bill-introduced">
+						<b>Introduced: </b>
+						<Moment fromNow ago>
+							{bill.introduced_date}
+						</Moment>{" "}
+						ago
+					</div>
+					<div className="bill-status">
+						<b>Status: </b>
+						{bill.latest_major_action}
+					</div>
+					<div className="bill-sponsor">
+						<b>Sponsor</b>
 
-            <MediumProfile member={bill.member} />
-          </div>
-        </li>
-      );
-    });
-  };
-  return (
-    <div className="congress-status-component">
-      <h3>
-        <b>What's happening on the floor?</b>
-      </h3>
-      <div>{bills && <ul className="bill-list">{renderBills()}</ul>}</div>
-    </div>
-  );
+						<MediumProfile member={bill.member} />
+					</div>
+				</li>
+			);
+		});
+	};
+	return (
+		<div className="congress-status-component">
+			<h3>
+				<b>What's happening on the floor?</b>
+			</h3>
+			<div>{bills && <ul className="bill-list">{renderBills()}</ul>}</div>
+		</div>
+	);
 }

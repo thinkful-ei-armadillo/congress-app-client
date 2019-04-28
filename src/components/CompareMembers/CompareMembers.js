@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import MemberApiService from "../../services/member-api-service";
 import MediumProfile from "../Profile/MediumProfile";
 import CompareMemberListPage from "../CompareMemberListPage/CompareMemberListPage";
@@ -32,12 +32,12 @@ export default function CompareMembers(props) {
       <React.Fragment>
         <div className="oneBlock">
           <form className="compareForm" onSubmit={submitForm}>
-            <input type="text" name="search" placeholder="Congressmen"  className='compare-text-input'/>
+            <input type="text" name="search" placeholder="Member of Congress"  className='compare-text-input'/>
           </form>
           <br /><br />
           <CompareMemberListPage members={members} setDisplay={setDisplay}/>
           <br /><br />
-          <MediumProfile member={memberToDisplay} />
+          <MediumProfile member={memberToDisplay} className='compare-member-profile' />
         </div>
       </React.Fragment>
     );
@@ -46,7 +46,7 @@ export default function CompareMembers(props) {
       <React.Fragment>
         <div className="oneBlock">
           <form onSubmit={submitForm}>
-            <input type="text" name="search" placeholder="Congressmen" className='compare-text-input'/>
+            <input type="text" name="search" placeholder="Member of Congress" className='compare-text-input'/>
           </form><br />
           <CompareMemberListPage members={members} setDisplay={setDisplay} />
         </div>

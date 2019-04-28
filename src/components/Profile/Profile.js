@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import "./Profile.css";
 
 function Profile(props) {
-	let { handle } = props.member;
-	console.log(handle);
+	// let { handle } = props.member;
 	return (
 		<div>
 			<img
@@ -20,29 +19,39 @@ function Profile(props) {
 				}.jpg`}
 			/>
 			<p className="name">
-				{props.member.short_title}{' '} 
-				{props.member.first_name} {props.member.middle_name}{" "}
-				{props.member.last_name}
+				{props.member.short_title} {props.member.first_name}{" "}
+				{props.member.middle_name} {props.member.last_name}
 				{props.member.suffix} ({props.member.party})
 			</p>
 			<p className="dob">Born: {props.member.date_of_birth}</p>
 			<section className="member-social-media">
-				{/* maybe these should be icons, or just social media widgets or something */}
-				<a
-					className="twitter"
-					href={`https://twitter.com/${props.member.twitter_account}`}>
-					Twitter
-				</a>
-				<a
-					className="youtube"
-					href={`https://youtube.com/${props.member.youtube_account}`}>
-					Youtube
-				</a>
-				<a
-					className="facebook"
-					href={`https://facebook.com/${props.member.facebook_account}`}>
-					Facebook
-				</a>
+				{!props.member.twitter_account ? (
+					""
+				) : (
+					<a
+						className="twitter"
+						href={`https://twitter.com/${props.member.twitter_account}`}>
+						<i class="fab fa-twitter" />
+					</a>
+				)}
+				{!props.member.youtube_account ? (
+					""
+				) : (
+					<a
+						className="youtube"
+						href={`https://youtube.com/${props.member.youtube_account}`}>
+						<i class="fab fa-youtube" />
+					</a>
+				)}
+				{!props.member.facebook_account ? (
+					""
+				) : (
+					<a
+						className="facebook"
+						href={`https://facebook.com/${props.member.facebook_account}`}>
+						<i class="fab fa-facebook" />
+					</a>
+				)}
 				<p className="phonenum">{props.member.phone}</p>
 				<p className="faxnum">{props.member.fax}</p>
 			</section>

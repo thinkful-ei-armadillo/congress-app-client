@@ -20,13 +20,8 @@ nav {
   text-decoration-line: none;
 }
 
-.logged-in-header > a {
+.logged-in-header > a, .logged-out-header > a  {
   font-size: 18px;
-}
-
-.logged-out-header > a {
-  font-size: 18px;
-  margin-left: 5px;
 }
 
 .logged-in-header, .logged-out-header {
@@ -34,14 +29,20 @@ nav {
   margin-right: 50px;
 }
 
-#login-button {
-  margin-top: 5px;
-  margin-bottom: 0px;
-  margin-left: 5px;
+#login-button, #logout-button, #compare-button, #register-button {
+  transition-property: background, border-radius, color, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  background: #ffffff;
 }
 
-#logout-button {
-  margin-top: 5px;
-  margin-bottom: 0px;
-  margin-left: 5px;
+#login-button:hover, #logout-button:hover, #compare-button:hover, #register-button:hover {
+  cursor: pointer;
+  color: #333;
+  background: #f6f6f6;
+  border-radius: 4px;
+  box-shadow: 0 1px #333;
 }

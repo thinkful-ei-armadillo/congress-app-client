@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import MemberApiService from "../services/member-api-service";
-import MediumProfile from "../components/Profile/MediumProfile";
+import React from "react";
 import CompareMembers from "../components/CompareMembers/CompareMembers";
 import "./CompareMembersRoute.css";
 
