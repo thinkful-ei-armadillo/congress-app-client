@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
-import TwitterLogo from "../../assets/Twitter_Social_Icon_Circle_White.png";
-import FacebookLogo from "../../assets/flogo-HexRBG-Wht-58.png";
-import YoutubeLogo from "../../assets/youtube_social_icon_dark.png";
 
 function Profile(props) {
 	let { handle } = props.member;
