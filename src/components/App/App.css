@@ -1,5 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100vh;
+}
+
 .App {
-	text-align: center;
+	/* text-align: center; */
 	margin: 0 auto;
 }
 

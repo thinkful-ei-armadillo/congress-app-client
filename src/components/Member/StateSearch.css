@@ -1,10 +1,10 @@
-#state-search {
-  margin-top: 5px;
-  width: 150px;
-  font-size: 16px;
+.state-search {
+	margin-top: 5px;
+	width: 150px;
+	font-size: 16px;
 }
 
 label {
-  font-size: 18px;
-  font-weight: 600;
+	font-size: 18px;
+	font-weight: 600;
 }

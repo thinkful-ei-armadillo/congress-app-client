@@ -26,10 +26,10 @@ function Dashboard(props) {
 			{/* 3 SmallProfiles showing stat related to leaderboard */}
 			{/* show more than one leaderboard in the future */}
 			<div className="col2">
-				<LeaderBoard />
-				<br />
-				<br />
 				<CongressStatus />
+				<br />
+				<br />
+				<LeaderBoard />
 				<br />
 				<br />
 			</div>
