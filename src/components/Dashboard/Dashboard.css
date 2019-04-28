@@ -1,2 +1,9 @@
 .dashboard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.col1 {
+	max-width: 300px;
 }
