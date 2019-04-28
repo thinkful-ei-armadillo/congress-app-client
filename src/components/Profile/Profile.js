@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
-import TwitterLogo from "../../assets/Twitter_Social_Icon_Circle_White.png";
-import FacebookLogo from "../../assets/flogo-HexRBG-Wht-58.png";
-import YoutubeLogo from "../../assets/youtube_social_icon_dark.png";
 
 function Profile(props) {
 	// let { handle } = props.member;
@@ -34,7 +31,7 @@ function Profile(props) {
 					<a
 						className="twitter"
 						href={`https://twitter.com/${props.member.twitter_account}`}>
-						<img src={TwitterLogo} alt="twitter-logo" />
+						<i class="fab fa-twitter" />
 					</a>
 				)}
 				{!props.member.youtube_account ? (
@@ -43,7 +40,7 @@ function Profile(props) {
 					<a
 						className="youtube"
 						href={`https://youtube.com/${props.member.youtube_account}`}>
-						<img src={YoutubeLogo} alt="youtube-logo" />
+						<i class="fab fa-youtube" />
 					</a>
 				)}
 				{!props.member.facebook_account ? (
@@ -52,7 +49,7 @@ function Profile(props) {
 					<a
 						className="facebook"
 						href={`https://facebook.com/${props.member.facebook_account}`}>
-						<img src={FacebookLogo} alt="facebook-logo" />
+						<i class="fab fa-facebook" />
 					</a>
 				)}
 				<p className="phonenum">{props.member.phone}</p>
