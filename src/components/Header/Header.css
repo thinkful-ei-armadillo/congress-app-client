@@ -3,7 +3,7 @@ header {
   display: flex;
   align-items: baseline;
   margin-bottom: 5px;
-  background: #ececec;
+  background: #0f4471;
   width: 100%;
 }
 
@@ -37,12 +37,17 @@ nav {
   font-weight: 400;
   border-radius: 5px;
   background: #ffffff;
+  color: #05004e;
 }
 
 #login-button:hover, #logout-button:hover, #compare-button:hover, #register-button:hover {
   cursor: pointer;
-  color: #333;
+  color: #05004e;
   background: #f6f6f6;
   border-radius: 4px;
   box-shadow: 0 1px #333;
+}
+
+header a{
+  color: #f6f6f6;
 }

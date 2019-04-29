@@ -2,5 +2,10 @@
 .youtube,
 .facebook {
 	text-decoration: none;
-	color: black;
+	color: #05004e;
+	margin: 2px;
 }
+
+.profile-compare {
+	color: #05004e;
+  }

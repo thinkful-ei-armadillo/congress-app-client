@@ -53,9 +53,9 @@ export default function CongressStatus(props) {
   };
   return (
     <div className="congress-status-component">
-      <h3>
+      <p>
         <b>What's happening on the floor?</b>
-      </h3>
+      </p>
       <div>{bills && <ul className="bill-list">{renderBills()}</ul>}</div>
     </div>
   );
