@@ -21,7 +21,7 @@ export default function StateSearch(props) {
 					Search for a State's Representatives
 				</label>
 				<br />
-				<select onChange={e => setStateSearch(e)} className="state-search">
+				<select onChange={e => setStateSearch(e)} id="state-search">
 					<option value="">Select a State</option>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>

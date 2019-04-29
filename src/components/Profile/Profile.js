@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
+import { Button } from '../Utils/Utils';
 
 function Profile(props) {
 	// let { handle } = props.member;
@@ -85,7 +86,7 @@ function Profile(props) {
 						member: props.member
 					}
 				}}>
-				<button className="profile-compare">Compare with another Member</button>
+				<Button className="profile-compare" id='compare-button'>Compare With Another Member</Button>
 			</Link>
 		</div>
 	);

@@ -10,13 +10,14 @@ body {
   color: #0f4471;
 }
 
-h1, h2, h3,h4{
+h1, h2, h3,h4 {
   color: #fc3c3c;
 }
 
-a{
+a {
   color: #05004e;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
