@@ -24,9 +24,9 @@ export default function CongressStatus(props) {
 
 	const renderBills = () => {
 		return bills.map(bill => {
-			console.log(bill);
+			// console.log(bill);
 			return (
-				<li className="bill-info">
+				<li className="bill-info" key={bill.id}>
 					<div className="bill-title">
 						<b>Title: </b>
 						{bill.title}

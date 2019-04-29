@@ -32,7 +32,7 @@ function Profile(props) {
 					<a
 						className="twitter"
 						href={`https://twitter.com/${props.member.twitter_account}`}>
-						<i class="fab fa-twitter" />
+						<i className="fab fa-twitter" />
 					</a>
 				)}
 				{!props.member.youtube_account ? (
@@ -41,7 +41,7 @@ function Profile(props) {
 					<a
 						className="youtube"
 						href={`https://youtube.com/${props.member.youtube_account}`}>
-						<i class="fab fa-youtube" />
+						<i className="fab fa-youtube" />
 					</a>
 				)}
 				{!props.member.facebook_account ? (
@@ -50,7 +50,7 @@ function Profile(props) {
 					<a
 						className="facebook"
 						href={`https://facebook.com/${props.member.facebook_account}`}>
-						<i class="fab fa-facebook" />
+						<i className="fab fa-facebook" />
 					</a>
 				)}
 				<p className="phonenum">{props.member.phone}</p>
