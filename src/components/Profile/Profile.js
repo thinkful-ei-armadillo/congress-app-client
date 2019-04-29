@@ -85,7 +85,7 @@ function Profile(props) {
 						member: props.member
 					}
 				}}>
-				<button>Compare with another Member</button>
+				<button className="profile-compare">Compare with another Member</button>
 			</Link>
 		</div>
 	);

@@ -45,18 +45,18 @@ export default function CongressStatus(props) {
 					<div className="bill-sponsor">
 						<b>Sponsor</b>
 
-						<MediumProfile member={bill.member} />
-					</div>
-				</li>
-			);
-		});
-	};
-	return (
-		<div className="congress-status-component">
-			<h3>
-				<b>What's happening on the floor?</b>
-			</h3>
-			<div>{bills && <ul className="bill-list">{renderBills()}</ul>}</div>
-		</div>
-	);
+            <MediumProfile member={bill.member} />
+          </div>
+        </li>
+      );
+    });
+  };
+  return (
+    <div className="congress-status-component">
+      <p>
+        <b>What's happening on the floor?</b>
+      </p>
+      <div>{bills && <ul className="bill-list">{renderBills()}</ul>}</div>
+    </div>
+  );
 }

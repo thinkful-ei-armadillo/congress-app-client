@@ -22,6 +22,21 @@
 	padding: 6px;
 }
 
+.bill-info b{
+  color: #fc3c3c;
+  text-shadow: 1px 1px #fc3c3c76;
+}
+
 .congress-status-component {
-	border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  border: 1px solid #05004e;
+  border-radius: 5px;
+  background: #0f4471;
+  box-shadow: 5px 5px #a6a6a6;
+  color: #f6f6f6;
+}
+
+.bill-sponsor a, .bill-sponsor p{
+  color: #f6f6f6;
 }

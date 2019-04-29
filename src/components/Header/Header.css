@@ -1,10 +1,10 @@
 header {
-	/* height: 75px; */
-	display: flex;
-	align-items: baseline;
-	margin-bottom: 5px;
-	background: #ececec;
-	width: 100%;
+  /* height: 75px; */
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 5px;
+  background: #0f4471;
+  width: 100%;
 }
 
 nav {
@@ -31,26 +31,25 @@ nav {
 	margin-right: 50px;
 }
 
-.login-button,
-.logout-button,
-.compare-button,
-.register-button {
-	transition-property: background, border-radius, color, box-shadow;
-	transition-duration: 0.25s;
-	transition-timing-function: linear;
-	font-size: 16px;
-	font-weight: 400;
-	border-radius: 5px;
-	background: #ffffff;
+#login-button, #logout-button, #compare-button, #register-button {
+  transition-property: background, border-radius, color, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #05004e;
 }
 
-.login-button:hover,
-.logout-button:hover,
-.compare-button:hover,
-.register-button:hover {
-	cursor: pointer;
-	color: #333;
-	background: #f6f6f6;
-	border-radius: 4px;
-	box-shadow: 0 1px #333;
+#login-button:hover, #logout-button:hover, #compare-button:hover, #register-button:hover {
+  cursor: pointer;
+  color: #05004e;
+  background: #f6f6f6;
+  border-radius: 4px;
+  box-shadow: 0 1px #333;
+}
+
+header a{
+  color: #f6f6f6;
 }

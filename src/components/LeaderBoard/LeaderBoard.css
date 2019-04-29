@@ -1,19 +1,31 @@
 .LeaderBoard {
-	max-width: 200px;
-	min-width: 120px;
-	overflow: scroll;
-	border: 1px solid #ccc;
-	padding-left: 0px;
-	margin-bottom: 0px;
-}
+    max-width: 200px;
+    min-width: 120px;
+    overflow: scroll;
+    border: 1px solid #05004e;
+    border-radius: 5px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    background: #0f4471;
+    box-shadow: 5px 5px #a6a6a6;
+    color: #f6f6f6;
+  }
 
-.MemberContainer {
-	border-top: 1px solid #ccc;
-	text-align: center;
-	padding: 2%;
-}
+  .LeaderBoard > p {
+    padding: 3px;
+  }
 
-.LeaderBoard-title {
-	margin: auto 0;
-	text-align: center;
-}
+  .LeaderBoard-title {
+    margin: auto 0;
+    text-align: center;
+  }
+  
+  .MemberContainer {
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding: 2%;
+  }
+
+  .rank{
+    text-shadow: 1px 1px #fc3c3c76;
+  }
