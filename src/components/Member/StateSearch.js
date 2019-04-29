@@ -75,10 +75,8 @@ export default function StateSearch(props) {
 					<option value="WY">Wyoming</option>
 				</select>
 			</form>
-			<div>
-				<br />
-				<MemberListPage members={members} />
-			</div>
+			<br />
+			<MemberListPage members={members} />
 		</section>
 	);
 }

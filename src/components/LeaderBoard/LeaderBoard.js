@@ -11,8 +11,8 @@ export default function LeaderBoard(props) {
 	}, []);
 	return top3 ? (
 		<div className="LeaderBoard">
-			<p>
-				<b>Highest Missed Votes %</b>
+			<p className="LeaderBoard-title">
+				<b>Missed Votes</b>
 			</p>
 			{top3.map((member, index) => {
 				return (
