@@ -51,9 +51,9 @@ export default class Header extends Component {
 			<header>
 				<h1 className="title">
 					{TokenService.hasAuthToken() ? (
-						<Link to="/dashboard">Congress.io</Link>
+						<Link to="/dashboard">MyCongress.io</Link>
 					) : (
-						<Link to="/">Congress.io</Link>
+						<Link to="/">MyCongress.io</Link>
 					)}
 				</h1>
 				<nav>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Input, Required } from '../Utils/Utils'
 import AuthApiService from '../../services/auth-api-service'
-// import './RegistrationForm.css'
+import './RegistrationForm.css'
 
 export default class RegistrationForm extends Component {
   // static defaultProps = {
@@ -66,7 +66,7 @@ export default class RegistrationForm extends Component {
           </Input>
         </div>
         <div className='password'>
-          <label htmlFor='RegistrationForm__password'>
+          <label htmlFor='RegistrationForm__user_name'>
             Password <Required />
           </label><br/>
           <Input

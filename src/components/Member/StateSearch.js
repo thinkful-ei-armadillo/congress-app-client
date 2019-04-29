@@ -16,7 +16,7 @@ export default function StateSearch(props) {
 
 	return (
 		<section className="state-reps">
-			<form>
+			<form className='state-search-form'>
 				<label htmlFor="state-search">
 					Search for a State's Representatives
 				</label>

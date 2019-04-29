@@ -1,0 +1,7 @@
+#LoginForm__user_name, #LoginForm__password {
+  width: 200px;
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 4px;
+	border: solid 2px #c6c6c6;
+}

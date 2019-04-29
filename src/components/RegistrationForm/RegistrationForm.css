@@ -1,0 +1,8 @@
+#RegistrationForm__full_name, #RegistrationForm__user_name, #RegistrationForm__password {
+  width: 200px;
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 4px;
+  border: solid 2px #c6c6c6;
+  margin-bottom: 10px;
+}
