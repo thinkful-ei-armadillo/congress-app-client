@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import MemberApiService from '../../services/member-api-service';
-import MemberListPage from '../MemberListPage/MemberListPage';
-import './MemberSearch.css';
+import React, { useState } from "react";
+import MemberApiService from "../../services/member-api-service";
+import MemberListPage from "../MemberListPage/MemberListPage";
+import "./MemberSearch.css";
 
 export default function MemberSearch(props) {
 	const [members, setMembers] = useState(null);
@@ -15,14 +15,18 @@ export default function MemberSearch(props) {
 		});
 	};
 
-  return (
-    <React.Fragment>
-      <form onSubmit={submitForm}>
-        <input type="text" name="search" placeholder="Member of Congress" id='searchbar'/>
-      </form><br />
-      <MemberListPage members={members} />
-    </React.Fragment>
-
-  );
-
+	return (
+		<section className="member-search">
+			<form onSubmit={submitForm}>
+				<input
+					type="text"
+					name="search"
+					placeholder="Member of Congress"
+					className="searchbar"
+				/>
+			</form>
+			<br />
+			<MemberListPage members={members} />
+		</section>
+	);
 }

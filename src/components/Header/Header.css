@@ -8,25 +8,27 @@ header {
 }
 
 nav {
-  width: 100%;
+	width: 100%;
 }
 
-#title {
-  text-align: left;
-  margin-left: 50px;
+.title {
+	text-align: left;
+	margin-left: 50px;
 }
 
-#title > a {
-  text-decoration-line: none;
+.title > a {
+	text-decoration-line: none;
 }
 
-.logged-in-header > a, .logged-out-header > a  {
-  font-size: 18px;
+.logged-in-header > a,
+.logged-out-header > a {
+	font-size: 18px;
 }
 
-.logged-in-header, .logged-out-header {
-  text-align: right;
-  margin-right: 50px;
+.logged-in-header,
+.logged-out-header {
+	text-align: right;
+	margin-right: 50px;
 }
 
 #login-button, #logout-button, #compare-button, #register-button {

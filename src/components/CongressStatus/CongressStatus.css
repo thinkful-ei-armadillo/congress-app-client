@@ -1,25 +1,25 @@
 .congress-status-component ul {
-  max-height: 500px;
-  overflow: scroll;
-  border-top: 1px solid #ccc;
-  padding-left: 0px;
-  margin-bottom: 0px;
+	max-height: 590px;
+	overflow: scroll;
+	border-top: 1px solid #ccc;
+	padding-left: 0px;
+	margin-bottom: 0px;
 }
 
 .bill-list li:last-child {
-  border-bottom: none;
+	border-bottom: none;
 }
 
 .bill-list li {
-  border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
 
 .bill-info {
-  text-align: left;
-  padding: 25px;
+	text-align: left;
+	padding: 25px;
 }
 .bill-info div {
-  padding: 6px;
+	padding: 6px;
 }
 
 .bill-info b{

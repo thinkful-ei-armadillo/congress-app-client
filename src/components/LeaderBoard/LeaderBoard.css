@@ -1,5 +1,6 @@
 .LeaderBoard {
     max-width: 200px;
+    min-width: 120px;
     overflow: scroll;
     border: 1px solid #05004e;
     border-radius: 5px;
@@ -10,8 +11,13 @@
     color: #f6f6f6;
   }
 
-  .LeaderBoard > p{
+  .LeaderBoard > p {
     padding: 3px;
+  }
+
+  .LeaderBoard-title {
+    margin: auto 0;
+    text-align: center;
   }
   
   .MemberContainer {
@@ -23,4 +29,3 @@
   .rank{
     text-shadow: 1px 1px #fc3c3c76;
   }
-  

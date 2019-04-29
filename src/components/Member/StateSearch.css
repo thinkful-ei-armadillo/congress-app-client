@@ -1,7 +1,8 @@
-#state-search {
-  margin-top: 5px;
-  width: 150px;
-  font-size: 16px;
+.state-search {
+	margin-top: 5px;
+	width: 150px;
+	font-size: 16px;
+	padding: 10px;
 }
 
 label {
