@@ -1,40 +1,45 @@
-.congress-status-component ul {
-	max-height: 590px;
-	overflow: scroll;
-	border-top: 1px solid #ccc;
-	padding-left: 0px;
-	margin-bottom: 0px;
-}
-
-.bill-list li:last-child {
-	border-bottom: none;
-}
-
-.bill-list li {
-	border-bottom: 1px solid #ccc;
-}
-
-.bill-info {
-	text-align: left;
-	padding: 25px;
-}
-.bill-info div {
-	padding: 6px;
-}
-
-.bill-info b{
-  color: #fc3c3c;
-  text-shadow: 1px 1px #fc3c3c76;
-}
-
 .congress-status-component {
-  /* border: 1px solid #ccc; */
   border-radius: 5px;
   border: 1px solid #05004e;
   border-radius: 5px;
   background: #0f4471;
   box-shadow: 5px 5px #a6a6a6;
   color: #f6f6f6;
+}
+
+.congress-status-component > p {
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
+}
+
+.congress-status-component ul {
+	max-height: 550px;
+	overflow: scroll;
+	border-top: 1px solid #ccc;
+	padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.bill-list li {
+	border-bottom: 1px solid #f6f6f6;
+}
+
+.bill-list li:last-child {
+	border-bottom: none;
+}
+
+.bill-info {
+	text-align: left;
+  padding: 25px;
+  padding-top: 30px;
+}
+.bill-info div {
+	padding: 6px;
+}
+
+.bill-info b {
+  color: #fc3c3c;
+  text-shadow: 1px 1px #fc3c3c76;
 }
 
 .bill-sponsor a, .bill-sponsor p{

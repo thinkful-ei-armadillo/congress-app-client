@@ -1,3 +1,11 @@
+.main-profile {
+	font-size: 20px;
+}
+
+.main-profile > .profile-picture {
+	width: 200px;
+}
+
 .twitter,
 .youtube,
 .facebook {

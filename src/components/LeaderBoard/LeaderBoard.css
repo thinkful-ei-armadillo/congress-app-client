@@ -12,7 +12,8 @@
   }
 
   .LeaderBoard > p {
-    padding: 3px;
+    font-family: 'Julius Sans One', sans-serif;
+    padding: 8px;
   }
 
   .LeaderBoard-title {

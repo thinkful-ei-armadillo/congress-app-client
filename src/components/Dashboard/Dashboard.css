@@ -8,4 +8,9 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	height: 100%;
+	margin-right: 30px;
+}
+
+.col2 {
+	min-width: 200px;
 }

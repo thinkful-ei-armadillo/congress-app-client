@@ -6,7 +6,7 @@ import { Button } from '../Utils/Utils';
 function Profile(props) {
 	// let { handle } = props.member;
 	return (
-		<div>
+		<div className='main-profile'>
 			<img
 				className="profile-picture"
 				alt={props.member.alt}
