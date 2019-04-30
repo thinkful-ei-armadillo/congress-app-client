@@ -52,8 +52,10 @@ const graphData = {
 
 
     console.log({ repub: repubAvg, dem: demAvg, ind: indAvg })
+
+    const result = [repubAvg, demAvg, indAvg]
     // return { repub: repubAvg, dem: demAvg, ind: indAvg };
-    return [  repubAvg, demAvg, indAvg ];
+    return result;
   }
 };
 // CongressApiService.getBills(),
