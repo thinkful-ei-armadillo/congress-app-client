@@ -1,21 +1,25 @@
-import config from "../config";
-import MemberApiService from "./member-api-service";
-import CongressApiService from "./congress-api-service";
+// import config from '../config';
+import MemberApiService from './member-api-service';
+// import CongressApiService from './congress-api-service';
 
 const graphData = {
-  getNumbers() {
+  async getNumbers() {
     let repubArr = [];
     let demArr = [];
     let indArr = [];
-    let fullArr = MemberApiService.getMembers("");
+    let fullArr = await MemberApiService.getMembers('');
+    console.log(fullArr)
     for (let i = 0; i < fullArr.length; i++) {
-      if (fullArr[i].party === "R") {
+      if (fullArr[i].party === 'R') { 
+        // console.log('republican found!')
         repubArr.push(fullArr[i].missed_votes_pct);
       }
-      if (fullArr[i].party === "D") {
+      if (fullArr[i].party === 'D') {
+        // console.log('democrat found!')
         demArr.push(fullArr[i].missed_votes_pct);
       }
-      if (fullArr[i].party === "ID") {
+      if (fullArr[i].party === 'ID') {
+        // console.log('independent found!')
         indArr.push(fullArr[i].missed_votes_pct);
       }
     }
