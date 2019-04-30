@@ -4,7 +4,7 @@ import StateSearch from "../Member/StateSearch";
 import LeaderBoard from "../LeaderBoard/LeaderBoard";
 import CongressStatus from "../CongressStatus/CongressStatus";
 import "./Dashboard.css";
-import MissedVotesGraph from "../Data/Data";
+import MissedVotesGraph from "../Data/MissedVotesGraph";
 
 function Dashboard(props) {
   return (
