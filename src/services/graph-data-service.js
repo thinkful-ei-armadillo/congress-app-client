@@ -7,7 +7,7 @@ const graphData = {
     let repubArr = [];
     let demArr = [];
     let indArr = [];
-    let fullArr = MemberApiService.getMembers();
+    let fullArr = MemberApiService.getMembers("");
     for (let i = 0; i < fullArr.length; i++) {
       if (fullArr[i].party === "R") {
         repubArr.push(fullArr[i].missed_votes_pct);
@@ -19,11 +19,11 @@ const graphData = {
         indArr.push(fullArr[i].missed_votes_pct);
       }
     }
-    let repubAvg = repubArr.reduce((a, b) => a + b) / repubArr.length;
-    let demAvg = demArr.reduce((a, b) => a + b) / demArr.length;
-    let indAvg = indArr.reduce((a, b) => a + b) / indArr.length;
+    let repubAvg = repubArr.reduce((a, b) => a + b / repubArr.length, []);
+    let demAvg = demArr.reduce((a, b) => a + b / demArr.length, []);
+    let indAvg = indArr.reduce((a, b) => a + b / indArr.length, []);
     return { repub: repubAvg, dem: demAvg, ind: indAvg };
   }
 };
 // CongressApiService.getBills(),
-module.exports = { graphData };
+export default graphData;
