@@ -7,10 +7,6 @@
   display: inline-block;
 }
 
-rect {
-  margin-left: 5px;
-}
-
 #repub-key {
   fill: red
 }
