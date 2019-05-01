@@ -75,7 +75,7 @@ import './Graph.css'
 
     return (
       <div id='missed-votes-graph'>
-       <h3 id='missed-votes-title'>Percentage of Missed Votes By Party</h3>
+       <h3 id='missed-votes-title'>Average % of Missed Votes By Party</h3>
        <div id='missed-votes-graph-wrapper'></div>
        <p><svg height='10' width='10'><circle cx='10' cy='10' r='10' id='repub-key'></circle></svg> = Republican</p>
        <p><svg height='10' width='10'><circle cx='10' cy='10' r='10' id='dem-key'></circle></svg> = Democrats</p>
