@@ -3,6 +3,7 @@ import MemberSearch from "../Member/MemberSearch";
 import StateSearch from "../Member/StateSearch";
 import LeaderBoard from "../LeaderBoard/LeaderBoard";
 import CongressStatus from "../CongressStatus/CongressStatus";
+import Committees from "../Committees/Committees";
 import "./Dashboard.css";
 import MissedVotesGraph from "../Data/MissedVotesGraph";
 

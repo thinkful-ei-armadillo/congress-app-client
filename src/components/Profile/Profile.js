@@ -5,6 +5,7 @@ import { Button } from '../Utils/Utils';
 
 function Profile(props) {
 	// let { handle } = props.member;
+	console.log(props.member)
 	return (
 		<div className='main-profile'>
 			<img
@@ -78,6 +79,18 @@ function Profile(props) {
 					{" "}
 					Votes with Party %: {props.member.votes_with_party_pct}
 				</p>
+			</section>
+			<section className="committee_chair">
+				{!props.member.committee_id ? (
+						""
+					) : (
+						<div>
+						<p>Chair of: The
+						{' '} 
+						<a href={`${props.member.committee_url}`} target='blank'>{props.member.committee_name}</a>
+						</p>
+						</div>
+					)}
 			</section>
 			<Link
 				to={{
