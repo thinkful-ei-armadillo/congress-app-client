@@ -23,10 +23,11 @@ export default function MemberSearch(props) {
 					name="search"
 					placeholder="Member of Congress"
 					className="searchbar"
+					data-cy="search"
 				/>
 			</form>
 			<br />
-			<MemberListPage members={members} />
+			<MemberListPage members={members} data-cy="results" />
 		</section>
 	);
 }
