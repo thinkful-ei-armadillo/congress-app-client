@@ -4,6 +4,7 @@ import MemberSearch from '../Member/MemberSearch';
 import StateSearch from '../Member/StateSearch';
 import LeaderBoard from '../LeaderBoard/LeaderBoard';
 import CongressStatus from '../CongressStatus/CongressStatus';
+import Committees from "../Committees/Committees";
 import './Dashboard.css';
 import MissedVotesGraph from '../Data/MissedVotesGraph';
 // import MemberListPage from '../MemberListPage/MemberListPage';
@@ -48,6 +49,9 @@ function Dashboard(props) {
         <CongressStatus />
         <br />
         <br />
+        <Committees />
+				<br />
+				<br />
       </div>
       <div className='col2'>
         <LeaderBoard />
