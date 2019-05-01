@@ -7,9 +7,9 @@ import './MemberListPage.css';
 export default class MemberListPage extends Component {
   renderMembers() {
     if (this.props.members === null) {
-      return <div id='no-search-feedback'>Please Input a Search Above</div>;
-    } else if (this.props.members === 0) {
-      return <div id='no-results-feedback'>Please Re-try a Search Above</div>;
+      return <div id='no-search-feedback'></div>;
+    } else if (this.props.members.length === 0) {
+      return <div id='no-results-feedback'>No Results. Please Retry With a New Search.</div>;
     }
     else {
       return this.props.members.map(member => (

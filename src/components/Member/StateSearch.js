@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MemberApiService from "../../services/member-api-service";
 import MemberListPage from "../MemberListPage/MemberListPage";
+import { Button } from '../Utils/Utils';
 import "./StateSearch.css";
 
 export default function StateSearch(props) {
@@ -8,10 +9,12 @@ export default function StateSearch(props) {
 
 	const setStateSearch = e => {
 		const state = e.target.value;
-		MemberApiService.getMembersByState(state).then(members => {
-			console.log(members);
-			setMembers(members);
-		});
+		if (state !== '') {
+			MemberApiService.getMembersByState(state).then(members => {
+				console.log(members);
+				setMembers(members);
+			});
+		}
 	};
 
 	return (
