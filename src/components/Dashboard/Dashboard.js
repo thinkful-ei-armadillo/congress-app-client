@@ -5,31 +5,32 @@ import LeaderBoard from "../LeaderBoard/LeaderBoard";
 import CongressStatus from "../CongressStatus/CongressStatus";
 import Committees from "../Committees/Committees";
 import "./Dashboard.css";
+import MissedVotesGraph from "../Data/MissedVotesGraph";
 
 function Dashboard(props) {
-	return (
-		<div className="dashboard">
-			<div className="col1">
-				<MemberSearch />
-				<br />
-				<br />
-				<StateSearch />
-				<br />
-				<br />
-				<CongressStatus />
-				<br />
-				<br />
-				<Committees />
-				<br />
-				<br />
-			</div>
-			<div className="col2">
-				<LeaderBoard />
-				<br />
-				<br />
-			</div>
-		</div>
-	);
+  return (
+    <div className="dashboard">
+      <div className="col1">
+        <MemberSearch />
+        <br />
+        <br />
+        <StateSearch />
+        <br />
+        <br />
+        <MissedVotesGraph />
+        <br />
+        <br />
+        <CongressStatus />
+        <br />
+        <br />
+      </div>
+      <div className="col2">
+        <LeaderBoard />
+        <br />
+        <br />
+      </div>
+    </div>
+  );
 }
 
 export default Dashboard;

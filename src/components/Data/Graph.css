@@ -1,0 +1,24 @@
+#graph  {
+  border: 2px solid #777;
+  border-radius: 2px;
+}
+
+#missed-votes-graph-wrapper {
+  display: inline-block;
+}
+
+rect {
+  margin-left: 5px;
+}
+
+#repub-key {
+  fill: red
+}
+
+#dem-key {
+  fill: blue
+}
+
+#ind-key {
+  fill: green
+}
