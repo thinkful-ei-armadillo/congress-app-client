@@ -8,7 +8,10 @@ export default class MemberListPage extends Component {
   renderMembers() {
     if (this.props.members === null) {
       return <div id='no-search-feedback'>Please Input a Search Above</div>;
-    } else {
+    } else if (this.props.members === 0) {
+      return <div id='no-results-feedback'>Please Re-try a Search Above</div>;
+    }
+    else {
       return this.props.members.map(member => (
         <div key={member.id} id='search-results'>
           <MemberListItem key={member.id} member={member} />

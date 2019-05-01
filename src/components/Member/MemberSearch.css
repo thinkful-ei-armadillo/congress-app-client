@@ -1,5 +1,9 @@
+.member-search {
+	text-align: center;
+}
+
 .searchbar {
-	width: 200px;
+	width: 250px;
 	font-size: 16px;
 	padding: 10px;
 	border-radius: 4px;
