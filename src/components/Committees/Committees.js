@@ -12,7 +12,7 @@ export default function Committees(props) {
 
   const renderCommittees = () =>{
     return committees.map(committee => {
-			console.log(committee);
+			// console.log(committee);
 			return (
 				<li className="committee-info" key={committee.committee_id}>
 					<div className="committee-name">
@@ -25,11 +25,12 @@ export default function Committees(props) {
           </div>
           <div className="committee-url">
             <b>Link: </b>
-            {committee.committee_url}
+            {/* {committee.committee_url} */}
+            <a href={`${committee.committee_url}`} destination='new'>Click here!</a>
             </div>
 					<div className="committee-chair">
 						<b>Chair: </b>
-            {/* <MediumProfile member={committee.chair_id} /> */}
+            <MediumProfile member={committee.member} />
           </div>
         </li>
       );

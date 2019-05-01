@@ -79,6 +79,17 @@ function Profile(props) {
 					Votes with Party %: {props.member.votes_with_party_pct}
 				</p>
 			</section>
+			{/* <section className="committee_chair">
+				{!props.member.committee ? (
+						""
+					) : (
+						<a
+							className="twitter"
+							href={`https://twitter.com/${props.member.twitter_account}`}>
+							<i className="fab fa-twitter" />
+						</a>
+					)}
+			</section> */}
 			<Link
 				to={{
 					pathname: "/compare",

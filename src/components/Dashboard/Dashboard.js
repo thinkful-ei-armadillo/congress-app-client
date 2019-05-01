@@ -10,7 +10,7 @@ function Dashboard(props) {
 	return (
 		<div className="dashboard">
 			<div className="col1">
-				{/* <MemberSearch />
+				<MemberSearch />
 				<br />
 				<br />
 				<StateSearch />
@@ -18,7 +18,7 @@ function Dashboard(props) {
 				<br />
 				<CongressStatus />
 				<br />
-				<br /> */}
+				<br />
 				<Committees />
 				<br />
 				<br />
