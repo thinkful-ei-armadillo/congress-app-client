@@ -1,6 +1,13 @@
-#no-search-feedback{
+#no-search-feedback {
   font-style: italic;
-  font-size: 14px;
+  font-size: 18px;
+}
+
+#no-results-feedback {
+  /* font-style: italic; */
+  font-size: 18px;
+  font-weight: 600;
+  color: #fc3c3c;
 }
 
 #search-results {
