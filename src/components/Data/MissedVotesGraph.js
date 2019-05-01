@@ -48,21 +48,26 @@ export default class MissedVotesGraph extends Component {
         }
       });
 
-    svgGraph
+    d3.select("#graph")
       .append("path")
       .data([dataset])
       .attr("class", "line")
       .attr("d", valueLine);
 
-    svgGraph.append("g").call(d3.axisLeft(y));
+    d3.select("#graph")
 
-    svgGraph
+      .append("g")
+      .style("fill", "black")
+      .call(d3.axisLeft(y));
+
+    d3.select("#graph")
       .append("text")
+      .style("color", "black")
       .attr("transform", "rotate(-90)")
       .attr("y", -50)
       .attr("x", -100)
       .attr("dy", "1em")
-      .style("text-anchor", "middle")
+      // .style("text-anchor", "middle")
       .text("Percentage");
 
     const tooltips = svgGraph
