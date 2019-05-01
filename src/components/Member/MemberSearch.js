@@ -21,6 +21,7 @@ export default function MemberSearch(props) {
 			<form onSubmit={submitForm}>
 				<input
 					type='text'
+					minLength='3'
 					name='search'
 					placeholder='Search for a Member of Congress...'
 					className='searchbar'

@@ -56,7 +56,6 @@ export default class MissedVotesGraph extends Component {
       .attr('x', (d,i)=>i*30)
       .attr('y', (d)=>h-2*d-3)
       .text((d)=>d)
-      .attr('fill', 'red')
       .style('font-size', 25);
   }
 
@@ -76,6 +75,7 @@ export default class MissedVotesGraph extends Component {
       <div id='missed-votes-graph'>
        <h3 id='missed-votes-title'>Average % of Missed Votes By Party</h3>
        <div id='missed-votes-graph-wrapper'></div>
+       &bull;&bull;&bull;&bull;
        <p><svg height='10' width='10'><circle cx='10' cy='10' r='10' id='repub-key'></circle></svg> = Republican</p>
        <p><svg height='10' width='10'><circle cx='10' cy='10' r='10' id='dem-key'></circle></svg> = Democrats</p>
        <p><svg height='10' width='10'><circle cx='10' cy='10' r='10' id='ind-key'></circle></svg> = Independent</p>
