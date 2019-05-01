@@ -3,7 +3,6 @@ import * as d3 from "d3";
 import graphData from "../../services/graph-data-service";
 import "./Graph.css";
 
-// async function MissedVotesGraph() {
 export default class MissedVotesGraph extends Component {
   async componentDidMount() {
     let dataset = await graphData.getNumbers();
@@ -13,9 +12,9 @@ export default class MissedVotesGraph extends Component {
     const w = 200;
 
     const y = d3.scaleLinear().range([h, 0]);
-    const valueLine = d3.line().y(function(d) {
-      return y(d);
-    });
+    // const valueLine = d3.line().y(function(d) {
+    //   return y(d);
+    // });
 
     y.domain([
       0,
@@ -48,16 +47,14 @@ export default class MissedVotesGraph extends Component {
         }
       });
 
-    d3.select("#graph")
-      .append("path")
-      .data([dataset])
-      .attr("class", "line")
-      .attr("d", valueLine);
+    // d3.select("#graph")
+    //   .append("path")
+      // .data([dataset])
+      // .attr("class", "line")
+      // .attr("d", valueLine);
 
     d3.select("#graph")
-
       .append("g")
-      .style("fill", "black")
       .call(d3.axisLeft(y));
 
     d3.select("#graph")
@@ -67,7 +64,7 @@ export default class MissedVotesGraph extends Component {
       .attr("y", -50)
       .attr("x", -100)
       .attr("dy", "1em")
-      // .style("text-anchor", "middle")
+      .style("text-anchor", "middle")
       .text("Percentage");
 
     const tooltips = svgGraph

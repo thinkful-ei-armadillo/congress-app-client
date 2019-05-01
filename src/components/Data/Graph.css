@@ -22,3 +22,11 @@ rect {
 #ind-key {
   fill: green
 }
+
+.tick {
+  stroke: #333;
+}
+
+.domain { 
+  stroke:#fff;
+}
