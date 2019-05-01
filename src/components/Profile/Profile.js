@@ -5,6 +5,7 @@ import { Button } from '../Utils/Utils';
 
 function Profile(props) {
 	// let { handle } = props.member;
+	console.log(props.member)
 	return (
 		<div className='main-profile'>
 			<img
@@ -79,17 +80,18 @@ function Profile(props) {
 					Votes with Party %: {props.member.votes_with_party_pct}
 				</p>
 			</section>
-			{/* <section className="committee_chair">
-				{!props.member.committee ? (
+			<section className="committee_chair">
+				{!props.member.committee_id ? (
 						""
 					) : (
-						<a
-							className="twitter"
-							href={`https://twitter.com/${props.member.twitter_account}`}>
-							<i className="fab fa-twitter" />
-						</a>
+						<div>
+						<p>Chair of: The
+						{' '} 
+						<a href={`${props.member.committee_url}`} target='blank'>{props.member.committee_name}</a>
+						</p>
+						</div>
 					)}
-			</section> */}
+			</section>
 			<Link
 				to={{
 					pathname: "/compare",

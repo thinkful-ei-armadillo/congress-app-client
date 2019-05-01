@@ -25,8 +25,7 @@ export default function Committees(props) {
           </div>
           <div className="committee-url">
             <b>Link: </b>
-            {/* {committee.committee_url} */}
-            <a href={`${committee.committee_url}`} destination='new'>Click here!</a>
+            <a href={`${committee.committee_url}`} target='blank'>Click here to open the committee's site</a>
             </div>
 					<div className="committee-chair">
 						<b>Chair: </b>
