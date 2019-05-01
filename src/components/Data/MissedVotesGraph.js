@@ -3,8 +3,7 @@ import * as d3 from 'd3';
 import graphData from '../../services/graph-data-service';
 import './Graph.css'
 
-// async function MissedVotesGraph() {
-  export default class MissedVotesGraph extends Component {
+export default class MissedVotesGraph extends Component {
   
   async componentDidMount() {
     let dataset = await graphData.getNumbers();
