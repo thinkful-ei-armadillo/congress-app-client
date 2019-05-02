@@ -20,5 +20,18 @@ rect {
 }
 
 #ind-key {
+<<<<<<< HEAD
   fill: green;
 }
+=======
+  fill: green
+}
+
+.tick {
+  stroke: #333;
+}
+
+.domain { 
+  stroke:#fff;
+}
+>>>>>>> 97057c8c4515b0b5fa765146d31f04452f1a9fde
