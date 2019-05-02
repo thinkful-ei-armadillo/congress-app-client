@@ -47,6 +47,21 @@ const MemberApiService = {
     return fetch(`${config.API_ENDPOINT}/users/${id}/followed`).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
+  },
+
+  addFollowedMembers(id){
+    return fetch(`${config.API_ENDPOINT}/users/${id}/followed`,{
+    method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(),
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
   }
 
 };

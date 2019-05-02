@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
 import { Button } from '../Utils/Utils';
+import UserContext from '../../contexts/UserContext';
+import MemberApiService from '../../services/member-api-service'
 
 function Profile(props) {
 	// let { handle } = props.member;
-	console.log(props.member)
+	// console.log(props.member)
+	const user = useContext(UserContext)
+	
+	
+	const followMember=()=>{
+		MemberApiService.addFollowedMembers(props.member.id); 
+	}
+
 	return (
 		<div className='main-profile'>
 			<img
@@ -101,6 +110,7 @@ function Profile(props) {
 				}}>
 				<Button className="profile-compare" id='compare-button'>Compare With Another Member</Button>
 			</Link>
+			{user.user.id && <Button className="add-member-following" onClick={followMember}>Follow Congress Member</Button>}
 		</div>
 	);
 }
