@@ -17,8 +17,21 @@ nav {
 }
 
 .title > a {
-	text-decoration-line: none;
+  transition-property: color, text-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  text-decoration-line: none;
 }
+
+.title > a:hover {
+  color: #fc3c3c;
+  text-shadow: 1px -1px #f6f6f6c9;
+}
+
+.title > a > .little {
+  font-size: 30px;
+}
+
 
 .logged-in-header > a,
 .logged-out-header > a {
@@ -54,6 +67,7 @@ nav {
   box-shadow: 0 1px #333;
 }
 
-header a{
+header a {
   color: #f6f6f6;
 }
+

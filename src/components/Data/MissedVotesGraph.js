@@ -79,6 +79,7 @@ export default class MissedVotesGraph extends Component {
       .attr('y', (y(dataset[0]) - dataset[0]) - 5 + 'px')
       .attr('fill', 'red')
       .text(dataset[0].toFixed(2)+'%');
+  }
 
     d3.select("#graph")
       .append('text')

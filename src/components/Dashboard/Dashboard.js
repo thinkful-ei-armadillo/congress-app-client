@@ -1,15 +1,17 @@
-import React from "react";
-import MemberSearch from "../Member/MemberSearch";
-import StateSearch from "../Member/StateSearch";
-import LeaderBoard from "../LeaderBoard/LeaderBoard";
-import CongressStatus from "../CongressStatus/CongressStatus";
-import "./Dashboard.css";
-import MissedVotesGraph from "../Data/MissedVotesGraph";
+import React from 'react';
+import MemberSearch from '../Member/MemberSearch';
+import StateSearch from '../Member/StateSearch';
+import LeaderBoard from '../LeaderBoard/LeaderBoard';
+import CongressStatus from '../CongressStatus/CongressStatus';
+import Committees from "../Committees/Committees";
+import './Dashboard.css';
+import MissedVotesGraph from '../Data/MissedVotesGraph';
 
 function Dashboard(props) {
+
   return (
-    <div className="dashboard">
-      <div className="col1">
+    <div className='dashboard'>
+      <div className='col1'>
         <MemberSearch />
         <br />
         <br />
@@ -22,8 +24,11 @@ function Dashboard(props) {
         <CongressStatus />
         <br />
         <br />
+        <Committees />
+				<br />
+				<br />
       </div>
-      <div className="col2">
+      <div className='col2'>
         <LeaderBoard />
         <br />
         <br />
