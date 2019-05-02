@@ -15,10 +15,9 @@ export default function Committees(props) {
 			// console.log(committee);
 			return (
 				<li className="committee-info" key={committee.committee_id}>
-					<div className="committee-name">
-						<b>Name: </b>
+					<h3 className="committee-name">
 						{committee.committee_name}
-					</div>
+					</h3>
 					<div className="committee-chamber">
             <b>Chamber: </b>
             {committee.committee_chamber}
@@ -38,9 +37,7 @@ export default function Committees(props) {
 
   return (
     <div className="committees-component">
-      <p>
-        <b>Committees</b>
-      </p>
+      <h2>Committees</h2>
       <div>{committees && <ul className='committee-list'>{renderCommittees()}</ul>}</div>
     </div>
   );

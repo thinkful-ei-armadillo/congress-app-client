@@ -7,7 +7,8 @@
   color: #f6f6f6;
 }
 
-.congress-status-component > p {
+.congress-status-component > h2 {
+  color: #f6f6f6;
   font-family: 'Julius Sans One', sans-serif;
   text-align: center;
 }
@@ -42,5 +43,11 @@
 }
 
 .bill-sponsor a, .bill-sponsor p{
+  color: #f6f6f6;
+}
+
+.bill-title {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
   color: #f6f6f6;
 }
