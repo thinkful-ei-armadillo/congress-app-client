@@ -1,5 +1,5 @@
-#graph  {
-  border: 2px solid #777;
+#graph {
+  /* border: 2px solid #777; */
   border-radius: 2px;
 }
 
@@ -12,13 +12,13 @@ rect {
 }
 
 #repub-key {
-  fill: red
+  fill: red;
 }
 
 #dem-key {
-  fill: blue
+  fill: blue;
 }
 
 #ind-key {
-  fill: green
+  fill: green;
 }

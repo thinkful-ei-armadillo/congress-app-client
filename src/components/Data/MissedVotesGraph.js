@@ -10,18 +10,20 @@ export default class MissedVotesGraph extends Component {
     console.log(dataset);
 
     const h = 200;
-    const w = 200;
+    const w = 300;
 
+    const x = d3.scaleLinear().range([0, w]);
     const y = d3.scaleLinear().range([h, 0]);
-    const valueLine = d3.line().y(function(d) {
-      return y(d);
-    });
+    // const valueLine = d3.line().y(function(d) {
+    //   return y(d);
+    // });
 
     y.domain([
       0,
-      d3.max(dataset, function(d) {
-        return d;
-      })
+      5
+      // d3.max(dataset, function(d) {
+      //   return d;
+      // })
     ]);
 
     const svgGraph = d3
@@ -36,8 +38,8 @@ export default class MissedVotesGraph extends Component {
       .append("rect")
       .attr("width", 40)
       .attr("height", 200)
-      .attr("x", (d, i) => i * 60 + 20)
-      .attr("y", d => h - d * 30 + "px")
+      .attr("x", (d, i) => i * 60 + 85)
+      .attr("y", d => y(d) - d + "px")
       .attr("fill", function(d, i) {
         if (i === 0) {
           return "red";
@@ -48,29 +50,36 @@ export default class MissedVotesGraph extends Component {
         }
       });
 
-    d3.select("#graph")
-      .append("path")
-      .data([dataset])
-      .attr("class", "line")
-      .attr("d", valueLine);
+    // d3.select("#graph")
+    //   .append("path")
+    //   .data([dataset])
+    //   .attr("class", "line")
+    //   .attr("d", valueLine);
 
     d3.select("#graph")
-
       .append("g")
       .style("fill", "black")
+      .attr("transform", `translate(45, ` + -6 + ")")
       .call(d3.axisLeft(y));
+
+    d3.select("#graph")
+      .append("g")
+      .attr("transform", `translate(39, ` + (h - 5) + ")")
+      .style("fill", "black")
+      .call(d3.axisBottom(x));
 
     d3.select("#graph")
       .append("text")
       .style("color", "black")
       .attr("transform", "rotate(-90)")
-      .attr("y", -50)
+      .attr("y", -5)
       .attr("x", -100)
       .attr("dy", "1em")
-      // .style("text-anchor", "middle")
+      .style("text-anchor", "middle")
       .text("Percentage");
 
-    const tooltips = svgGraph
+    // const tooltips = svgGraph
+    d3.select("#graph")
       .selectAll("title")
       .data(dataset)
       .enter()
