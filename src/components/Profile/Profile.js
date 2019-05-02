@@ -52,13 +52,13 @@ function Profile(props) {
 							href={`https://youtube.com/${props.member.youtube_account}`}>
 							<i className="fab fa-youtube" />
 						</a>
+						{/* <script src="https://apis.google.com/js/platform.js" />
 						<div
 							class="g-ytsubscribe"
 							data-channel={`${props.member.youtube_account}`}
 							data-layout="full"
 							data-count="hidden"
-						/>
-						<script src="https://apis.google.com/js/platform.js" />
+						/> */}
 					</section>
 				)}
 				{!props.member.facebook_account ? (
