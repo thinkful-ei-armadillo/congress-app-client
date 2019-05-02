@@ -3,6 +3,7 @@ import * as d3 from "d3";
 
 export default class ProfileVotes extends Component {
   componentDidMount() {
+
     const values = Object.values(this.props);
     console.log(values);
     values.push(1 - values[0]);
@@ -39,7 +40,6 @@ export default class ProfileVotes extends Component {
       .enter()
       .append("g")
       .attr("class", "arc");
-
     g.append("path")
       .attr("d", arc)
       .style("fill", function(d) {
@@ -52,29 +52,3 @@ export default class ProfileVotes extends Component {
     return <div id="profile-votes-graph" />;
   }
 }
-
-// const width = 480;
-// const height = 225;
-// const radius = Math.min(width, height) / 2;
-
-// const svgGraph = d3
-//   .select("#profile-votes-graph")
-//   .append("svg")
-//   .attr("width", width)
-//   .attr("height", height);
-
-// const pie = d3.layout
-//   .pie()
-//   .sort(null)
-//   .value(function(d) {
-//     return d;
-//   });
-
-// const arc = d3.svg
-//   .arc()
-//   .outerRadius(radius * 0.6)
-//   .innerRadius(radius * 0.3);
-// const outerArc = d3.svg
-//   .arc()
-//   .outerRadius(radius * 0.5)
-//   .innerRadius(radius * 0.5);
