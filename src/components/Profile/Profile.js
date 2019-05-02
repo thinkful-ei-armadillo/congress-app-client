@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
-import { FacebookProvider, Page } from "react-facebook";
 import { Button } from "../Utils/Utils";
 import "./Profile.css";
 
@@ -31,35 +30,26 @@ function Profile(props) {
 					""
 				) : (
 					<section className="twitter-links">
-						<a
+						{/* <a
 							className="twitter"
 							href={`https://twitter.com/${props.member.twitter_account}`}>
 							<i className="fab fa-twitter" />
-						</a>
+						</a> */}
 						<TwitterTimelineEmbed
 							sourceType="profile"
-							screenName={`RepJohnJoyce`}
-							options={{ height: 400 }} //height >= 200, width >= 220
+							screenName={`${props.member.twitter_account}`}
+							options={{ height: 400, width: 220 }}
 						/>
 					</section>
 				)}
 				{!props.member.youtube_account ? (
 					""
 				) : (
-					<section className="youtube-links">
 						<a
 							className="youtube"
 							href={`https://youtube.com/${props.member.youtube_account}`}>
 							<i className="fab fa-youtube" />
 						</a>
-						{/* <script src="https://apis.google.com/js/platform.js" />
-						<div
-							class="g-ytsubscribe"
-							data-channel={`${props.member.youtube_account}`}
-							data-layout="full"
-							data-count="hidden"
-						/> */}
-					</section>
 				)}
 				{!props.member.facebook_account ? (
 					""
