@@ -5,24 +5,21 @@ import MemberListItem from "./MemberListItem";
 import "./MemberListPage.css";
 
 export default class MemberListPage extends Component {
-	renderMembers() {
-		if (this.props.members === null) {
-			return (
-				<div className="no-search-feedback">Please Input a Search Above</div>
-			);
-		}
-		// else if (this.props.members === []) {
-		// 	return <div className="no results">No Results</div>;
-		// }
-		else {
-			return this.props.members.map(member => (
-				<div key={member.id} id="search-results">
-					<MemberListItem key={member.id} member={member} />
-				</div>
-			));
-		}
-	}
-	render() {
-		return <div className="container">{this.renderMembers()}</div>;
-	}
+  renderMembers() {
+    if (this.props.members === null) {
+      return <div id='no-search-feedback'></div>;
+    } else if (this.props.members.length === 0) {
+      return <div id='no-results-feedback'>No Results. Please Retry With a New Search.</div>;
+    }
+    else {
+      return this.props.members.map(member => (
+        <div key={member.id} className='search-results'>
+          <MemberListItem key={member.id} member={member} />
+        </div>
+      ));
+    }
+  }
+  render() {
+    return <div id='search-results-container'>{this.renderMembers()}</div>;
+  }
 }

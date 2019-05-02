@@ -27,10 +27,9 @@ export default function CongressStatus(props) {
 			// console.log(bill);
 			return (
 				<li className="bill-info" key={bill.id}>
-					<div className="bill-title">
-						<b>Title: </b>
-						{bill.title}
-					</div>
+					<h3 className="bill-title">
+					<b>Title:</b> {bill.title}
+					</h3>
 					<div className="bill-introduced">
 						<b>Introduced: </b>
 						<Moment fromNow ago>
@@ -53,9 +52,7 @@ export default function CongressStatus(props) {
   };
   return (
     <div className="congress-status-component">
-      <p>
-        <b>What's happening on the floor?</b>
-      </p>
+      <h2>What's happening on the floor?</h2>
       <div>{bills && <ul className="bill-list">{renderBills()}</ul>}</div>
     </div>
   );

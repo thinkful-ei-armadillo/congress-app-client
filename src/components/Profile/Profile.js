@@ -38,8 +38,8 @@ function Profile(props) {
 						</a>
 						<TwitterTimelineEmbed
 							sourceType="profile"
-							screenName={`${props.member.twitter_account}`}
-							options={{ height: 400 }}
+							screenName={`RepJohnJoyce`}
+							options={{ height: 400 }} //height >= 200, width >= 220
 						/>
 					</section>
 				)}
