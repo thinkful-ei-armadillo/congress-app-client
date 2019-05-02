@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
+import { Button } from "../Utils/Utils";
 import "./Profile.css";
-import { Button } from '../Utils/Utils';
 
 function Profile(props) {
-	// let { handle } = props.member;
-	console.log(props.member)
 	return (
-		<div className='main-profile'>
+		<div className="main-profile">
 			<img
 				className="profile-picture"
 				alt={props.member.alt}
@@ -30,20 +29,27 @@ function Profile(props) {
 				{!props.member.twitter_account ? (
 					""
 				) : (
-					<a
-						className="twitter"
-						href={`https://twitter.com/${props.member.twitter_account}`}>
-						<i className="fab fa-twitter" />
-					</a>
+					<section className="twitter-links">
+						{/* <a
+							className="twitter"
+							href={`https://twitter.com/${props.member.twitter_account}`}>
+							<i className="fab fa-twitter" />
+						</a> */}
+						<TwitterTimelineEmbed
+							sourceType="profile"
+							screenName={`${props.member.twitter_account}`}
+							options={{ height: 400, width: 220 }}
+						/>
+					</section>
 				)}
 				{!props.member.youtube_account ? (
 					""
 				) : (
-					<a
-						className="youtube"
-						href={`https://youtube.com/${props.member.youtube_account}`}>
-						<i className="fab fa-youtube" />
-					</a>
+						<a
+							className="youtube"
+							href={`https://youtube.com/${props.member.youtube_account}`}>
+							<i className="fab fa-youtube" />
+						</a>
 				)}
 				{!props.member.facebook_account ? (
 					""
@@ -82,15 +88,17 @@ function Profile(props) {
 			</section>
 			<section className="committee_chair">
 				{!props.member.committee_id ? (
-						""
-					) : (
-						<div>
-						<p>Chair of: The
-						{' '} 
-						<a href={`${props.member.committee_url}`} target='blank'>{props.member.committee_name}</a>
+					""
+				) : (
+					<div>
+						<p>
+							Chair of: The{" "}
+							<a href={`${props.member.committee_url}`} target="blank">
+								{props.member.committee_name}
+							</a>
 						</p>
-						</div>
-					)}
+					</div>
+				)}
 			</section>
 			<Link
 				to={{
@@ -99,7 +107,9 @@ function Profile(props) {
 						member: props.member
 					}
 				}}>
-				<Button className="profile-compare" id='compare-button'>Compare With Another Member</Button>
+				<Button className="profile-compare" id="compare-button">
+					Compare With Another Member
+				</Button>
 			</Link>
 		</div>
 	);
