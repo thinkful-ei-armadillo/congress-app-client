@@ -14,19 +14,15 @@ export default class MissedVotesGraph extends Component {
 
     const x = d3.scaleLinear().range([0, w]);
     const y = d3.scaleLinear().range([h, 0]);
-    // const valueLine = d3.line().y(function(d) {
-    //   return y(d);
-    // });
 
     y.domain([
       0,
-      5
-      // d3.max(dataset, function(d) {
-      //   return d;
-      // })
+      d3.max(dataset, function(d) {
+        return d + 1.5;
+      })
     ]);
 
-    const svgGraph = d3
+    d3
       .select("#missed-votes-graph-wrapper")
       .append("svg")
       .attr("width", w)
@@ -40,6 +36,15 @@ export default class MissedVotesGraph extends Component {
       .attr("height", 200)
       .attr("x", (d, i) => i * 60 + 85)
       .attr("y", d => y(d) - d + "px")
+      .attr("id", function(d, i) {
+        if (i === 0) {
+          return "repubs";
+        } else if (i === 1) {
+          return "dems";
+        } else if (i === 2) {
+          return "ind";
+        }
+      })
       .attr("fill", function(d, i) {
         if (i === 0) {
           return "red";
@@ -50,31 +55,10 @@ export default class MissedVotesGraph extends Component {
         }
       });
 
-    // d3.select("#graph")
-    //   .append("path")
-<<<<<<< HEAD
-    //   .data([dataset])
-    //   .attr("class", "line")
-    //   .attr("d", valueLine);
-
     d3.select("#graph")
       .append("g")
-      .style("fill", "black")
-      .attr("transform", `translate(45, ` + -6 + ")")
-=======
-      // .data([dataset])
-      // .attr("class", "line")
-      // .attr("d", valueLine);
-
-    d3.select("#graph")
-      .append("g")
->>>>>>> 97057c8c4515b0b5fa765146d31f04452f1a9fde
-      .call(d3.axisLeft(y));
-
-    d3.select("#graph")
-      .append("g")
-      .attr("transform", `translate(39, ` + (h - 5) + ")")
-      .style("fill", "black")
+      .attr("transform", `translate(35, ` + (h - 5) + ")")
+      .style("fill", "#333")
       .call(d3.axisBottom(x));
 
     d3.select("#graph")
@@ -85,63 +69,63 @@ export default class MissedVotesGraph extends Component {
       .attr("x", -100)
       .attr("dy", "1em")
       .style("text-anchor", "middle")
+      .style("font-size", "16")
       .text("Percentage");
 
-<<<<<<< HEAD
-    // const tooltips = svgGraph
-=======
->>>>>>> 97057c8c4515b0b5fa765146d31f04452f1a9fde
     d3.select("#graph")
-      .selectAll("title")
-      .data(dataset)
-      .enter()
-      .append("title")
-      .text(function(d, i) {
-        return "Missed voting % is " + d.toFixed(2) + "%";
-      });
+      .append('text')
+      .attr('x', 85)
+      // .attr('y', 70)
+      .attr('y', (y(dataset[0]) - dataset[0]) - 5 + 'px')
+      .attr('fill', 'red')
+      .text(dataset[0].toFixed(2)+'%');
 
     d3.select("#graph")
-      .selectAll("text")
-      .data(dataset)
-      .enter()
-      .append("text")
-      .attr("x", (d, i) => i * 30)
-      .attr("y", d => h - 2 * d - 3)
-      .text(d => d)
-      .attr("fill", "red")
-      .style("font-size", 25);
+      .append('text')
+      .attr('x', 145)
+      .attr('y', (y(dataset[1]) - dataset[1]) - 5)
+      .attr('fill', 'blue')
+      .text(dataset[1].toFixed(2)+'%');
+    
+    d3.select("#graph")
+      .append('text')
+      .attr('x', 205)
+      .attr('y', (y(dataset[2]) - dataset[2]) - 5)
+      .attr('fill', 'green')
+      .text(dataset[2].toFixed(2)+'%');
+
   }
-
-  // svg.selectAll('text')
-  //       .data(dataset)
-  //       .enter()
-  //       .append('text')
-  //       .attr('x',(d,i)=>d[0]+5)
-  //       .attr('y',(d,i)=>h-d[1])
-  //       .text((d)=>d[0]+','+d[1]);
 
   render() {
     return (
       <div id="missed-votes-graph">
-        <h3 id="missed-votes-title">Percentage of Missed Votes By Party</h3>
+        <h3 id="missed-votes-title">Average % of Missed Votes By Party</h3>
         <div id="missed-votes-graph-wrapper" />
-        <p>
-          <svg height="10" width="10">
-            <circle cx="10" cy="10" r="10" id="repub-key" />
-          </svg>{" "}
-          = Republican
+        <p className='legend'>
+          <span className='legend-item'>
+            <svg height="10" width="10">
+              <circle cx="10" cy="10" r="10" id="repub-key" />
+            </svg>{" "}
+            Republican{" "}
+          </span>
+          <span className='legend-item'>
+            <svg height="10" width="10">
+              <circle cx="10" cy="10" r="10" id="dem-key" />
+            </svg>{" "}
+            Democrats{" "}
+          </span>
+          <span className='legend-item'>
+            <svg height="10" width="10">
+              <circle cx="10" cy="10" r="10" id="ind-key" />
+            </svg>{" "}
+            Independent{" "}
+          </span>
         </p>
         <p>
-          <svg height="10" width="10">
-            <circle cx="10" cy="10" r="10" id="dem-key" />
-          </svg>{" "}
-          = Democrats
+          
         </p>
         <p>
-          <svg height="10" width="10">
-            <circle cx="10" cy="10" r="10" id="ind-key" />
-          </svg>{" "}
-          = Independent
+          
         </p>
         <br />
       </div>

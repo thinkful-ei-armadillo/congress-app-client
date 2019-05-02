@@ -20,10 +20,6 @@ rect {
 }
 
 #ind-key {
-<<<<<<< HEAD
-  fill: green;
-}
-=======
   fill: green
 }
 
@@ -33,5 +29,9 @@ rect {
 
 .domain { 
   stroke:#fff;
+  stroke-width: 0px;
 }
->>>>>>> 97057c8c4515b0b5fa765146d31f04452f1a9fde
+
+.legend-item {
+  margin-right: 5px;
+}
