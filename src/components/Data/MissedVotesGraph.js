@@ -4,6 +4,7 @@ import graphData from "../../services/graph-data-service";
 import "./Graph.css";
 
 export default class MissedVotesGraph extends Component {
+  
   async componentDidMount() {
     let dataset = await graphData.getNumbers();
     console.log(dataset);
@@ -67,7 +68,7 @@ export default class MissedVotesGraph extends Component {
       .style("text-anchor", "middle")
       .text("Percentage");
 
-    const tooltips = svgGraph
+    d3.select("#graph")
       .selectAll("title")
       .data(dataset)
       .enter()
@@ -76,7 +77,7 @@ export default class MissedVotesGraph extends Component {
         return "Missed voting % is " + d.toFixed(2) + "%";
       });
 
-    const labels = svgGraph
+    d3.select("#graph")
       .selectAll("text")
       .data(dataset)
       .enter()
