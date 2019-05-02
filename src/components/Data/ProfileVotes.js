@@ -20,11 +20,11 @@ export default class ProfileVotes extends Component {
     const arc = d3
       .arc()
       .outerRadius(radius - 10)
-      .innerRadius(0);
+      .innerRadius(65);
 
     const labelArc = d3
       .arc()
-      .outerRadius(radius - 40)
+      .outerRadius(radius)
       .innerRadius(radius - 40);
     const svg = d3
       .select("#profile-votes-graph")
