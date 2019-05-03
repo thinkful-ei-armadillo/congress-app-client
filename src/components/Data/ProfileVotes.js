@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as d3 from "d3";
+import './Graph.css';
 
 export default class ProfileVotes extends Component {
   componentDidMount() {

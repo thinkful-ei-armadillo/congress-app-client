@@ -76,13 +76,10 @@ function Profile(props) {
           Missed Voting Opportunities:{props.member.missed_votes}
         </p>
         <p className="missed_votes_pct">
-          {/* {" "} */}
           Missed Voting Opportunities:
           <ProfileVotes props={props.member.missed_votes_pct / 100} />
         </p>
-
         <p className="votes_with_party_pct">
-          {/* {" "} */}
           Votes with Party:
           <ProfileVotes props={props.member.votes_with_party_pct / 100} />
         </p>

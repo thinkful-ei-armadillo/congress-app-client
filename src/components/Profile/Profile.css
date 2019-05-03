@@ -1,5 +1,7 @@
 .main-profile {
 	font-size: 20px;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .main-profile > .profile-picture {
@@ -16,4 +18,8 @@
 
 .profile-compare {
 	color: #05004e;
-  }
+}
+
+.stats {
+
+}
