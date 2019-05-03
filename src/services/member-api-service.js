@@ -1,4 +1,5 @@
 import config from '../config';
+import TokenService from './token-service'
 
 const MemberApiService = {
   getMemberbyID(id) {
@@ -50,12 +51,13 @@ const MemberApiService = {
   },
 
   addFollowedMembers(id){
+    console.log(id)
     return fetch(`${config.API_ENDPOINT}/users/${id}/followed`,{
     method: 'POST',
       headers: {
         'content-type': 'application/json',
-      },
-      body: JSON.stringify(),
+        'authorization': `Bearer ${TokenService.getAuthToken()}`,
+      }
     })
       .then(res =>
         (!res.ok)
