@@ -6,7 +6,6 @@ import CongressStatus from "../CongressStatus/CongressStatus";
 import Committees from "../Committees/Committees";
 import "./Dashboard.css";
 import MissedVotesGraph from "../Data/MissedVotesGraph";
-import ProfileVotes from "../Data/ProfileVotes";
 
 function Dashboard(props) {
   return (

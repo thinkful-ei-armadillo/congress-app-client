@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as d3 from "d3";
 import './Graph.css';
 
-export default class ProfileVotes extends Component {
+export default class ProfileMissedVotes extends Component {
   componentDidMount() {
 
     const values = Object.values(this.props);
@@ -11,10 +11,10 @@ export default class ProfileVotes extends Component {
     console.log(values);
     const data = values.map(num => num * 100);
 
-    const width = 300;
-    const height = 300;
-    const radius = Math.min(width, height) / 2;
-    const color = d3.scaleOrdinal().range(["red", "blue"]);
+    const width = 100;
+    const height = 100;
+    const radius = Math.min(width, height) / 10;
+    const color = d3.scaleOrdinal().range(["green", "orange"]);
 
     const pie = d3.pie().value(function(d) {
       return d;
@@ -22,14 +22,14 @@ export default class ProfileVotes extends Component {
     const arc = d3
       .arc()
       .outerRadius(radius - 10)
-      .innerRadius(65);
+      .innerRadius(50);
 
     const labelArc = d3
       .arc()
       .outerRadius(radius)
       .innerRadius(radius - 40);
     const svg = d3
-      .select("#profile-votes-graph")
+      .select("#profile-missed-votes-graph")
       .append("svg")
       .attr("width", width)
       .attr("height", height)
@@ -50,6 +50,6 @@ export default class ProfileVotes extends Component {
 
   render() {
     // let dataset = this.props;
-    return <div id="profile-votes-graph" />;
+    return <div id="profile-missed-votes-graph" />;
   }
 }
