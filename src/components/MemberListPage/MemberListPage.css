@@ -10,6 +10,29 @@
   color: #fc3c3c;
 }
 
-#search-results {
-  font-size: 18px;
+#search-results-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.search-results {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background: #0f4471;
+  color: #f6f6f6;
+  padding: 3px 8px 4px 8px;
+  margin: 8px 6px 8px 6px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.search-results > a {
+  color: #f6f6f6;
+  text-decoration-line: none;
+}
+
+.search-results > a:hover {
+  text-decoration-line: underline;
 }

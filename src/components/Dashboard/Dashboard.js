@@ -1,43 +1,17 @@
-import React from 'react';
-// import { useReducer } from 'react';
-import MemberSearch from '../Member/MemberSearch';
-import StateSearch from '../Member/StateSearch';
-import LeaderBoard from '../LeaderBoard/LeaderBoard';
-import CongressStatus from '../CongressStatus/CongressStatus';
+import React from "react";
+import MemberSearch from "../Member/MemberSearch";
+import StateSearch from "../Member/StateSearch";
+import LeaderBoard from "../LeaderBoard/LeaderBoard";
+import CongressStatus from "../CongressStatus/CongressStatus";
 import Committees from "../Committees/Committees";
-import './Dashboard.css';
-import MissedVotesGraph from '../Data/MissedVotesGraph';
-// import MemberListPage from '../MemberListPage/MemberListPage';
-
-// const MemberContext = React.createContext(null);
+import "./Dashboard.css";
+import MissedVotesGraph from "../Data/MissedVotesGraph";
 
 function Dashboard(props) {
-
-//   const initialState = {
-//     members: null,
-//   }
-
-//   const UPDATE_MEMBERS = 'UPDATE_MEMBERS';
-
-// function reducer(state, action) {
-//   switch (action.type) {
-//     case UPDATE_MEMBERS:
-//       return {
-//         members: action.members,
-//       };
-//     default:
-//       return initialState;
-//   }
-// }
-
-//   const [members, setMembers] = React.useReducer(reducer, initialState)
   return (
-    <div className='dashboard'>
-      <div className='col1'>
+    <div className="dashboard">
+      <div className="col1">
         <MemberSearch />
-        {/* <MemberContext.Provider value={{ members, setMembers }}>
-          <MemberListPage members={members} />
-        </MemberContext.Provider> */}
         <br />
         <br />
         <StateSearch />
@@ -50,10 +24,10 @@ function Dashboard(props) {
         <br />
         <br />
         <Committees />
-				<br />
-				<br />
+        <br />
+        <br />
       </div>
-      <div className='col2'>
+      <div className="col2">
         <LeaderBoard />
         <br />
         <br />

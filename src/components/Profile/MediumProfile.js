@@ -24,17 +24,16 @@ function MediumProfile(props) {
 				{props.member.suffix} ({props.member.party})
 			</Link>
 			<section className="member-social-media">
-				<p className="phonenum">{props.member.phone}</p>
-				<p className="faxnum">{props.member.fax}</p>
+				<p className="phonenum">Phone: {props.member.phone}</p>
 			</section>
 			<section className="stats">
 				<p className="missed_votes_pct">
 					{" "}
-					Missed Voting Opportunities %: {props.member.missed_votes_pct}
+					Missed Votes: {props.member.missed_votes_pct}%
 				</p>
 				<p className="votes_with_party_pct">
 					{" "}
-					Votes with Party %: {props.member.votes_with_party_pct}
+					Votes with Party: {props.member.votes_with_party_pct}%
 				</p>
 			</section>
 		</div>

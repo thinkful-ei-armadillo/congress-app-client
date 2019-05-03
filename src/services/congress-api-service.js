@@ -1,8 +1,8 @@
 import config from '../config';
 
 const CongressApiService = {
-  getBills() {
-    return fetch(`${config.API_ENDPOINT}/bills`, {
+  getBills(filter) {
+    return fetch(`${config.API_ENDPOINT}/bills?filter=${filter}`, {
       method: 'GET'
     }).then(res => {
       if (!res.ok) {

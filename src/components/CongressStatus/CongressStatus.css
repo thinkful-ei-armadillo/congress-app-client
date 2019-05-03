@@ -7,40 +7,64 @@
   color: #f6f6f6;
 }
 
-.congress-status-component > p {
+.congress-status-component header > h2 {
+  color: #f6f6f6;
   font-family: 'Julius Sans One', sans-serif;
   text-align: center;
+  width: 100%;
+  margin-top: 22px;
+}
+
+.congress-status-component header {
+}
+
+.bill-filter {
+  margin-top: 5px;
+  width: 150px;
+  height: 30px;
+  font-size: 16px;
+  padding: 10px;
+  background: #fff;
+  color: #05004e;
+  margin-right: 10px;
 }
 
 .congress-status-component ul {
-	max-height: 550px;
-	overflow: scroll;
-	border-top: 1px solid #ccc;
-	padding-left: 0px;
+  max-height: 550px;
+  overflow: scroll;
+  border-top: 1px solid #ccc;
+  padding-left: 0px;
   margin-bottom: 0px;
 }
 
 .bill-list li {
-	border-bottom: 1px solid #f6f6f6;
+  border-bottom: 1px solid #f6f6f6;
 }
 
 .bill-list li:last-child {
-	border-bottom: none;
+  border-bottom: none;
 }
 
 .bill-info {
-	text-align: left;
+  text-align: left;
   padding: 25px;
   padding-top: 30px;
 }
 .bill-info div {
-	padding: 6px;
+  padding: 6px;
 }
 
 .bill-info b {
   color: #fc3c3c;
 }
 
-.bill-sponsor a, .bill-sponsor p{
+.bill-sponsor a,
+.bill-sponsor p {
+  color: #f6f6f6;
+}
+
+.bill-title {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
   color: #f6f6f6;
 }

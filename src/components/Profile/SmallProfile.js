@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Profile.css";
 
 function SmallProfile(props) {
@@ -18,17 +18,18 @@ function SmallProfile(props) {
 					props.member.id
 				}.jpg`}
 			/>
-			<p className="name">
-				{props.member.short_title}{' '} 
-				{firstInitial}
-				{"."}
-				{props.member.last_name}
-				{props.member.suffix} ({props.member.party})
-			</p>
+			<Link to={`/profile/${props.member.id}`} className="name">
+				<p className="name">
+					{props.member.short_title}{' '} 
+					{firstInitial}
+					{"."}
+					{props.member.last_name}
+					{props.member.suffix} ({props.member.party})
+				</p>
+			</Link>
 			<section className="stats">
 				<p className="missed_votes_pct">
-					{" "}
-					Missed {props.member.missed_votes_pct} %
+					Missed {props.member.missed_votes_pct}%
 				</p>
 			</section>
 		</div>

@@ -13,13 +13,13 @@ export default class MemberListPage extends Component {
     }
     else {
       return this.props.members.map(member => (
-        <div key={member.id} id='search-results'>
+        <div key={member.id} className='search-results'>
           <MemberListItem key={member.id} member={member} />
         </div>
       ));
     }
   }
   render() {
-    return <div className="container">{this.renderMembers()}</div>;
+    return <div id='search-results-container'>{this.renderMembers()}</div>;
   }
 }
