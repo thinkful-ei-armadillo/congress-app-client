@@ -7,7 +7,6 @@ import "./Following.css";
 export default function Following(props) {
   const [members, setMembers] = useState(null);
   const user = useContext(UserContext)
-  console.log(user);
 
   useEffect(()=>{
     MemberApiService.getFollowedMembers(user.user.id).then(data=>setMembers(data))

@@ -21,7 +21,7 @@ export default class ProfileRoute extends Component {
       "Now Loading..."
     ) : (
       <section className="member-profile-container">
-        <Profile member={this.state.member} props={this.props}/>
+        <Profile member={this.state.member} />
       </section>
     );
   }

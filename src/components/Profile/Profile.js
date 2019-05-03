@@ -1,70 +1,13 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import './Profile.css';
-import { Button } from '../Utils/Utils';
-import UserContext from '../../contexts/UserContext';
-import MemberApiService from '../../services/member-api-service';
-import MemberContext from '../../contexts/MemberContext';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Profile.css";
+import { Button } from "../Utils/Utils";
 import ProfileMissedVotes from "../Data/ProfileMissedVotes";
 import ProfilePartyVotes from '../Data/ProfilePartyVotes';
 
 function Profile(props) {
   // let { handle } = props.member;
-  // console.log(props.member)
-  const user = useContext(UserContext);
-  const [followedMembers, setFollowedMembers] = useState(null);
-  const [isFollowing, setFollowing] = useState(false);
-  // const newMember = useContext(MemberContext)
-
-  const followMember = () => {
-    MemberApiService.addFollowedMembers(props.member.id);
-    setFollowing(true);
-    // look at TJ's workshop, wk8 on hooks
-    // newMember.setMember();
-    //props.props.history.push('/dashboard');
-  };
-
-  const unFollowMember = () => {
-    MemberApiService.removeFollowedMembers(props.member.id);
-    setFollowing(false);
-    //props.props.history.push('/dashboard');
-  };
-
-  useEffect(() => {
-    MemberApiService.getFollowedMembersId(user.user.id).then(data => {
-      setFollowedMembers(data);
-      data.forEach(e => {
-        if (e.member_id === props.member.id) {
-          setFollowing(true);
-        }
-      });
-      /*followedMembers.forEach(e => {
-        if (e.member_id === props.member.id) {
-          setFollowing(true);
-        }
-      });*/
-    });
-  }, []);
-
-  // members id with getFollowedMemebers
-  // if array.includes(props.member.id)
-
-  const renderFollowButton = () => {
-    if (isFollowing) {
-      return (
-        <Button className="add-member-following" onClick={unFollowMember}>
-          Unfollow Congress Member
-        </Button>
-      );
-    } else {
-      return (
-        <Button className="add-member-following" onClick={followMember}>
-          Follow Congress Member
-        </Button>
-      );
-    }
-  };
-  
+  console.log(props.member);
   return (
     <div className="main-profile">
       <img
@@ -73,21 +16,21 @@ function Profile(props) {
         onError={e => {
           e.target.onerror = null;
           e.target.src =
-            'https://t3.ftcdn.net/jpg/01/87/10/40/240_F_187104027_8i2JbFDBB5jB7R65Ce464yRs4gfNbR3Z.jpg';
+            "https://t3.ftcdn.net/jpg/01/87/10/40/240_F_187104027_8i2JbFDBB5jB7R65Ce464yRs4gfNbR3Z.jpg";
         }}
         src={`https://theunitedstates.io/images/congress/225x275/${
           props.member.id
         }.jpg`}
       />
       <p className="name">
-        {props.member.short_title} {props.member.first_name}{' '}
+        {props.member.short_title} {props.member.first_name}{" "}
         {props.member.middle_name} {props.member.last_name}
         {props.member.suffix} ({props.member.party})
       </p>
       <p className="dob">Born: {props.member.date_of_birth}</p>
       <section className="member-social-media">
         {!props.member.twitter_account ? (
-          ''
+          ""
         ) : (
           <a
             className="twitter"
@@ -97,7 +40,7 @@ function Profile(props) {
           </a>
         )}
         {!props.member.youtube_account ? (
-          ''
+          ""
         ) : (
           <a
             className="youtube"
@@ -107,7 +50,7 @@ function Profile(props) {
           </a>
         )}
         {!props.member.facebook_account ? (
-          ''
+          ""
         ) : (
           <a
             className="facebook"
@@ -166,7 +109,6 @@ function Profile(props) {
           Compare With Another Member
         </Button>
       </Link>
-      {user.user.id && isFollowing !== null && renderFollowButton()}
     </div>
   );
 }
