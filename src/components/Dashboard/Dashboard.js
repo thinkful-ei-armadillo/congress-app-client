@@ -21,9 +21,6 @@ function Dashboard(props) {
         <MissedVotesGraph />
         <br />
         <br />
-        <ProfileVotes props={0.4} />
-        <br />
-        <br />
         <CongressStatus />
         <br />
         <br />

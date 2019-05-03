@@ -34,22 +34,36 @@ const graphData = {
     }
 
     console.log('republican total ', repubAvg);
-    repubAvg = repubAvg / repubArr.length;
+    if (repubAvg !== 0) {
+      repubAvg = repubAvg / repubArr.length;
+    }
     
     for (let k = 0; k < demArr.length; k++) {
       demAvg += parseInt(demArr[k], 10);
     }
 
     console.log('democrat total ', demAvg);
-    demAvg = demAvg / demArr.length;
+    if (demAvg !== 0) {
+      demAvg = demAvg / demArr.length;
+    }
 
     for (let l = 0; l < indArr.length; l++) {
       indAvg += parseInt(indArr[l], 10);
     }
 
     console.log('independent total ', indAvg);
-    indAvg = indAvg / indArr.length;
 
+    if (indAvg !== 0) {
+      indAvg = indAvg / indArr.length;
+    }
+
+    // if (demAvg === NaN) {
+    //   demAvg = 0;
+    // }
+
+    // if (repubAvg === NaN) {
+    //   repubAvg = 0;
+    // }
 
     console.log({ repub: repubAvg, dem: demAvg, ind: indAvg })
 
