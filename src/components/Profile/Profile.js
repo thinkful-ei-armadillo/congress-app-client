@@ -30,14 +30,12 @@ function Profile(props) {
 
   useEffect(() => {
     MemberApiService.getFollowedMembersId(user.user.id).then(data => {
-      debugger;
       setFollowedMembers(data);
       data.forEach(e => {
         if (e.member_id === props.member.id) {
           setFollowing(true);
         }
       });
-      console.log(followedMembers);
       /*followedMembers.forEach(e => {
         if (e.member_id === props.member.id) {
           setFollowing(true);
@@ -50,7 +48,6 @@ function Profile(props) {
   // if array.includes(props.member.id)
 
   const renderFollowButton = () => {
-    debugger;
     if (isFollowing) {
       return (
         <Button className="add-member-following" onClick={unFollowMember}>
@@ -65,7 +62,6 @@ function Profile(props) {
       );
     }
   };
-  console.log(followedMembers);
   return (
     <div className="main-profile">
       <img
@@ -170,10 +166,6 @@ function Profile(props) {
         </Button>
       </Link>
       {user.user.id && isFollowing !== null && renderFollowButton()}
-      {/*console.log('member', props.member) &&
-        console.log('followedMembers', followedMembers) && (
-          // && (followedMembers.includes(props.member.id)) ?
-				// : */}
     </div>
   );
 }
