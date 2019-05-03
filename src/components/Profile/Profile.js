@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
 import { Button } from "../Utils/Utils";
-import ProfileVotes from "../Data/ProfileVotes";
+import ProfileMissedVotes from "../Data/ProfileMissedVotes";
+import ProfilePartyVotes from '../Data/ProfilePartyVotes';
 
 function Profile(props) {
   // let { handle } = props.member;
@@ -58,8 +59,8 @@ function Profile(props) {
             <i className="fab fa-facebook" />
           </a>
         )}
-        <p className="phonenum">{props.member.phone}</p>
-        <p className="faxnum">{props.member.fax}</p>
+        <p className="phonenum">Phone: {props.member.phone}</p>
+        {!props.member.fax ? '' : <p className="faxnum"> Fax: {props.member.fax}</p>}
       </section>
       <section className="stats">
         <p className="seniority"> Years in Senate: {props.member.seniority}</p>
@@ -73,21 +74,14 @@ function Profile(props) {
         </p>
         <p className="missed_votes">
           {" "}
-          Missed Voting Opportunities:{props.member.missed_votes}
+          Missed Votes: {props.member.missed_votes}
         </p>
-        <p className="missed_votes_pct">
-          {/* {" "} */}
-          Missed Voting Opportunities:
-          <ProfileVotes props={props.member.missed_votes_pct / 100} />
-        </p>
-
-        <p className="votes_with_party_pct">
-          {/* {" "} */}
-          Votes with Party:
-          <ProfileVotes props={props.member.votes_with_party_pct / 100} />
-        </p>
+        <p className="missed_votes_pct">Proportion of Missed Voting Opportunities: {props.member.missed_votes_pct}%</p>
+        <ProfileMissedVotes props={props.member.missed_votes_pct / 100} />
+        <p className="votes_with_party_pct">Votes with Party: {props.member.votes_with_party_pct}%</p>
+          <ProfilePartyVotes props={props.member.votes_with_party_pct / 100} />
       </section>
-
+          <br />
       <section className="committee_chair">
         {!props.member.committee_id ? (
           ""
@@ -102,6 +96,7 @@ function Profile(props) {
           </div>
         )}
       </section>
+      <br />
       <Link
         to={{
           pathname: "/compare",
