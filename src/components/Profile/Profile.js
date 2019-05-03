@@ -1,19 +1,36 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
 import { Button } from '../Utils/Utils';
 import UserContext from '../../contexts/UserContext';
 import MemberApiService from '../../services/member-api-service'
+import MemberContext from '../../contexts/MemberContext';
 
 function Profile(props) {
 	// let { handle } = props.member;
 	// console.log(props.member)
 	const user = useContext(UserContext)
-	
+	const [followedMembers, setFollowedMembers] = useState(null);
+	// const newMember = useContext(MemberContext)
 	
 	const followMember=()=>{
-		MemberApiService.addFollowedMembers(props.member.id); 
+		MemberApiService.addFollowedMembers(props.member.id);
+		// look at TJ's workshop, wk8 on hooks
+		// newMember.setMember();
+		props.props.history.push('/dashboard');
 	}
+
+	const unFollowMember=()=>{
+		MemberApiService.removeFollowedMembers(props.member.id);
+		props.props.history.push('/dashboard');
+	}
+
+	useEffect(()=>{
+		MemberApiService.getFollowedMembersId(user.user.id).then(data=>setFollowedMembers(data))
+	  }, [])
+
+	// members id with getFollowedMemebers
+	// if array.includes(props.member.id)
 
 	return (
 		<div className='main-profile'>
@@ -110,7 +127,12 @@ function Profile(props) {
 				}}>
 				<Button className="profile-compare" id='compare-button'>Compare With Another Member</Button>
 			</Link>
-			{user.user.id && <Button className="add-member-following" onClick={followMember}>Follow Congress Member</Button>}
+			{user.user.id &&
+			// console.log('member', props.member) &&
+			console.log('followedMembers', followedMembers) &&
+			// && (followedMembers.includes(props.member.id)) ? 
+			// <Button className="add-member-following" onClick={unFollowMember}>Unfollow Congress Member</Button>:
+			<Button className="add-member-following" onClick={followMember}>Follow Congress Member</Button>}
 		</div>
 	);
 }

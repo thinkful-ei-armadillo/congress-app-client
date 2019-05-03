@@ -50,10 +50,32 @@ const MemberApiService = {
     );
   },
 
+  getFollowedMembersId(id){
+    return fetch(`${config.API_ENDPOINT}/users/${id}/favorites`).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
+  },
+
   addFollowedMembers(id){
     console.log(id)
     return fetch(`${config.API_ENDPOINT}/users/${id}/followed`,{
     method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `Bearer ${TokenService.getAuthToken()}`,
+      }
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  },
+
+  removeFollowedMembers(id){
+    console.log(id)
+    return fetch(`${config.API_ENDPOINT}/users/${id}/followed`,{
+    method: 'DELETE',
       headers: {
         'content-type': 'application/json',
         'authorization': `Bearer ${TokenService.getAuthToken()}`,
