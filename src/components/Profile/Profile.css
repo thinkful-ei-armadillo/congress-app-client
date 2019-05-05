@@ -1,5 +1,8 @@
 .main-profile {
 	font-size: 20px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 100px;
 }
 
 .main-profile > .profile-picture {
@@ -9,11 +12,24 @@
 .twitter,
 .youtube,
 .facebook {
+	transition-property: color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
 	text-decoration: none;
 	color: #05004e;
-	margin: 2px;
+	margin: 5px;
+}
+
+.LeaderBoard > .MemberContainer > div > .name {
+	color: #f6f6f6;
+}
+
+.twitter:hover,
+.youtube:hover,
+.facebook:hover {
+	color: #0f4471;
 }
 
 .profile-compare {
 	color: #05004e;
-  }
+}

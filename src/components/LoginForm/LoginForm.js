@@ -1,42 +1,45 @@
-import React, { Component } from "react";
-import { Button, Input } from "../Utils/Utils";
-import AuthApiService from "../../services/auth-api-service";
-import "./LoginForm.css";
+import React, { Component } from 'react';
+import { Button, Input } from '../Utils/Utils';
+import AuthApiService from '../../services/auth-api-service';
+import UserContext from '../../contexts/UserContext';
+import './LoginForm.css';
 
 export default class LoginForm extends Component {
-	static defaultProps = {
-		onLoginSuccess: () => {}
-	};
+  static contextType = UserContext;
+  static defaultProps = {
+    onLoginSuccess: () => {}
+  };
 
-	state = { error: null };
+  state = { error: null };
 
-	handleSubmitJwtAuth = ev => {
-		ev.preventDefault();
+  handleSubmitJwtAuth = ev => {
+    ev.preventDefault();
 
-		const { user_name, password } = ev.target;
+    const { user_name, password } = ev.target;
 
-		this.setState({ error: null });
+    this.setState({ error: null });
 
-		console.log("login form submitted");
+    console.log('login form submitted');
 
-		AuthApiService.postLogin({
-			user_name: user_name.value,
-			password: password.value
-		})
-			.then(res => {
-				user_name.value = "";
-				password.value = "";
-				this.props.onLoginSuccess();
-			})
-			.catch(res => {
-				this.setState({ error: res.error });
-			});
-	};
+    AuthApiService.postLogin({
+      user_name: user_name.value,
+      password: password.value
+    })
+      .then(res => {
+        user_name.value = '';
+        password.value = '';
+        this.context.processLogin(res.authToken);
+        this.props.onLoginSuccess();
+      })
+      .catch(res => {
+        this.setState({ error: res.error });
+      });
+  };
 
-	render() {
-		const { error } = this.state;
-		return (
-			<form
+  render() {
+    const { error } = this.state;
+    return (
+      <form
 				className="LoginForm"
 				onSubmit={this.handleSubmitJwtAuth}
 				data-cy="login_form">
@@ -68,6 +71,6 @@ export default class LoginForm extends Component {
 					Login
 				</Button>
 			</form>
-		);
-	}
+    );
+  }
 }
