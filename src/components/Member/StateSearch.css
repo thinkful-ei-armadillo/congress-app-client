@@ -2,18 +2,38 @@
 	text-align: center;
 }
 
-.state-search-form > label {
-	font-size: 22px;
-  font-weight: 600;
+.search {
+	display: flex;
+	justify-content: center;
 }
 
-#state-search {
-	margin-top: 5px;
-	width: 150px;
-	height: 30px;
-	font-size: 16px;
+input,
+select {
+	height: 40px;
 	padding: 10px;
-	background: #fff;
+	margin: auto;
+	margin-top:10px;
+	border-radius: 4px;
+	border: solid 2px #c6c6c6;
+		font-size: 16px;
+
 	color: #05004e;
 }
 
+.address-search-form {
+	max-width: 240px;
+}
+
+.state-search-form > label,
+.address-search-form > label {
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.state-search {
+		background: #fff;
+	margin-top: 5px;
+	width: 150px;
+
+
+}
