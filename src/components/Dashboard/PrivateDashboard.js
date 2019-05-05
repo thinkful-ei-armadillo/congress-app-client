@@ -4,6 +4,8 @@ import StateSearch from "../Member/StateSearch";
 import LeaderBoard from "../LeaderBoard/LeaderBoard";
 import Following from "../Following/Following";
 import CongressStatus from '../CongressStatus/CongressStatus';
+import MissedVotesGraph from "../Data/MissedVotesGraph";
+import Committees from "../Committees/Committees";
 import "./Dashboard.css";
 
 function PrivateDashboard(props) {
@@ -19,7 +21,13 @@ function PrivateDashboard(props) {
 				<Following />
 				<br />
 				<br />
+				<MissedVotesGraph />
+				<br />
+				<br />
 				<CongressStatus />
+				<br />
+				<br />
+				<Committees />
 				<br />
 				<br />
 			</div>

@@ -3,8 +3,7 @@ import * as d3 from 'd3';
 import graphData from '../../services/graph-data-service';
 import './Graph.css'
 
-// async function MissedVotesGraph() {
-  export default class MissedVotesGraph extends Component {
+export default class MissedVotesGraph extends Component {
   
   async componentDidMount() {
     let dataset = await graphData.getNumbers();
@@ -57,7 +56,6 @@ import './Graph.css'
       .attr('x', (d,i)=>i*30)
       .attr('y', (d)=>h-2*d-3)
       .text((d)=>d)
-      .attr('fill', 'red')
       .style('font-size', 25);
   }
 
@@ -75,7 +73,7 @@ import './Graph.css'
 
     return (
       <div id='missed-votes-graph'>
-       <h3 id='missed-votes-title'>Percentage of Missed Votes By Party</h3>
+       <h3 id='missed-votes-title'>Average % of Missed Votes By Party</h3>
        <div id='missed-votes-graph-wrapper'></div>
        <p><svg height='10' width='10'><circle cx='10' cy='10' r='10' id='repub-key'></circle></svg> = Republican</p>
        <p><svg height='10' width='10'><circle cx='10' cy='10' r='10' id='dem-key'></circle></svg> = Democrats</p>
