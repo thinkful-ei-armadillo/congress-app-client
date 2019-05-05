@@ -9,10 +9,15 @@
 
 input,
 select {
+	height: 40px;
 	padding: 10px;
-	padding: 10px;
+	margin: auto;
+	margin-top:10px;
 	border-radius: 4px;
 	border: solid 2px #c6c6c6;
+		font-size: 16px;
+
+	color: #05004e;
 }
 
 .address-search-form {
@@ -26,12 +31,9 @@ select {
 }
 
 .state-search {
-	margin: auto;
+		background: #fff;
 	margin-top: 5px;
 	width: 150px;
-	height: 40px;
-	font-size: 16px;
-	padding: 10px;
-	background: #fff;
-	color: #05004e;
+
+
 }
