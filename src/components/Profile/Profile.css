@@ -20,7 +20,7 @@
 	margin: 5px;
 }
 
-.name {
+.LeaderBoard > .MemberContainer > div > .name {
 	color: #f6f6f6;
 }
 
