@@ -2,6 +2,7 @@ describe("User Login/Registry", function() {
 	it("Does not do much", function() {
 		expect(true).to.equal(true);
 	});
+
 	it("visits the login page and logs in using the demo account", function() {
 		cy.visit("/login");
 		cy.get("[data-cy=user_name]").type("demo123");
@@ -13,8 +14,5 @@ describe("User Login/Registry", function() {
 		cy.visit("/register");
 	});
 
-	it("Uses MemberSearch and is linked", function() {
-		cy.visit("/");
-		cy.get("[data-cy=search]").type("alex{enter}");
-	});
+
 });

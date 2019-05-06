@@ -7,3 +7,5 @@ describe("Dashboard", function() {
 		cy.visit("/");
 	});
 });
+// smoke tests for components that render on this page
+// ensure that clicking all buttons submits events or navigates to the correct pages

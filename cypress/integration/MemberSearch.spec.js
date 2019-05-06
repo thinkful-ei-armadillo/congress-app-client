@@ -20,4 +20,8 @@ describe("MemberSearch Unhappy", function() {
 		cy.get("[data-cy=search]").type("alexf{enter}");
 		cy.get(".member-search").contains("No results");
 	});
+		it("Uses MemberSearch and is linked", function() {
+		cy.visit("/");
+		cy.get("[data-cy=search]").type("alex{enter}");
+	});
 });
