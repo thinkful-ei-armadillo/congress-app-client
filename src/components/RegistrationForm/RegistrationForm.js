@@ -39,6 +39,7 @@ export default class RegistrationForm extends Component {
       <form
         className='RegistrationForm'
         onSubmit={this.handleSubmit}
+        data-cy="registration_form"
       >
         <div role='alert'>
           {error && <p className='red'>{error}</p>}
@@ -51,7 +52,8 @@ export default class RegistrationForm extends Component {
             name='full_name'
             type='text'
             required
-            id='RegistrationForm__full_name'>
+            id='RegistrationForm__full_name'
+            data-cy="full_name">
           </Input>
         </div>
         <div className='user_name'>
@@ -62,7 +64,8 @@ export default class RegistrationForm extends Component {
             name='user_name'
             type='text'
             required
-            id='RegistrationForm__user_name'>
+            id='RegistrationForm__user_name'
+            data-cy="user_name">
           </Input>
         </div>
         <div className='password'>
@@ -73,7 +76,8 @@ export default class RegistrationForm extends Component {
             name='password'
             type='password'
             required
-            id='RegistrationForm__password'>
+            id='RegistrationForm__password'
+            data-cy="password">
           </Input>
         </div><br/>
         <Button type='submit' id='register-button'>

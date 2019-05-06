@@ -10,8 +10,12 @@ describe("User Login/Registry", function() {
 		cy.get("[data-cy=login_form]").submit();
 	});
 
-	it("visits the register page", function() {
+	it("visits the register page and creates a new account", function() {
 		cy.visit("/register");
+		cy.get("[data-cy=full_name]").type("rocketPower");
+		cy.get("[data-cy=user_name]").type("RProcks");
+		cy.get("[data-cy=password]").type("rocketPower123!");
+		cy.get("[data-cy=registration_form]").submit();
 	});
 
 
