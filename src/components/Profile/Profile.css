@@ -33,3 +33,23 @@
 .profile-compare {
 	color: #05004e;
 }
+
+.add-member-following {
+	transition-property: background, border-radius, color, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  background: #ffffff;
+	color: #05004e;
+	margin-left: 5px;
+}
+
+.add-member-following:hover {
+  cursor: pointer;
+  color: #05004e;
+  background: #f6f6f6;
+  border-radius: 4px;
+  box-shadow: 0 1px #333;
+}

@@ -58,7 +58,7 @@ export default function CongressStatus(props) {
         <select
           className="bill-filter"
           onChange={e => {
-            debugger;
+            ;
             setBillFilter(e.target.value);
           }}
           value={billFilter}

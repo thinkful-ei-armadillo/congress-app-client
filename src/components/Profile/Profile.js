@@ -48,18 +48,18 @@ function Profile(props) {
     if (isFollowing) {
       return (
         <Button className="add-member-following" onClick={unFollowMember}>
-          Unfollow Congress Member
+          Unfollow
         </Button>
       );
     } else {
       return (
         <Button className="add-member-following" onClick={followMember}>
-          Follow Congress Member
+          Follow
         </Button>
       );
     }
   };
-  debugger;
+  ;
   return (
     <div className="main-profile">
       <img

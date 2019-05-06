@@ -1,10 +1,28 @@
+.following-wrapper {
+
+}
+
 .following-list {
   display: flex;
   flex-direction: row;
   padding: 0px;
 }
 
-.followed-member{
+.followed-member {
   list-style: none;
   margin-left: 15px;
+  background-color: #0f4471;
+  border-radius: 10px;
+  border: 3px solid #A6A6A6;
+  /* box-shadow: 2px 2px #A6A6A6; */
+}
+
+.followed-member > .medium-profile {
+  color: #f6f6f6;
+  padding: 20px 20px 10px 20px;
+  text-align: center;
+}
+
+.followed-member > .medium-profile > a {
+  color: #f6f6f6;
 }
