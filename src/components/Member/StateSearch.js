@@ -66,12 +66,16 @@ export default function StateSearch(props) {
 					</div>
 				</form> */}
 
-				<form className="state-search-form">
+				<form className="state-search-form"
+				data-cy="state_search_form">
 					<label htmlFor="state-search">
 						Search for a State's Representatives
 					</label>
 					<br />
-					<select onChange={e => setStateSearch(e)} className="state-search search">
+					<select 
+					onChange={e => setStateSearch(e)} 
+					className="state-search search"
+					data-cy="state-search">
 						<option value="">Select a State</option>
 						<option value="AL">Alabama</option>
 						<option value="AK">Alaska</option>
