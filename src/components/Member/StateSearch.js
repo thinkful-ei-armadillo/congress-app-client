@@ -34,13 +34,12 @@ export default function StateSearch(props) {
 	return (
 		<section className="state-reps">
 			<div className="search">
-				<form
+				{/* <form
 					className="address-search-form"
 					onSubmit={e => handleAddressSearch(e)}>
 					<label htmlFor="address-search-form">
 						Search for My Representatives
 					</label>
-					{/* <label htmlFor="address"> Address</label> */}
 					<input
 						type="text"
 						className="search-input"
@@ -48,7 +47,6 @@ export default function StateSearch(props) {
 						placeholder="Address"
 						required
 					/>
-					{/* <label htmlFor="city"> City</label> */}
 					<input
 						type="text"
 						className="search-input"
@@ -56,7 +54,6 @@ export default function StateSearch(props) {
 						placeholder="City"
 						required
 					/>
-					{/* <label htmlFor="state"> State</label> */}
 					<input
 						type="text"
 						className="search-input"
@@ -67,7 +64,7 @@ export default function StateSearch(props) {
 					<div className="input search-input">
 						<input type="submit" />
 					</div>
-				</form>
+				</form> */}
 
 				<form className="state-search-form">
 					<label htmlFor="state-search">
