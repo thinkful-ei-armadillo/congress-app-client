@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import MemberApiService from '../../services/member-api-service';
-import MemberListPage from '../MemberListPage/MemberListPage';
-import { Button } from '../Utils/Utils';
-import './MemberSearch.css';
+import React, { useState } from "react";
+import MemberApiService from "../../services/member-api-service";
+import MemberListPage from "../MemberListPage/MemberListPage";
+import { Button } from "../Utils/Utils";
+import "./MemberSearch.css";
 
 export default function MemberSearch(props) {
 	const [members, setMembers] = useState(null);
@@ -17,7 +17,7 @@ export default function MemberSearch(props) {
 	};
 
 	return (
-		<section className='member-search'>
+		<section className="member-search">
 			<form onSubmit={submitForm}>
 				<input
 					type='text'
@@ -27,25 +27,28 @@ export default function MemberSearch(props) {
 					className='searchbar'
 					list='members'
 					autoComplete='on'
+					data-cy="search"
 				/>
-				<datalist id='members'>
-					<option value='Nancy Pelosi'/>
-					<option value='Adam Schiff'/>
-					<option value='Mitch McConnell'/>
-					<option value='Jerrold Nadler'/>
-					<option value='Patrick Leahy'/>
-					<option value='Chuck Grassley'/>
-					<option value='Dianne Feinstein'/>
-					<option value='Patty Murray'/>
-					<option value='Susan Collins'/>
-					<option value='Chuck Schumer'/>
-					<option value='Mike Crapo'/>
-					<option value='Debbie Stabenow'/>
+				<datalist id="members">
+					<option value="Nancy Pelosi" />
+					<option value="Adam Schiff" />
+					<option value="Mitch McConnell" />
+					<option value="Jerrold Nadler" />
+					<option value="Patrick Leahy" />
+					<option value="Chuck Grassley" />
+					<option value="Dianne Feinstein" />
+					<option value="Patty Murray" />
+					<option value="Susan Collins" />
+					<option value="Chuck Schumer" />
+					<option value="Mike Crapo" />
+					<option value="Debbie Stabenow" />
 				</datalist>
-				<Button type='submit' id='member-search-submit'>Submit</Button>
+				<Button type="submit" id="member-search-submit">
+					Submit
+				</Button>
 			</form>
 			<br />
-			<MemberListPage members={members} />
+			<MemberListPage members={members} data-cy="results" />
 		</section>
 	);
 }

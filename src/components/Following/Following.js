@@ -9,7 +9,7 @@ export default function Following(props) {
   const user = useContext(UserContext);
 
   useEffect(() => {
-    debugger;
+    ;
     MemberApiService.getFollowedMembers(user.user.id).then(data =>
       setMembers(data)
     );

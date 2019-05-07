@@ -26,14 +26,18 @@ The Congress has a total of 535 members. It's hard to keep up to date on your re
 
 - [Create React App](https://github.com/facebook/create-react-app)
 - [React](https://github.com/facebook/react)
+- [React Context](https://reactjs.org/docs/context.html)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [Moment](https://momentjs.com/)
 - [React Moment](https://github.com/headzoo/react-moment)
 - [D3.js](https://d3js.org/)
+- [Cypress - Testing](https://www.cypress.io/)
 
-* [Node](https://github.com/nodejs/node)
-* [Express](https://github.com/expressjs/express)
-* [PostgreSQL](https://www.postgresql.org/)
-* [Knex](https://knexjs.org/)
+- [Node](https://github.com/nodejs/node)
+- [NPM](https://www.npmjs.com/)
+- [Express](https://github.com/expressjs/express)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Knex](https://knexjs.org/)
 
 [Server repo](https://github.com/thinkful-ei-armadillo/congress-app-server)
 

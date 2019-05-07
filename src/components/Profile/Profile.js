@@ -7,6 +7,7 @@ import ProfilePartyVotes from '../Data/ProfilePartyVotes';
 import UserContext from '../../contexts/UserContext';
 import MemberApiService from '../../services/member-api-service';
 import MemberContext from '../../contexts/MemberContext';
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 function Profile(props) {
   const user = useContext(UserContext);
@@ -47,18 +48,18 @@ function Profile(props) {
     if (isFollowing) {
       return (
         <Button className="add-member-following" onClick={unFollowMember}>
-          Unfollow Congress Member
+          Unfollow
         </Button>
       );
     } else {
       return (
         <Button className="add-member-following" onClick={followMember}>
-          Follow Congress Member
+          Follow
         </Button>
       );
     }
   };
-  debugger;
+  ;
   return (
     <div className="main-profile">
       <img
