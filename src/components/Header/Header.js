@@ -14,7 +14,7 @@ export default class Header extends Component {
   };
 
   renderLogoutLink() {
-    console.log(this.context.user.username);
+    // console.log(this.context.user.username);
     return (
       <div className="logged-in-header">
         {/* <p>Welcome, {this.context.user.username}</p> */}

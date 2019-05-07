@@ -10,7 +10,7 @@ const graphData = {
     let fullArr = await MemberApiService.getMembers('');
 
     for (let i = 0; i < fullArr.length; i++) {
-      if (fullArr[i].party === 'R' && fullArr[i].missed_votes_pct !== null) { 
+      if (fullArr[i].party === 'R' && fullArr[i].missed_votes_pct !== null) {
         repubArr.push(fullArr[i].missed_votes_pct);
       }
       if (fullArr[i].party === 'D' && fullArr[i].missed_votes_pct !== null) {
@@ -28,21 +28,21 @@ const graphData = {
     let repubAvg = 0;
     let demAvg = 0;
     let indAvg = 0;
-    
+
     for (let j = 0; j < repubArr.length; j++) {
       repubAvg += parseInt(repubArr[j], 10);
     }
 
-    console.log('republican total ', repubAvg);
+    // console.log('republican total ', repubAvg);
     if (repubAvg !== 0) {
       repubAvg = repubAvg / repubArr.length;
     }
-    
+
     for (let k = 0; k < demArr.length; k++) {
       demAvg += parseInt(demArr[k], 10);
     }
 
-    console.log('democrat total ', demAvg);
+    // console.log('democrat total ', demAvg);
     if (demAvg !== 0) {
       demAvg = demAvg / demArr.length;
     }
@@ -51,7 +51,7 @@ const graphData = {
       indAvg += parseInt(indArr[l], 10);
     }
 
-    console.log('independent total ', indAvg);
+    // console.log('independent total ', indAvg);
 
     if (indAvg !== 0) {
       indAvg = indAvg / indArr.length;
@@ -65,7 +65,7 @@ const graphData = {
     //   repubAvg = 0;
     // }
 
-    console.log({ repub: repubAvg, dem: demAvg, ind: indAvg })
+    // console.log({ repub: repubAvg, dem: demAvg, ind: indAvg })
 
     const result = [repubAvg, demAvg, indAvg]
     // return { repub: repubAvg, dem: demAvg, ind: indAvg };
