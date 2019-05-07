@@ -41,7 +41,6 @@ The Congress has a total of 535 members. It's hard to keep up to date on your re
 
 [Server repo](https://github.com/thinkful-ei-armadillo/congress-app-server)
 
-```
 ## Team
 
 - Project Manager [Daniel Ors](https://github.com/danielors)
@@ -49,4 +48,3 @@ The Congress has a total of 535 members. It's hard to keep up to date on your re
 - Testing Lead [Owen Cyr](https://github.com/owencyr)
 - Design Lead [Secil Reel](https://github.com/secilreel)
 - Marketing Lead [Payman Kossari](https://github.com/paypay43)
-```
