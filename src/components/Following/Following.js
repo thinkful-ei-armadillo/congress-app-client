@@ -5,12 +5,14 @@ import UserContext from "../../contexts/UserContext";
 import "./Following.css";
 
 export default function Following(props) {
-	const [members, setMembers] = useState(null);
+	const [members, setMembers] = useState([]);
 	const user = useContext(UserContext);
 
 	useEffect(() => {
-		MemberApiService.getFollowedMembers(user.user.id).then(data =>
-			setMembers(data)
+		MemberApiService.getFollowedMembers(user.user.id).then(
+			followedMembers => {
+				setMembers(followedMembers);
+			}
 		);
 	}, [user.user.id]);
 
@@ -25,15 +27,19 @@ export default function Following(props) {
 	};
 	return (
 		<div className="following-wrapper">
-			{!members ? (
+			{members.length > 0 ? (
 				<div>
 					<p>
 						<b>Congress Members I am following: </b>
 					</p>
-					<ul className="following-list">{() => renderFollowedMembers}</ul>
+					<ul className="following-list">{renderFollowedMembers()}</ul>
 				</div>
 			) : (
-				<div><p><b>Not following anyone yet</b></p></div>
+				<div>
+					<p>
+						<b>Not following anyone yet</b>
+					</p>
+				</div>
 			)}
 		</div>
 	);
