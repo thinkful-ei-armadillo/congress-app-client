@@ -58,12 +58,6 @@ export default function CongressStatus(props) {
         <select
           className="bill-filter"
           onChange={e => {
-<<<<<<< HEAD
-||||||| merged common ancestors
-            debugger;
-=======
-            ;
->>>>>>> 973c3b956a52e8614147cf12a24bb4036c164516
             setBillFilter(e.target.value);
           }}
           value={billFilter}
