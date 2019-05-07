@@ -37,7 +37,9 @@ export default function Committees(props) {
 
   return (
     <div className="committees-component">
-      <h2>Committees</h2>
+      <header>
+        <h2>Committees</h2>
+      </header>
       <div>{committees && <ul className='committee-list'>{renderCommittees()}</ul>}</div>
     </div>
   );

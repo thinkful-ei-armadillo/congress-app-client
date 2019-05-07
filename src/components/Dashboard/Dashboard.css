@@ -3,14 +3,38 @@
 	flex-direction: row;
 }
 
+.members-status{
+	display: flex;
+	flex-direction: column;
+	background-color: #f2f2f2;
+	color: #0f4471;
+	box-shadow: 5px 5px #f2f2f2;
+	padding: 8px;
+	margin-bottom: 5%;
+	border-radius: 5px;
+	border: 1px solid #cccccc;
+	text-align: center;
+}
+
 .col1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	height: 100%;
-	margin-right: 30px;
+	margin-right: 10px;
 }
 
 .col2 {
-	min-width: 200px;
+	min-width: 150px;
 }
+
+@media only screen and (max-width: 600px) {
+	.col2 {
+	  max-width: 200px;
+	  margin: 0 auto;
+	  margin-top: 5px;
+	  margin-right: 20px;
+	  margin-left: 10px;
+	  width: 75%;
+	}
+  }
