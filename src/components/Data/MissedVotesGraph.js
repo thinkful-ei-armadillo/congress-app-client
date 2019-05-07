@@ -4,10 +4,10 @@ import graphData from "../../services/graph-data-service";
 import "./Graph.css";
 
 export default class MissedVotesGraph extends Component {
-  
+
   async componentDidMount() {
     let dataset = await graphData.getNumbers();
-    console.log(dataset);
+    // console.log(dataset);
 
     const h = 200;
     const w = 300;
@@ -79,14 +79,14 @@ export default class MissedVotesGraph extends Component {
       .attr('y', (y(dataset[0]) - dataset[0]) - 5 + 'px')
       .attr('fill', 'red')
       .text(dataset[0].toFixed(2)+'%');
-      
+
     d3.select("#graph")
         .append('text')
         .attr('x', 145)
         .attr('y', (y(dataset[1]) - dataset[1]) - 5 + 'px')
         .attr('fill', 'blue')
         .text(dataset[1].toFixed(2)+'%');
-      
+
     d3.select("#graph")
         .append('text')
         .attr('x', 205)
@@ -122,10 +122,10 @@ export default class MissedVotesGraph extends Component {
           </span>
         </p>
         <p>
-          
+
         </p>
         <p>
-          
+
         </p>
         <br />
       </div>

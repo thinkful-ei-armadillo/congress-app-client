@@ -1,8 +1,4 @@
 describe("CompareMembers", function() {
-	it("Does not do much", function() {
-		expect(true).to.equal(true);
-	});
-
 	it("visits the CompareMembers page", function() {
 		cy.visit("/compare");
 	});

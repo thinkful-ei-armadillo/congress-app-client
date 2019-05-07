@@ -6,9 +6,9 @@ export default class ProfilePartyVotes extends Component {
   componentDidMount() {
 
     const values = Object.values(this.props);
-    console.log(values);
+    // console.log(values);
     values.push(1 - values[0]);
-    console.log(values);
+    // console.log(values);
     const data = values.map(num => num * 100);
 
     const width = 100;
