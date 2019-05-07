@@ -11,6 +11,7 @@ function Dashboard(props) {
   return (
     <div className="dashboard">
       <div className="col1">
+        <div className="members-status">
         <MemberSearch />
         <br />
         <br />
@@ -20,6 +21,7 @@ function Dashboard(props) {
         <MissedVotesGraph />
         <br />
         <br />
+        </div>
         <CongressStatus />
         <br />
         <br />
