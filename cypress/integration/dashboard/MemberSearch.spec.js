@@ -4,10 +4,14 @@ describe("MemberSearch smoke", function() {
 	});
 });
 describe("MemberSearch Happy", function() {
-	it("Returna MemberSearch with a linked profile that opens when clicked", function() {
+	it("Return MemberSearch with a linked profile that opens when clicked", function() {
 		cy.visit("/");
 		cy.get("[data-cy=search]").type("alex{enter}");
-		cy.get("[data-cy=state-search-result] > :nth-child(1) > a").click();
+		cy.get("[data-cy=search-result] > :nth-child(1) > a").click();
+	});
+	it("Uses MemberSearch and is linked", function() {
+		cy.visit("/");
+		cy.get("[data-cy=search]").type("alex{enter}");
 	});
 });
 describe("MemberSearch Unhappy", function() {
@@ -17,9 +21,5 @@ describe("MemberSearch Unhappy", function() {
 		cy.get(".member-search").contains(
 			"No Results. Please Retry With a New Search."
 		);
-	});
-	it("Uses MemberSearch and is linked", function() {
-		cy.visit("/");
-		cy.get("[data-cy=search]").type("alex{enter}");
 	});
 });
