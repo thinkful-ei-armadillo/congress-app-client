@@ -5,12 +5,10 @@ export default class MemberListItem extends Component {
   render() {
     let { member } = this.props;
     return (
-      <React.Fragment>
         <Link to={`/profile/${member.id}`}>
-          {member.short_title}{' '} 
+          {member.short_title}{' '}
           {member.first_name} {member.last_name}
         </Link>
-      </React.Fragment>
     );
   }
 }

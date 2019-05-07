@@ -1,8 +1,4 @@
 describe("StateSearch smoke", function() {
-	it("Does not do much", function() {
-		expect(true).to.equal(true);
-	});
-
 	it("visits the home page", function() {
 		cy.visit("/");
 	});
