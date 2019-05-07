@@ -60,8 +60,8 @@ describe("User Login/Registry", function() {
 
 	it("Logs in using the demo account", function() {
 		cy.visit("/login");
-		cy.get("[data-cy=user_name]").type("RProcks");
-		cy.get("[data-cy=password]").type("rocketPower123!");
+		cy.get("[data-cy=user_name]").type("demo123");
+		cy.get("[data-cy=password]").type("Demo123!");
 		cy.get("[data-cy=login_form]").submit();
 	});
 });
