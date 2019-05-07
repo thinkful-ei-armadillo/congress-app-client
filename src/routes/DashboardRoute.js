@@ -3,7 +3,7 @@ import Dashboard from '../components/Dashboard/Dashboard';
 
 function DashboardRoute(props) {
   return (
-    <section className="dashboard-section">
+    <section className="dashboard-section" data-cy='public'>
       <Dashboard />
     </section>
   );

@@ -45,8 +45,14 @@ export default function CompareMembers(props) {
     return (
       <React.Fragment>
         <div className="oneBlock">
-          <form onSubmit={submitForm}>
-            <input type="text" name="search" placeholder="Member of Congress" className='compare-text-input'/>
+          <form onSubmit={submitForm}
+          data-cy="compare_form">
+            <input 
+            type="text" 
+            name="search" 
+            placeholder="Member of Congress" 
+            className='compare-text-input'
+            data-cy="compare_search"/>
           </form><br />
           <CompareMemberListPage members={members} setDisplay={setDisplay} />
         </div>

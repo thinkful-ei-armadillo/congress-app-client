@@ -23,6 +23,6 @@ export default class MemberListPage extends Component {
 		}
 	}
 	render() {
-		return <div id="search-results-container">{this.renderMembers()}</div>;
+		return <div id="search-results-container" data-cy="search-result">{this.renderMembers()}</div>;
 	}
 }

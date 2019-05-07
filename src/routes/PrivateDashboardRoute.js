@@ -3,7 +3,7 @@ import PrivateDashboard from '../components/Dashboard/PrivateDashboard';
 
 function PrivateDashboardRoute(props) {
   return (
-    <section className="dashboard-section">
+    <section className="dashboard-section" data-cy='private'>
       <PrivateDashboard />
     </section>
   );
