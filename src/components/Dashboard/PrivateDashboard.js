@@ -7,21 +7,25 @@ import CongressStatus from '../CongressStatus/CongressStatus';
 import MissedVotesGraph from "../Data/MissedVotesGraph";
 import Committees from "../Committees/Committees";
 import "./Dashboard.css";
+import LeaderBoardMobile from "../LeaderBoard/LeaderBoardMobile";
 
 function PrivateDashboard(props) {
 	return (
 		<div className="dashboard">
 			<div className="col1">
-				<MemberSearch />
-				<br />
-				<br />
-				<StateSearch />
-				<br />
-				<br />
-				<Following />
-				<br />
-				<br />
-				<MissedVotesGraph />
+				<div className="members-status">
+					<MemberSearch />
+					<br />
+					<br />
+					<StateSearch />
+					<br />
+					<br />
+					<Following />
+					<br />
+					<br />
+					<MissedVotesGraph />
+				</div>
+				<LeaderBoardMobile />
 				<br />
 				<br />
 				<CongressStatus />

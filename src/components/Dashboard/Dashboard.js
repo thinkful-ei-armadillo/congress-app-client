@@ -6,22 +6,26 @@ import CongressStatus from "../CongressStatus/CongressStatus";
 import Committees from "../Committees/Committees";
 import "./Dashboard.css";
 import MissedVotesGraph from "../Data/MissedVotesGraph";
+import LeaderBoardMobile from "../LeaderBoard/LeaderBoardMobile";
 
 function Dashboard(props) {
   return (
     <div className="dashboard">
       <div className="col1">
         <div className="members-status">
-        <MemberSearch />
-        <br />
-        <br />
-        <StateSearch />
-        <br />
-        <br />
-        <MissedVotesGraph className="graph"/>
-        <br />
-        <br />
+          <MemberSearch />
+          <br />
+          <br />
+          <StateSearch />
+          <br />
+          <br />
+          <MissedVotesGraph className="graph"/>
+          <br />
+          <br />
         </div>
+        <LeaderBoardMobile />
+        <br />
+        <br />
         <CongressStatus />
         <br />
         <br />
