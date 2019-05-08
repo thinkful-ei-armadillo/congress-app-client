@@ -17,7 +17,6 @@ describe("User Login/Registry", function() {
 				win.sessionStorage.clear();
 			}
 		});
-		// cy.get("[data-cy=full_name]").type("rocketPower");
 		cy.get("[data-cy=user_name]").type("RProcks");
 		cy.get("[data-cy=password]").type("rocketPower123!");
 		cy.get("[data-cy=registration_form]").submit();
@@ -34,7 +33,6 @@ describe("User Login/Registry", function() {
 			}
 		});
 		cy.get("[data-cy=full_name]").type("rocketPower");
-		// cy.get("[data-cy=user_name]").type("RProcks");
 		cy.get("[data-cy=password]").type("rocketPower123!");
 		cy.get("[data-cy=registration_form]").submit();
 		cy.get("[data-cy=registration_form] .red").should(
@@ -50,18 +48,29 @@ describe("User Login/Registry", function() {
 		});
 		cy.get("[data-cy=full_name]").type("rocketPower");
 		cy.get("[data-cy=user_name]").type("RProcks");
-		// cy.get("[data-cy=password]").type("rocketPower123!");
 		cy.get("[data-cy=registration_form]").submit();
 		cy.get("[data-cy=registration_form] .red").should(
 			"contain",
 			"Missing 'password' in request body"
 		);
 	});
-
-	it("Logs in using the demo account", function() {
+	it("Logs in using the account", function() {
 		cy.visit("/login");
-		cy.get("[data-cy=user_name]").type("demo123");
-		cy.get("[data-cy=password]").type("Demo123!");
+		cy.get("[data-cy=user_name]").type("RProcks");
+		cy.get("[data-cy=password]").type("rocketPower123!");
 		cy.get("[data-cy=login_form]").submit();
+	});
+
+	it("Requires a username", function() {
+		cy.visit("/login");
+		cy.get("[data-cy=password]").type("rocketPower123!");
+		cy.get("[data-cy=login_form]").submit();
+		cy.get(".red").contains("Incorrect user_name or password");
+	});
+	it("Requires a password", function() {
+		cy.visit("/login");
+		cy.get("[data-cy=user_name]").type("RProcks");
+		cy.get("[data-cy=login_form]").submit();
+		cy.get(".red").contains("Incorrect user_name or password");
 	});
 });

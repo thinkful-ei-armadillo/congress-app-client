@@ -1,3 +1,7 @@
+.RegistrationPage {
+  text-align: center;
+}
+
 #RegistrationForm__full_name, #RegistrationForm__user_name, #RegistrationForm__password {
   width: 200px;
 	font-size: 16px;
@@ -5,4 +9,12 @@
 	border-radius: 4px;
   border: solid 2px #c6c6c6;
   margin-bottom: 10px;
+}
+
+#register-submit {
+  font-size: 16px;
+	font-weight: 400;
+  border-radius: 5px;
+  color: black;
+  background-color: transparent;
 }

@@ -19,7 +19,7 @@ export default class LoginForm extends Component {
 
     this.setState({ error: null });
 
-    console.log('login form submitted');
+    // console.log('login form submitted');
 
     AuthApiService.postLogin({
       user_name: user_name.value,
@@ -50,7 +50,7 @@ export default class LoginForm extends Component {
 					<Input
 						required
 						name="user_name"
-						id="LoginForm__user_name"
+						className="LoginForm__user_name"
 						data-cy="user_name"
 					/>
 				</div>
@@ -62,12 +62,12 @@ export default class LoginForm extends Component {
 						required
 						name="password"
 						type="password"
-						id="LoginForm__password"
+						className="LoginForm__password"
 						data-cy="password"
 					/>
 				</div>
 				<br />
-				<Button type="submit" id="login-button">
+				<Button type="submit" id="login-submit">
 					Login
 				</Button>
 			</form>

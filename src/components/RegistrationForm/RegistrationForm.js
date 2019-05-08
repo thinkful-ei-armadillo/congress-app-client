@@ -80,7 +80,7 @@ export default class RegistrationForm extends Component {
             data-cy="password">
           </Input>
         </div><br/>
-        <Button type='submit' id='register-button'>
+        <Button type='submit' id='register-submit'>
           Register
         </Button>
       </form>

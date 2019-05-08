@@ -1,7 +1,15 @@
-#LoginForm__user_name, #LoginForm__password {
+/* .LoginForm__user_name, .LoginForm__password {
   width: 200px;
+} */
+
+.LoginPage {
+	text-align: center;
+}
+
+#login-submit {
 	font-size: 16px;
-	padding: 10px;
-	border-radius: 4px;
-	border: solid 2px #c6c6c6;
+	font-weight: 400;
+  border-radius: 5px;
+  color: black;
+  background-color: transparent;
 }
