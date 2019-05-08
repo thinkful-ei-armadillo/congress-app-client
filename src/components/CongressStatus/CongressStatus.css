@@ -30,7 +30,7 @@
 
 .congress-status-component ul {
   max-height: 550px;
-  overflow: scroll;
+  overflow-y: scroll;
   border-top: 1px solid #ccc;
   padding-left: 0px;
 }
