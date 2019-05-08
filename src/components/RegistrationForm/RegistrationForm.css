@@ -12,9 +12,29 @@
 }
 
 #register-submit {
-  font-size: 16px;
+  height: 35px;
+  padding: 1px 15px 0px 15px;
+	transition-property: background, color, box-shadow, border-radius;
+	transition-duration: 0.25s;
+	transition-timing-function: linear;
+	color: #05004e;
+	font-size: 16px;
 	font-weight: 400;
-  border-radius: 5px;
-  color: black;
-  background-color: transparent;
+	border-radius:  4px;
+	background-color: #fff;
+}
+
+#register-submit:hover {
+  background-color: #05004e;
+  color: #fff;
+  box-shadow: 0 1px #333;
+  border-radius: 6px;
+}
+
+@media only screen and (max-width: 480px) {
+  #register-submit:hover {
+    background: #1daf29;
+    color: #fff;
+    box-shadow: 0 1px #333;
+  }
 }
