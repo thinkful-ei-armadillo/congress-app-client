@@ -67,7 +67,7 @@ export default function StateSearch(props) {
 
 				<form className="state-search-form"
 				data-cy="state_search_form">
-					<label htmlFor="state-search">
+					<label htmlFor="state-search" className="state-search-label">
 						Search for a State's Representatives
 					</label>
 					<br />

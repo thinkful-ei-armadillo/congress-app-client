@@ -25,7 +25,7 @@ select {
 
 .state-search-form > label,
 .address-search-form > label {
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 600;
 }
 
@@ -33,4 +33,12 @@ select {
 	background: #fff;
 	margin-top: 5px;
 	width: 150px;
+}
+
+@media only screen and (min-width: 890px) {
+.state-search-form > label,
+.address-search-form > label {
+	font-size: 22px;
+	font-weight: 600;
+}
 }

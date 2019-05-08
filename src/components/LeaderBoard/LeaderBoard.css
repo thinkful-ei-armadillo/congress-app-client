@@ -20,7 +20,8 @@
 .MemberContainer {
   border-top: 1px solid #ccc;
   text-align: center;
-  padding: 2%;
+  padding: 12px;
+  overflow: none;
 }
 
 .rank {
@@ -28,12 +29,18 @@
   margin-bottom: 12px;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 480px) {
   .LeaderBoard {
+    width: 77%;
+    margin: 0 auto;
+  }
+  .LeaderBoard-title > b {
+    font-size: 20px;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
   .LeaderBoard {
+    margin: 0 auto;
   }
 }
