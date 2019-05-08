@@ -28,22 +28,34 @@
 
 .col2 {
   width: 20%;
-  margin-left: 5%;
+  margin-left: 3%;
+}
+@media only screen and (max-width: 700px) {
+  main {
+    width: 90%;
+  }
+  .col1 {
+    width: 70%;
+  }
+  .col2 {
+    width: 25%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
   .col1 {
     width: 100%;
   }
+  .col2 {
+    width: 100%;
+    margin-left: 0;
+  }
   .dashboard {
     display: flex;
     flex-direction: column-reverse;
   }
 }
-@media only screen and (min-width: 700px) {
-  .col1 {
-  }
-}
+
 @media only screen and (min-width: 900px) {
   .col1 {
   }
