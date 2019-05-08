@@ -20,6 +20,10 @@ h1#profile-page-name {
 		width: 150px;
 		margin-top: 15px;
 	}
+
+	#profile-page-name {
+		font-size: 26px;
+	}
 }
 
 .twitter,

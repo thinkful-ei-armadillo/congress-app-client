@@ -1,0 +1,23 @@
+.small-profile {
+  text-align: center;
+}
+
+div.small-profile > img.small-profile-picture {
+  /* max-width: 4rem; */
+}
+
+@media only screen and (max-width: 600px) {
+  div.small-profile > img.small-profile-picture {
+    max-width: 4rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  div.small-profile > img.small-profile-picture {
+    max-width: 7rem;
+  }
+
+  .small-profile {
+    font-size: 20px;
+  }
+}
