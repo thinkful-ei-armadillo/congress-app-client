@@ -16,15 +16,15 @@
 }
 
 #ind-key {
-  fill: green
+  fill: green;
 }
 
 .tick {
   stroke: #333;
 }
 
-.domain { 
-  stroke:#fff;
+.domain {
+  stroke: #fff;
   stroke-width: 0px;
 }
 
@@ -34,4 +34,13 @@
 
 #profile-votes-graph {
   /* width: 20%; */
+}
+
+#missed-votes-graph-wrapper {
+}
+
+@media only screen and (max-width: 600px) {
+  .legend-item {
+    font-size: 14px;
+  }
 }
