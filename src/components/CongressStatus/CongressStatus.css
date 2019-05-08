@@ -14,6 +14,8 @@
   width: 100%;
   margin-top: 22px;
   word-wrap: break-word;
+  font-size: 20px;
+  /* background-color: #0f4471; */
 }
 
 .bill-filter {
@@ -36,7 +38,7 @@
 }
 
 .bill-list li {
-  border-bottom: 1px solid #f6f6f6;
+  border-bottom: 1px solid #ccc;
 }
 
 .bill-list li:last-child {
@@ -63,8 +65,28 @@
 
 .bill-title {
   font-family: 'Crimson Text', serif;
-  font-weight: 400;
+  font-weight: 500;
   color: #0f4471;
+}
+
+@media only screen and (max-width: 400px) {
+  .congress-status-component > header > h2{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-right: 5%;
+    margin-left: 10px;
+    width: 75%;
+  }
+  .bill-filter{
+    font-size: 8px;
+    padding: 1.2%;
+    width: 70px;
+  }
+  .bill-info {
+    padding: 15px;
+    padding-top: 20px;
+  }
 }
 
 @media only screen and (max-width: 840px) {
@@ -80,14 +102,21 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   .congress-status-component > header {
-    font-size: 14px;
+    /* font-size: 14px; */
     text-align: center;
     margin: 0 auto;
     margin-top: 5px;
     margin-right: 20px;
     margin-left: 10px;
     width: 75%;
+  }
+  .bill-filter{
+    font-size: 10px;
+    padding: 1.2%;
+    width: 100px;
+    position: relative;
+    left: 100px;
   }
 }

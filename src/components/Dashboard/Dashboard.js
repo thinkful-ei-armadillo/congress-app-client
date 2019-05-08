@@ -18,7 +18,7 @@ function Dashboard(props) {
         <StateSearch />
         <br />
         <br />
-        <MissedVotesGraph />
+        <MissedVotesGraph className="graph"/>
         <br />
         <br />
         </div>
