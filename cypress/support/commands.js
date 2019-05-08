@@ -14,12 +14,13 @@ Cypress.Commands.add("login", () => {
 	cy.request({
 		method: "POST",
 		url: "http://localhost:8000/api/auth/login",
+		// url: "http://congress-io.herokuapp.com/api/auth/login",
 		headers: {
 			"content-type": "application/json"
 		},
 		body: {
-				user_name: "demo123",
-				password: "Demo123!"
+			user_name: "demo123",
+			password: "Demo123!"
 		}
 	}).then(res => {
 		window.sessionStorage.setItem(
