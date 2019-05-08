@@ -76,11 +76,11 @@ function Profile(props) {
 					props.member.id
 				}.jpg`}
 			/>
-			<p className="name">
+			<h1 className="name" id='profile-page-name'>
 				{props.member.short_title} {props.member.first_name}{" "}
 				{props.member.middle_name} {props.member.last_name}
 				{props.member.suffix} ({props.member.party})
-			</p>
+			</h1>
 			<p className="dob">Born: {props.member.date_of_birth}</p>
 			<section className="member-social-media">
 				{!props.member.twitter_account ? (
@@ -164,7 +164,7 @@ function Profile(props) {
 						member: props.member
 					}
 				}}>
-				<Button className="profile-compare" id="compare-button">
+				<Button className="profile-compare" id="compare-button-profile">
 					Compare With Another Member
 				</Button>
 			</Link>
