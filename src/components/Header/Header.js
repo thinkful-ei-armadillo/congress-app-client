@@ -31,7 +31,7 @@ export default class Header extends Component {
   renderLoginLink() {
     return (
       <div className="logged-out-header">
-        <Link to="/compare">
+        <Link className="compare-button-link" to="/compare">
           <Button id="compare-button">Compare Members</Button>
         </Link>{' '}
         <Link to="/login" className="login-button">
