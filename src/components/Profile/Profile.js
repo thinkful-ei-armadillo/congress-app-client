@@ -11,6 +11,7 @@ import MemberApiService from "../../services/member-api-service";
 
 function Profile(props) {
 	const user = useContext(UserContext);
+	// eslint-disable-next-line
 	const [followedMembers, setFollowedMembers] = useState(null);
 	const [isFollowing, setFollowing] = useState(false);
 

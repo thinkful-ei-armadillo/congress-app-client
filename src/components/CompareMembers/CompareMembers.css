@@ -14,6 +14,13 @@
   padding: 4px;
 }
 
-.compare-member-profile {
+#compare-member-profile-container {
+    display: flex;
+    justify-content: center;
+}
 
+@media (max-width: 599px) {
+  #compare-member-profile-container {
+    flex-direction: column;
+  }
 }
