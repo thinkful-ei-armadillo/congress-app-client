@@ -12,13 +12,13 @@ export default function LeaderBoard(props) {
 	return top3 ? (
 		<div className="LeaderBoard">
 			<p className="LeaderBoard-title">
-				<b>Missed Votes</b>
+				<b>Leaders in Missed Votes</b>
 			</p>
 			{top3.map((member, index) => {
 				return (
 					<div key={member.id} className="MemberContainer">
 						<h4 className="rank">#{index + 1}</h4>
-						<SmallProfile member={member} className="" />
+						<SmallProfile member={member} className="leaderboard-small-profile" />
 					</div>
 				);
 			})}
