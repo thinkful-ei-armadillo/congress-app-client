@@ -36,7 +36,8 @@
   /* width: 20%; */
 }
 
-#missed-votes-graph-wrapper {
+#missed-votes-title {
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 600px) {
