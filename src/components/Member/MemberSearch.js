@@ -20,13 +20,13 @@ export default function MemberSearch(props) {
 		<section className="member-search">
 			<form onSubmit={submitForm}>
 				<input
-					type='text'
-					minLength='3'
-					name='search'
-					placeholder='Search for a Member of Congress...'
-					className='searchbar'
-					list='members'
-					autoComplete='on'
+					type="text"
+					minLength="3"
+					name="search"
+					placeholder="Search for a Member of Congress..."
+					className="searchbar"
+					list="members"
+					autoComplete="on"
 					data-cy="search"
 				/>
 				<datalist id="members">

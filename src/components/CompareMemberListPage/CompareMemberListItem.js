@@ -1,5 +1,4 @@
 import React from "react";
-import "./CompareMemberListItem.css";
 
 function CompareMemberListItem(props) {
 	let { member } = props;
@@ -8,13 +7,11 @@ function CompareMemberListItem(props) {
 		props.setDisplay(member);
 	};
 	return (
-			<button
-				className="compare-member-list-item"
-				onClick={e => clickMember(e)}>
-				<p>
-					{member.first_name} {member.last_name}, {member.title}
-				</p>
-			</button>
+		<button className="compare-member-list-item" onClick={e => clickMember(e)}>
+			<p>
+				{member.short_title}{' '} {member.first_name} {member.last_name}
+			</p>
+		</button>
 	);
 }
 
