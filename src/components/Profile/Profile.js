@@ -6,8 +6,8 @@ import ProfileMissedVotes from "../Data/ProfileMissedVotes";
 import ProfilePartyVotes from "../Data/ProfilePartyVotes";
 import UserContext from "../../contexts/UserContext";
 import MemberApiService from "../../services/member-api-service";
-import MemberContext from "../../contexts/MemberContext";
-import { TwitterTimelineEmbed } from "react-twitter-embed";
+// import MemberContext from "../../contexts/MemberContext";
+// import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 function Profile(props) {
 	const user = useContext(UserContext);

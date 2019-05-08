@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import MemberApiService from "../../services/member-api-service";
 import MemberListPage from "../MemberListPage/MemberListPage";
-import { Button } from "../Utils/Utils";
 import "./StateSearch.css";
 
 export default function StateSearch(props) {
@@ -17,19 +16,19 @@ export default function StateSearch(props) {
 		}
 	};
 
-	const handleAddressSearch = e => {
-		e.preventDefault();
-		let address = [
-			e.target.address.value,
-			e.target.city.value,
-			e.target.state.value
-		].join(" ");
-		console.log(address);
-		MemberApiService.getMemberbyAddress(address).then(members => {
-			console.log(members);
-			setMembers(members);
-		});
-	};
+	// const handleAddressSearch = e => {
+	// 	e.preventDefault();
+	// 	let address = [
+	// 		e.target.address.value,
+	// 		e.target.city.value,
+	// 		e.target.state.value
+	// 	].join(" ");
+	// 	console.log(address);
+	// 	MemberApiService.getMemberbyAddress(address).then(members => {
+	// 		console.log(members);
+	// 		setMembers(members);
+	// 	});
+	// };
 
 	return (
 		<section className="state-reps">
@@ -72,8 +71,8 @@ export default function StateSearch(props) {
 						Search for a State's Representatives
 					</label>
 					<br />
-					<select 
-					onChange={e => setStateSearch(e)} 
+					<select
+					onChange={e => setStateSearch(e)}
 					className="state-search search"
 					data-cy="state-search">
 						<option value="">Select a State</option>

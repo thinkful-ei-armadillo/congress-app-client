@@ -1,0 +1,9 @@
+.compare-member-list-item {
+  border: 0;
+  background: none;
+  color: #05004e;
+  font-family: 'Crimson Text', serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  text-decoration: underline;
+}

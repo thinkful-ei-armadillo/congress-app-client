@@ -24,10 +24,10 @@ export default class ProfileMissedVotes extends Component {
       .outerRadius(radius - 10)
       .innerRadius(50);
 
-    const labelArc = d3
-      .arc()
-      .outerRadius(radius)
-      .innerRadius(radius - 40);
+    // const labelArc = d3
+    //   .arc()
+    //   .outerRadius(radius)
+    //   .innerRadius(radius - 40);
     const svg = d3
       .select("#profile-missed-votes-graph")
       .append("svg")
