@@ -40,6 +40,7 @@ export default function CompareMembers(props) {
 						list="members"
 						autoComplete="on"
 						data-cy="compare-search"
+						aria-label="search"
 					/>
 					<datalist id="members">
 						<option value="Nancy Pelosi" />
@@ -83,6 +84,7 @@ export default function CompareMembers(props) {
 						list="members"
 						autoComplete="on"
 						data-cy="compare-search"
+						aria-label="search"
 					/>
 					<datalist id="members">
 						<option value="Nancy Pelosi" />

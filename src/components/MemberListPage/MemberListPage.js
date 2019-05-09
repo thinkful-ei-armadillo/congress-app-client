@@ -7,10 +7,10 @@ import "./MemberListPage.css";
 export default class MemberListPage extends Component {
 	renderMembers() {
 		if (this.props.members === null) {
-			return <div id="no-search-feedback" />;
+			return <div className="no-search-feedback" />;
 		} else if (this.props.members.length === 0) {
 			return (
-				<div id="no-results-feedback">
+				<div className="no-results-feedback">
 					No Results. Please Retry With a New Search.
 				</div>
 			);
@@ -23,6 +23,6 @@ export default class MemberListPage extends Component {
 		}
 	}
 	render() {
-		return <div id="search-results-container" data-cy="search-result">{this.renderMembers()}</div>;
+		return <div className="search-results-container" data-cy="search-result">{this.renderMembers()}</div>;
 	}
 }
