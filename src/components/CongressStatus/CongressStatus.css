@@ -35,8 +35,9 @@
 }
 
 .congress-status-component ul {
-  max-height: 550px;
-  overflow-y: scroll;
+  /* max-height: 550px; */
+  /* overflow-y: scroll; */
+  list-style: none;
   padding-left: 0px;
 }
 
@@ -90,6 +91,12 @@
   .bill-info {
     padding: 15px;
     padding-top: 20px;
+  }
+}
+@media only screen and (min-width: 500px){
+  .congress-status-component ul {
+    max-height: 550px;
+    overflow-y: scroll;
   }
 }
 

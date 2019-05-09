@@ -19,8 +19,9 @@
   }
   
   .committees-component ul {
-    max-height: 550px;
-    overflow-y: scroll;
+    /* max-height: 550px; */
+    /* overflow-y: scroll; */
+    list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
   }
@@ -54,6 +55,13 @@
   .committee-chair a, .committee-chair p, .committee-url a{
     color: #0f4471;
   }
+
+@media only screen and (min-width: 500px) {
+  .committees-component ul {
+    max-height: 550px;
+    overflow-y: scroll;
+    }
+}
 
 @media (min-width: 600px) {
   .committees-component > header > h2 {
