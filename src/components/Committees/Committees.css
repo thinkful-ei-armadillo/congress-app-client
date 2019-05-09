@@ -7,10 +7,10 @@
     color: #0f4471;
   }
   
-  .committees-component header > h2 {
-    color: #0f4471;
-    color: #f2f2f2;
-    font-family: 'Julius Sans One', sans-serif;
+  .committees-component > header > h2 {
+    /* color: #0f4471;*/
+    color: #f2f2f2; 
+    /* font-family: 'Julius Sans One', sans-serif; */ 
     text-align: center;
     width: 100%;
     margin-top: 22px;
@@ -62,8 +62,8 @@
     margin: 0 auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-right: 5%;
-    margin-left: 10px;
+    /* margin-right: 5%;
+    margin-left: 10px; */
     padding: 2%;
     width: 75%;
   }
@@ -75,8 +75,8 @@
     align-items: center;
     font-size: 18px;
     margin-top: 15px;
-    margin-right: 20px;
-    margin-left: 15px;
+    /* margin-right: 20px;
+    margin-left: 15px; */
     width: 50%;
     text-align: center;
   }
