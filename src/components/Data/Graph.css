@@ -8,15 +8,15 @@
 }
 
 #repub-key {
-  fill: red;
+  fill: #d50000;
 }
 
 #dem-key {
-  fill: blue;
+  fill: #0f4471;
 }
 
 #ind-key {
-  fill: green;
+  fill: gray;
 }
 
 .tick {

@@ -14,7 +14,7 @@ export default class ProfilePartyVotes extends Component {
     const width = 100;
     const height = 100;
     const radius = Math.min(width, height) / 10;
-    const color = d3.scaleOrdinal().range(["green", "orange"]);
+    const color = d3.scaleOrdinal().range(["#928a97", "#d50000"]);
 
     const pie = d3.pie().value(function(d) {
       return d;

@@ -66,7 +66,7 @@ function Profile(props) {
 		<div className="main-profile">
 			<img
 				className="profile-picture"
-				alt={props.member.alt}
+				alt={props.member.first_name}
 				onError={e => {
 					e.target.onerror = null;
 					e.target.src =
@@ -88,7 +88,9 @@ function Profile(props) {
 				) : (
 					<a
 						className="twitter"
-						href={`https://twitter.com/${props.member.twitter_account}`}>
+						href={`https://twitter.com/${props.member.twitter_account}`}
+						aria-label='twitter link'
+						>
 						<i className="fab fa-twitter" />
 					</a>
 				)}
@@ -97,7 +99,9 @@ function Profile(props) {
 				) : (
 					<a
 						className="youtube"
-						href={`https://youtube.com/${props.member.youtube_account}`}>
+						href={`https://youtube.com/${props.member.youtube_account}`}
+						aria-label='youtube link'
+						>
 						<i className="fab fa-youtube" />
 					</a>
 				)}
@@ -106,7 +110,9 @@ function Profile(props) {
 				) : (
 					<a
 						className="facebook"
-						href={`https://facebook.com/${props.member.facebook_account}`}>
+						href={`https://facebook.com/${props.member.facebook_account}`}
+						aria-label='facebook link'
+						>
 						<i className="fab fa-facebook" />
 					</a>
 				)}
