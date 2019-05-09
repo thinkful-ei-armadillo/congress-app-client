@@ -12,12 +12,12 @@ nav {
   width: 100%;
 }
 
-  .logo-container {
+.logo-container {
   margin-left: 4%;
   margin-right: 5px;
   width: 8%;
   height: 8%;
-/* display: none; */
+  /* display: none; */
   /* width: 71px;
   height: 93px; */
 }
@@ -50,6 +50,16 @@ header > div > img {
 .logged-in-header > a,
 .logged-out-header > a {
   font-size: 18px;
+  border-right: 1px solid rgb(61, 94, 158);
+  padding: 5px;
+}
+.logged-out-header > a:last-child {
+  border-right: none;
+}
+
+.logged-out-header > a:hover {
+  background-color: rgb(61, 94, 158);
+  border-radius: 5px;
 }
 
 .logged-in-header,
@@ -67,6 +77,10 @@ header > div > img {
   border-radius: 5px;
   color: white;
   background-color: transparent;
+  border: none;
+}
+
+.compare-button-link {
 }
 
 #logout-button {
@@ -78,10 +92,6 @@ header > div > img {
 #compare-button:hover,
 #register-button:hover {
   cursor: pointer;
-  color: #05004e;
-  background: #f6f6f6;
-  border-radius: 4px;
-  box-shadow: 0 1px #333;
 }
 
 header a {
