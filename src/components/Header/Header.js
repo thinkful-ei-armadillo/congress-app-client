@@ -16,11 +16,11 @@ export default class Header extends Component {
 		return (
 			<div className="logged-in-header">
 				{"  "}
-				<Link to="/compare">
+				<Link to="/compare" className='compare-button-link'>
 					Compare Members
 				</Link>
-				<Link onClick={this.handleLogoutClick} to="/">
-					<Button id="logout-button">Logout</Button>
+				<Link onClick={this.handleLogoutClick} to="/" className='logout-button'>
+					Logout
 				</Link>
 			</div>
 		);
