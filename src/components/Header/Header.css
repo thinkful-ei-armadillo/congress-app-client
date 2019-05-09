@@ -45,7 +45,7 @@ header > div > div > img {
 }
 
 .title > a:hover {
-  color: #D50000;
+  color: #d50000;
 }
 
 .title > a > .little {
@@ -55,6 +55,16 @@ header > div > div > img {
 .logged-in-header > a,
 .logged-out-header > a {
   font-size: 18px;
+  border-right: 1px solid rgb(61, 94, 158);
+  padding: 5px;
+}
+.logged-out-header > a:last-child {
+  border-right: none;
+}
+
+.logged-out-header > a:hover {
+  background-color: rgb(61, 94, 158);
+  border-radius: 5px;
 }
 
 .logged-in-header,
@@ -72,6 +82,10 @@ header > div > div > img {
   border-radius: 5px;
   color: white;
   background-color: transparent;
+  border: none;
+}
+
+.compare-button-link {
 }
 
 #logout-button {
@@ -83,10 +97,6 @@ header > div > div > img {
 #compare-button:hover,
 #register-button:hover {
   cursor: pointer;
-  color: #05004e;
-  background: #f6f6f6;
-  border-radius: 4px;
-  box-shadow: 0 1px #333;
 }
 
 header a {
