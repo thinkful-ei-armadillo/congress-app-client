@@ -21,11 +21,11 @@ const MemberApiService = {
 
 	getMembersByState(params) {
 		let url = `${config.API_ENDPOINT}/members`;
-		console.log(params);
+		
 		if (params) {
 			url += `?query=${encodeURIComponent(params)}`;
 		}
-		console.log(url);
+		
 		return fetch(url, {
 			method: "GET"
 		}).then(res => {
@@ -40,7 +40,7 @@ const MemberApiService = {
 		let url = `${config.API_ENDPOINT}/members?address=${encodeURIComponent(
 			params
 		)}`;
-		console.log(encodeURIComponent(params));
+		
 		return fetch(url, {
 			method: "GET"
 		}).then(res => {
@@ -70,7 +70,7 @@ const MemberApiService = {
 	},
 
 	addFollowedMembers(memberID) {
-		// console.log(id);
+		
 		return fetch(`${config.API_ENDPOINT}/users/${memberID}/followed`, {
 			method: "POST",
 			headers: {
@@ -83,7 +83,7 @@ const MemberApiService = {
 	},
 
 	removeFollowedMembers(id) {
-		console.log(id);
+		
 		return fetch(`${config.API_ENDPOINT}/users/${id}/followed`, {
 			method: "DELETE",
 			headers: {
