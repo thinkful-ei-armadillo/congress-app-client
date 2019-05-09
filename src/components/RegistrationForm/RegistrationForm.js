@@ -52,6 +52,7 @@ export default class RegistrationForm extends Component {
 						required
 						id="RegistrationForm__full_name"
 						data-cy="full_name"
+						aria-required="true"
 					/>
 				</div>
 				<div className="user_name">
@@ -65,6 +66,7 @@ export default class RegistrationForm extends Component {
 						required
 						id="RegistrationForm__user_name"
 						data-cy="user_name"
+						aria-required="true"
 					/>
 				</div>
 				<div className="password">
@@ -78,6 +80,7 @@ export default class RegistrationForm extends Component {
 						required
 						id="RegistrationForm__password"
 						data-cy="password"
+						aria-required="true"
 					/>
 				</div>
 				<br />

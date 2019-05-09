@@ -53,13 +53,12 @@ export default class LoginForm extends Component {
 						className="LoginForm__user_name"
 						id="LoginForm__user_name"
 						data-cy="user_name"
+						aria-required="true"
 					/>
 				</div>
 				<br />
 				<div className="password">
-					<label htmlFor="LoginForm__password">
-						Password
-					</label>
+					<label htmlFor="LoginForm__password">Password</label>
 					<br />
 					<Input
 						required
@@ -67,6 +66,7 @@ export default class LoginForm extends Component {
 						type="password"
 						data-cy="password"
 						id="LoginForm__password"
+						aria-required="true"
 					/>
 				</div>
 				<br />

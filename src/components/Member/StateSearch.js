@@ -45,6 +45,7 @@ export default function StateSearch(props) {
 						name="address"
 						placeholder="Address"
 						required
+						aria-required='true'
 					/>
 					<input
 						type="text"
@@ -52,6 +53,7 @@ export default function StateSearch(props) {
 						name="city"
 						placeholder="City"
 						required
+						aria-required='true'
 					/>
 					<input
 						type="text"
@@ -59,6 +61,7 @@ export default function StateSearch(props) {
 						name="state"
 						placeholder="State"
 						required
+						aria-required='true'
 					/>
 					<div className="input search-input">
 						<input type="submit" />
@@ -73,9 +76,8 @@ export default function StateSearch(props) {
 					<select
 						onChange={e => setStateSearch(e)}
 						className="state-search search"
-						id='state-search'
-						data-cy="state-search"
-						>
+						id="state-search"
+						data-cy="state-search">
 						<option value="">Select a State</option>
 						<option value="AL">Alabama</option>
 						<option value="AK">Alaska</option>
