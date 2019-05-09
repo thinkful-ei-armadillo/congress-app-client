@@ -1,0 +1,9 @@
+.RegistrationPage > h2#registration-header {
+    font-size: 26px;
+}
+
+@media only screen and (max-width: 400px) {
+    .LoginPage > h2#registration-header {
+        font-size: 24px;
+    }
+}
