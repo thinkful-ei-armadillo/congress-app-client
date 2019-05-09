@@ -45,21 +45,19 @@ export default class LoginForm extends Component {
 				data-cy="login_form">
 				<div role="alert">{error && <p className="red">{error}</p>}</div>
 				<div className="user_name">
-					<label htmlFor="LoginForm__user_name" id="LoginForm__user_name">
-						Username
-					</label>
+					<label htmlFor="LoginForm__user_name">Username</label>
 					<br />
 					<Input
 						required
 						name="user_name"
 						className="LoginForm__user_name"
+						id="LoginForm__user_name"
 						data-cy="user_name"
-						aria-labelledby="LoginForm__user_name"
 					/>
 				</div>
 				<br />
 				<div className="password">
-					<label htmlFor="LoginForm__password" id="LoginForm__password">
+					<label htmlFor="LoginForm__password">
 						Password
 					</label>
 					<br />
@@ -67,9 +65,8 @@ export default class LoginForm extends Component {
 						required
 						name="password"
 						type="password"
-						className="LoginForm__password"
 						data-cy="password"
-						aria-labelledby="LoginForm__password"
+						id="LoginForm__password"
 					/>
 				</div>
 				<br />
