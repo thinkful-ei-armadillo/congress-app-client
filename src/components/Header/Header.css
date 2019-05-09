@@ -26,9 +26,6 @@ nav {
 
 #logo {
   display: inline-block;
-}
-
-header > div > div > img {
   width: 50%;
 }
 
@@ -73,16 +70,17 @@ header > div > div > img {
   margin-right: 5%;
 }
 
-#login-button,
-#logout-button,
-#compare-button,
-#register-button {
+.login-button,
+.logout-button,
+.compare-button-link,
+.register-button {
   font-size: 16px;
   font-weight: 400;
   border-radius: 5px;
   color: white;
   background-color: transparent;
   border: none;
+  text-decoration: none;
 }
 
 #logout-button {

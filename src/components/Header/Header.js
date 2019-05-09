@@ -17,7 +17,7 @@ export default class Header extends Component {
 			<div className="logged-in-header">
 				{"  "}
 				<Link to="/compare">
-					<Button id="compare-button">Compare Members</Button>
+					Compare Members
 				</Link>
 				<Link onClick={this.handleLogoutClick} to="/">
 					<Button id="logout-button">Logout</Button>
@@ -30,13 +30,13 @@ export default class Header extends Component {
 		return (
 			<div className="logged-out-header">
 				<Link className="compare-button-link" to="/compare">
-					<Button id="compare-button">Compare Members</Button>
+					Compare Members
 				</Link>{" "}
 				<Link to="/login" className="login-button">
-					<Button id="login-button">Login</Button>
+					Login
 				</Link>{" "}
 				<Link to="/register" className="register-button">
-					<Button id="register-button">Register</Button>
+					Register
 				</Link>
 			</div>
 		);

@@ -5,10 +5,10 @@ import "./SmallProfile.css";
 function SmallProfile(props) {
 	let firstInitial = props.member.first_name.charAt(0);
 	return (
-		<div className='small-profile'>
+		<div className="small-profile">
 			<img
 				className="small-profile-picture"
-				alt='member small profile'
+				alt="member small profile"
 				onError={e => {
 					e.target.onerror = null;
 					e.target.src =
@@ -18,10 +18,14 @@ function SmallProfile(props) {
 					props.member.id
 				}.jpg`}
 			/>
-			<Link to={`/profile/${props.member.id}`} className="name">
+			<Link
+				to={`/profile/${props.member.id}`}
+				className="name"
+				title={`Click here to visit ${props.member.short_title} ${
+					props.member.first_name
+				} ${props.member.last_name}'s Profile Page`}>
 				<p className="name">
-					{props.member.short_title}{' '}
-					{firstInitial}
+					{props.member.short_title} {firstInitial}
 					{"."}
 					{props.member.last_name}
 					{props.member.suffix} ({props.member.party})

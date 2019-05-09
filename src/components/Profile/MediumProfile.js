@@ -24,7 +24,8 @@ function MediumProfile(props) {
 				<Link
 					to={`/profile/${props.member.id}`}
 					className="name med-profile-name-link"
-					data_cy="compare-name">
+					data_cy="compare-name"
+					title={`Click here to visit ${props.member.short_title} ${props.member.first_name} ${props.member.last_name}'s Profile Page`}>
 					{props.member.short_title} {props.member.first_name}{" "}
 					{props.member.middle_name}
 					{props.member.last_name}
