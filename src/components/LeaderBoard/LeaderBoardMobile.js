@@ -3,17 +3,18 @@ import SmallProfile from "../Profile/SmallProfile";
 import MemberApiService from "../../services/member-api-service";
 import "./LeaderBoard.css";
 
-export default function LeaderBoard(props) {
+export default function LeaderBoardMobile(props) {
 	let [top3, setTop3] = useState(null);
 	useEffect(() => {
 		// query members by one prop, show them sorted DESC
 		MemberApiService.getTop3s().then(res => setTop3(res));
 	}, []);
 	return top3 ? (
-		<div className="LeaderBoard">
-			<p className="LeaderBoard-title">
+    <>
+    <p className="LeaderBoard-title-mobile">
 				<b>Leaders in Missed Votes</b>
-			</p>
+		</p>
+		<div className="LeaderBoardMobile">
 			{top3.map((member, index) => {
 				return (
 					<div key={member.id} className="MemberContainer">
@@ -23,6 +24,7 @@ export default function LeaderBoard(props) {
 				);
 			})}
 		</div>
+    </>
 	) : (
 		""
 	);

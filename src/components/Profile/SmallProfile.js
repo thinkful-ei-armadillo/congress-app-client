@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Profile.css";
+import "./SmallProfile.css";
 
 function SmallProfile(props) {
 	let firstInitial = props.member.first_name.charAt(0);
 	return (
-		<div>
+		<div className='small-profile'>
 			<img
-				className="profile-picture"
+				className="small-profile-picture"
 				alt={props.member.alt}
 				onError={e => {
 					e.target.onerror = null;

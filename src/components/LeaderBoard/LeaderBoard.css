@@ -20,7 +20,8 @@
 .MemberContainer {
   border-top: 1px solid #ccc;
   text-align: center;
-  padding: 2%;
+  padding: 12px;
+  overflow: none;
 }
 
 .rank {
@@ -28,12 +29,73 @@
   margin-bottom: 12px;
 }
 
-@media only screen and (min-width: 400px) {
+.LeaderBoardMobile, .LeaderBoard-title-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .LeaderBoardMobile, .LeaderBoard-title-mobile {
+    display: none;
+  }
+
   .LeaderBoard {
+    display: block;
+    width: 77%;
+    margin: 0 auto;
+  }
+
+  .LeaderBoard-title > b {
+    font-size: 20px;
+  }
+  
+}
+
+@media only screen and (max-width: 480px) and (min-width: 400px) {
+  .LeaderBoard {
+    display: none;
+  }
+  
+  .LeaderBoardMobile {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid #05004e;
+    border-radius: 5px;
+    padding-left: 0px;
+    background: #0f4471;
+    box-shadow: 4px 4px #a6a6a6;
+    color: #f6f6f6; 
+  }
+
+  .LeaderBoardMobile > .MemberContainer {
+    text-align: center;
+    padding: 12px;
+    overflow: none;
+  }
+
+  .LeaderBoard-title-mobile {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .LeaderBoardMobile > .MemberContainer:first-child {
+    border-right: 1px solid #ccc;
+  }
+
+  .LeaderBoardMobile > .MemberContainer:last-child {
+    border-left: 1px solid #ccc;
+  }
+
+  .LeaderBoardMobile > .MemberContainer > .small-profile > a.name {
+    color: #f6f6f6;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
   .LeaderBoard {
+    margin: 0 auto;
   }
 }

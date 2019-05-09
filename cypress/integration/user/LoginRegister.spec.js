@@ -11,7 +11,18 @@ describe("User Login/Registry", function() {
 		cy.get("[data-cy=registration_form]").submit();
 	});
 
-	it("Requires a name", function() {
+	it("All text inputs are required", function() {
+		cy.visit("/register", {
+			onBeforeLoad: win => {
+				win.sessionStorage.clear();
+			}
+		});
+		cy.get("[data-cy=full_name]").should("have.attr", "required");
+		cy.get("[data-cy=user_name]").should("have.attr", "required");
+		cy.get("[data-cy=password]").should("have.attr", "required");
+	});
+
+	it("Error message without a name", function() {
 		cy.visit("/register", {
 			onBeforeLoad: win => {
 				win.sessionStorage.clear();
@@ -26,7 +37,7 @@ describe("User Login/Registry", function() {
 		);
 	});
 
-	it("Requires a username", function() {
+	it("Error message without a username", function() {
 		cy.visit("/register", {
 			onBeforeLoad: win => {
 				win.sessionStorage.clear();
@@ -40,7 +51,7 @@ describe("User Login/Registry", function() {
 			"Missing 'user_name' in request body"
 		);
 	});
-	it("Requires a password", function() {
+	it("Error message without a password", function() {
 		cy.visit("/register", {
 			onBeforeLoad: win => {
 				win.sessionStorage.clear();
@@ -61,13 +72,19 @@ describe("User Login/Registry", function() {
 		cy.get("[data-cy=login_form]").submit();
 	});
 
-	it("Requires a username", function() {
+	it("All login text inputs are required", function() {
+		cy.visit("/login");
+		cy.get("[data-cy=user_name]").should("have.attr", "required");
+		cy.get("[data-cy=password]").should("have.attr", "required");
+	});
+
+	it("Error message without a username", function() {
 		cy.visit("/login");
 		cy.get("[data-cy=password]").type("rocketPower123!");
 		cy.get("[data-cy=login_form]").submit();
 		cy.get(".red").contains("Incorrect user_name or password");
 	});
-	it("Requires a password", function() {
+	it("Error message without a password", function() {
 		cy.visit("/login");
 		cy.get("[data-cy=user_name]").type("RProcks");
 		cy.get("[data-cy=login_form]").submit();

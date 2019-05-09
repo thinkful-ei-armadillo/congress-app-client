@@ -1,7 +1,38 @@
-.compareSearch {
-  font-size: 14px;
-  font-weight: 200;
+#no-search-feedback {
   font-style: italic;
-  margin: 0 auto;
-  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#no-results-feedback {
+  /* font-style: italic; */
+  font-size: 18px;
+  font-weight: 600;
+  color: #fc3c3c;
+}
+
+#search-results-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.search-results > button {
+  color: #f6f6f6;
+  text-decoration-line: none;
+  background: none;
+  border: none;
+  font-family: 'Crimson Text', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  height: 25px;
+}
+
+.search-results > button > p {
+  margin: 0;
+}
+
+.search-results > button:hover {
+  text-decoration-line: underline;
 }

@@ -7,9 +7,28 @@
 }
 
 #login-submit {
+  height: 35px;
+  padding: 1px 15px 0px 15px;
+	transition-property: color, background, box-shadow, border-radius;
+	transition-duration: 0.25s;
+	transition-timing-function: linear;
+	color: #05004e;
 	font-size: 16px;
 	font-weight: 400;
-  border-radius: 5px;
-  color: black;
-  background-color: transparent;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+#login-submit:hover {
+  color: #f6f6f6;
+  background-color: #05004e;
+  box-shadow: 0 1px #333;
+}
+
+@media only screen and (max-width: 480px) {
+  #login-submit:hover {
+    background: #1daf29;
+    color: #fff;
+    box-shadow: 0 1px #333;
+  }
 }

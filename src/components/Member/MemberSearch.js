@@ -23,11 +23,11 @@ export default function MemberSearch(props) {
 					type='text'
 					minLength='3'
 					name='search'
-					placeholder='Search for a Member of Congress...'
+					placeholder='Search for a Member of Congress'
 					className='searchbar'
 					list='members'
 					autoComplete='on'
-					data-cy="search"
+					data-cy='search'
 				/>
 				<datalist id="members">
 					<option value="Nancy Pelosi" />

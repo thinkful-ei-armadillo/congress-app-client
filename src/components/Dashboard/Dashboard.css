@@ -27,8 +27,10 @@
 }
 
 .col2 {
-  width: 25%;
-  margin-left: 3%;
+  /*width: 25%;
+  margin-left: 3%;*/
+  width: 20%;
+  margin-left: 5%;
 }
 
 @media only screen and (max-width: 700px) {
@@ -40,7 +42,7 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .col1 {
     width: 100%;
   }
@@ -50,7 +52,8 @@
   }
   .dashboard {
     display: flex;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
+    flex-direction: column;
   }
 }
 
