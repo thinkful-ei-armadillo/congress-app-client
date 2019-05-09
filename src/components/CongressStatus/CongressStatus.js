@@ -43,7 +43,7 @@ export default function CongressStatus(props) {
 	return (
 		<div className="congress-status-component">
 			<div id="bills-header">
-				<h2>Bills on the floor:</h2>
+				<h2>Bills On The Floor</h2>
 				<select
 					className="bill-filter"
 					onChange={e => {
