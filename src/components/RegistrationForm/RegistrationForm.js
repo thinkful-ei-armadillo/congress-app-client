@@ -68,7 +68,7 @@ export default class RegistrationForm extends Component {
 					/>
 				</div>
 				<div className="password">
-					<label htmlFor="RegistrationForm__user_name">
+					<label htmlFor="RegistrationForm__password">
 						Password <Required />
 					</label>
 					<br />

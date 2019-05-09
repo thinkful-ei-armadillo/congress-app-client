@@ -59,7 +59,7 @@ export default function CongressStatus(props) {
 					onChange={e => {
 						setBillFilter(e.target.value);
 					}}
-					value={billFilter}>
+					value={billFilter} aria-label='bill-filter'>
 					<option value="introduced">Introduced</option>
 					<option value="active">Active</option>
 				</select>

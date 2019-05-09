@@ -45,7 +45,7 @@ export default function MemberSearch(props) {
 					<option value="Mike Crapo" />
 					<option value="Debbie Stabenow" />
 				</datalist>
-				<Button type="submit" id="member-search-submit">
+				<Button type="submit" className="member-search-submit">
 					Submit
 				</Button>
 			</form>

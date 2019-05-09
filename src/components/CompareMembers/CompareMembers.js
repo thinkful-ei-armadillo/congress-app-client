@@ -42,7 +42,7 @@ export default function CompareMembers(props) {
 						data-cy="compare-search"
 						aria-label="search"
 					/>
-					<datalist id="members">
+					{/* <datalist id="members">
 						<option value="Nancy Pelosi" />
 						<option value="Adam Schiff" />
 						<option value="Mitch McConnell" />
@@ -55,8 +55,8 @@ export default function CompareMembers(props) {
 						<option value="Chuck Schumer" />
 						<option value="Mike Crapo" />
 						<option value="Debbie Stabenow" />
-					</datalist>
-					<Button type="submit" id="member-search-submit">
+					</datalist> */}
+					<Button type="submit" className="member-search-submit">
 						Submit
 					</Button>
 				</form>
@@ -86,7 +86,7 @@ export default function CompareMembers(props) {
 						data-cy="compare-search"
 						aria-label="search"
 					/>
-					<datalist id="members">
+					{/* <datalist id="members">
 						<option value="Nancy Pelosi" />
 						<option value="Adam Schiff" />
 						<option value="Mitch McConnell" />
@@ -99,8 +99,8 @@ export default function CompareMembers(props) {
 						<option value="Chuck Schumer" />
 						<option value="Mike Crapo" />
 						<option value="Debbie Stabenow" />
-					</datalist>
-					<Button type="submit" id="member-search-submit">
+					</datalist> */}
+					<Button type="submit" className="member-search-submit">
 						Submit
 					</Button>
 				</form>
