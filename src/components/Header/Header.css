@@ -103,7 +103,28 @@ header a {
   color: #f6f6f6;
 }
 
+@media (max-width: 700px) {
+  .logged-in-header,
+  .logged-out-header {
+    margin-right: 0;
+  }
+  .title {
+    margin-left: -13px;
+    font-size: 30px;
+  }
+  .title > a > .little {
+    font-size: 27px;
+  }
+  .logo-container {
+    margin-top: 0px;
+  }
+}
+
 @media (max-width: 599px) {
+  #logo {
+    width: 25px;
+  }
+
   .title > a > .little {
     font-size: 15px;
   }
@@ -118,7 +139,8 @@ header a {
     font-size: 12px;
   }
 
-  .logged-in-header, .logged-out-header {
+  .logged-in-header,
+  .logged-out-header {
     margin-bottom: 5px;
   }
 
@@ -127,25 +149,35 @@ header a {
   }
   .title {
     margin-top: 15px;
+    margin-left: -5px;
   }
+
   .logo-container {
     margin-left: 4%;
     margin-right: 5px;
-    margin-top: 5px;
     width: 15%;
   }
-
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .compare-button-link {
     display: block;
   }
+  #logo {
+    width: 23px;
+  }
+}
+
+@media (max-width: 400px) {
   #login-button,
   #logout-button,
   #compare-button,
   #register-button {
     box-shadow: none;
+  }
+
+  .logo-container {
+    display: none;
   }
 
   header {
@@ -171,22 +203,18 @@ header a {
     width: 20%;
   }
 
-  .logged-in-header, .logged-out-header {
+  .logged-in-header,
+  .logged-out-header {
     margin-bottom: 0px;
+  }
+  .title-container {
+    margin-left: 15px;
+    margin-top: 0px;
+    /* padding-bottom: 5px; */
   }
 }
 
 @media (max-width: 360px) {
-  .logo-container {
-    display: none;
-  }
-
-  .title-container {
-    margin-left: 15px; 
-    margin-top: 0px;
-    /* padding-bottom: 5px; */
-  }
-
   #compare-button {
     display: none;
   }
