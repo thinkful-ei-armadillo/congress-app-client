@@ -52,8 +52,8 @@ export default function CongressStatus(props) {
 	};
 	return (
 		<div className="congress-status-component">
-			<header>
-				<h2>What's happening on the floor?</h2>
+			<div id="bills-header">
+				<h2>Bills on the floor:</h2>
 				<select
 					className="bill-filter"
 					onChange={e => {
@@ -63,7 +63,7 @@ export default function CongressStatus(props) {
 					<option value="introduced">Introduced</option>
 					<option value="active">Active</option>
 				</select>
-			</header>
+			</div>
 			<div>{bills && <ul className="bill-list">{renderBills()}</ul>}</div>
 		</div>
 	);
