@@ -11,13 +11,13 @@
   color: #f2f2f2;
   font-family: 'Julius Sans One', sans-serif;
   text-align: center;
-  width: 50%;
-  margin-top: 22px;
+  width: 100%;
   word-wrap: break-word;
-  font-size: 20px;
+  font-size: 26px;
+  margin-left: 10px;
 }
 
-#bills-header{
+#bills-header {
   height: 100%;
   width: 100%;
   display: flex;
@@ -102,8 +102,8 @@
 @media only screen and (max-width: 800px) {
   .congress-status-component > #bills-header > h2 {
     align-items: center;
-    font-size: 18px;
-    margin-top: 15px;
+    font-size: 20px;
+    margin-top: 20px;
     margin-left: 15px;
     width: 50%;
     text-align: center;
