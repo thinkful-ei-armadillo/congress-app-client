@@ -15,9 +15,54 @@ export default function StateSearch(props) {
 		}
 	};
 
+	// const handleAddressSearch = e => {
+	// 	e.preventDefault();
+	// 	let address = [
+	// 		e.target.address.value,
+	// 		e.target.city.value,
+	// 		e.target.state.value
+	// 	].join(" ");
+	// 	console.log(address);
+	// 	MemberApiService.getMemberbyAddress(address).then(members => {
+	// 		console.log(members);
+	// 		setMembers(members);
+	// 	});
+	// };
+
 	return (
 		<section className="state-reps">
 			<div className="search">
+			{/* <form
+					className="address-search-form"
+					onSubmit={e => handleAddressSearch(e)}>
+					<label htmlFor="address-search-form">
+						Search for My Representatives
+					</label>
+					<input
+						type="text"
+						className="search-input"
+						name="address"
+						placeholder="Address"
+						required
+					/>
+					<input
+						type="text"
+						className="search-input"
+						name="city"
+						placeholder="City"
+						required
+					/>
+					<input
+						type="text"
+						className="search-input"
+						name="state"
+						placeholder="State"
+						required
+					/>
+					<div className="input search-input">
+						<input type="submit" />
+					</div>
+				</form> */}
 				<form className="state-search-form" data-cy="state_search_form">
 					<br />
 					<label htmlFor="state-search" className="state-search-label">
