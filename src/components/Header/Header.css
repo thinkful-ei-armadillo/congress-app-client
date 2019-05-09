@@ -1,35 +1,40 @@
 header {
-  /* height: 75px; */
   display: flex;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 5px;
   background: #0f4471;
   width: 100%;
-  position: relative;
 }
 
 nav {
   width: 100%;
 }
 
-.logo-container {
-  margin-left: 4%;
-  margin-right: 5px;
-  width: 8%;
-  height: 8%;
-  /* display: none; */
-  /* width: 71px;
-  height: 93px; */
+.title-container {
+  white-space: nowrap;
+  display: flex;
+  margin-top: 5px;
 }
 
-header > div > img {
-  width: 100%;
-  height: 100%;
+.logo-container {
+  margin-left: 4%;
+  margin-top: 10px;
+  width: 81px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#logo {
+  display: inline-block;
+}
+
+header > div > div > img {
+  width: 50%;
 }
 
 .title {
   text-align: left;
-  /* margin-left: 4%; */
+  margin-left: 0;
 }
 
 .title > a {
@@ -40,7 +45,7 @@ header > div > img {
 }
 
 .title > a:hover {
-  color: #fc3c3c;
+  color: #d50000;
 }
 
 .title > a > .little {
@@ -112,6 +117,23 @@ header a {
   #register-button {
     font-size: 11px;
   }
+  .logo-container {
+    margin-left: 4%;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 12%;
+    height: 12%;
+  }
+}
+
+@media (max-width: 800px) {
+  /* .logo-container {
+    margin-left: 4%;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 12%;
+    height: 12%;
+} */
 }
 
 @media (max-width: 400px) {
@@ -124,7 +146,16 @@ header a {
   #register-button {
     box-shadow: none;
   }
+
   header {
     align-items: inherit;
+    padding: 8px 0 8px 0;
+  }
+
+  .logo-container {
+    margin-left: 5%;
+    margin-right: 0px;
+    margin-top: 5px;
+    width: 14%;
   }
 }

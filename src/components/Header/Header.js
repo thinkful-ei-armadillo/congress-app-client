@@ -47,22 +47,24 @@ export default class Header extends Component {
 	render() {
 		return (
 			<header>
-				<div className="logo-container">
-					<img src="https://i.ibb.co/LY5d7h2/logo.png" alt="logo" border="0" />
+				<div className="title-container">
+					<div className="logo-container">
+						<img src="https://i.ibb.co/LY5d7h2/logo.png" alt="mycongress logo" id='logo' border="0" />
+					</div>
+					<h1 className="title">
+							{TokenService.hasAuthToken() ? (
+								<Link to="/dashboard">
+									<span className="little">My</span>
+									Congress
+								</Link>
+							) : (
+								<Link to="/">
+									<span className="little">My</span>
+									Congress
+								</Link>
+							)}
+					</h1>
 				</div>
-				<h1 className="title">
-					{TokenService.hasAuthToken() ? (
-						<Link to="/dashboard">
-							<span className="little">My</span>Congress
-							<span className="little">.io</span>
-						</Link>
-					) : (
-						<Link to="/">
-							<span className="little">My</span>Congress
-							<span className="little">.io</span>
-						</Link>
-					)}
-				</h1>
 				<nav>
 					{TokenService.hasAuthToken()
 						? this.renderLogoutLink()

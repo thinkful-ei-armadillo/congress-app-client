@@ -6,7 +6,7 @@ import "./CompareMemberListPage.css";
 
 function CompareMemberListPage(props) {
 	if (props.members === null) {
-		return <div id="no-search-feedback" />;
+		return <div className="no-search-feedback" />;
 	} else if (props.members.length === 0) {
 		return (
 			<div id="no-results-feedback">
@@ -15,7 +15,7 @@ function CompareMemberListPage(props) {
 		);
 	} else {
 		return props.members.map(member => (
-			<div id="search-results-container" data-cy="search-result">
+			<div className="search-results-container" data-cy="search-result">
 				<div key={member.id} className="search-results">
 					<CompareMemberListItem
 						key={member.id}

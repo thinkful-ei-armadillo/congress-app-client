@@ -8,7 +8,7 @@ function SmallProfile(props) {
 		<div className='small-profile'>
 			<img
 				className="small-profile-picture"
-				alt={props.member.alt}
+				alt='member small profile'
 				onError={e => {
 					e.target.onerror = null;
 					e.target.src =
@@ -20,7 +20,7 @@ function SmallProfile(props) {
 			/>
 			<Link to={`/profile/${props.member.id}`} className="name">
 				<p className="name">
-					{props.member.short_title}{' '} 
+					{props.member.short_title}{' '}
 					{firstInitial}
 					{"."}
 					{props.member.last_name}

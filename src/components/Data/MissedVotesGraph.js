@@ -96,7 +96,7 @@ export default class MissedVotesGraph extends Component {
   render() {
     return (
       <div id="missed-votes-graph">
-        <h3 id="missed-votes-title">Average % of Missed Votes By Party</h3>
+        <h2 id="missed-votes-title">Average % of Missed Votes By Party</h2>
         <div id="missed-votes-graph-wrapper" />
         <p className="legend">
           <span className="legend-item">

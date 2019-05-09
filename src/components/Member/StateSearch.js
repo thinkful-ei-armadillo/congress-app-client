@@ -65,16 +65,16 @@ export default function StateSearch(props) {
 					</div>
 				</form> */}
 
-				<form className="state-search-form"
-				data-cy="state_search_form">
-					<label htmlFor="state-search" className="state-search-label">
+				<form className="state-search-form" data-cy="state_search_form">
+					<br />
+					<label htmlFor="state-search" className="state-search-label" id='state-search-label'>
 						Search for a State's Representatives
 					</label>
-					<br />
 					<select
-					onChange={e => setStateSearch(e)}
-					className="state-search search"
-					data-cy="state-search">
+						onChange={e => setStateSearch(e)}
+						className="state-search search"
+						data-cy="state-search"
+						aria-labelledby='state-search-label'>
 						<option value="">Select a State</option>
 						<option value="AL">Alabama</option>
 						<option value="AK">Alaska</option>

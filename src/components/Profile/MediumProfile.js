@@ -23,8 +23,7 @@ function MediumProfile(props) {
 				<p className="title">{props.short_title}</p>
 				<Link
 					to={`/profile/${props.member.id}`}
-					className="name"
-					id='med-profile-name-link'
+					className="name med-profile-name-link"
 					data_cy="compare-name">
 					{props.member.short_title} {props.member.first_name}{" "}
 					{props.member.middle_name}

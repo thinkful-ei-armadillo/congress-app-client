@@ -20,15 +20,17 @@ export default function MemberSearch(props) {
 		<section className="member-search">
 			<form onSubmit={submitForm}>
 				<input
-					type='text'
-					minLength='3'
-					name='search'
-					placeholder='Search for a Member of Congress'
-					className='searchbar'
-					list='members'
-					autoComplete='on'
-					data-cy='search'
+					type="text"
+					minLength="3"
+					name="search"
+					placeholder="Search for a Member of Congress"
+					className="searchbar"
+					list="members"
+					autoComplete="on"
+					data-cy="search"
+					aria-label="search"
 				/>
+
 				<datalist id="members">
 					<option value="Nancy Pelosi" />
 					<option value="Adam Schiff" />
@@ -43,7 +45,7 @@ export default function MemberSearch(props) {
 					<option value="Mike Crapo" />
 					<option value="Debbie Stabenow" />
 				</datalist>
-				<Button type="submit" id="member-search-submit">
+				<Button type="submit" className="member-search-submit">
 					Submit
 				</Button>
 			</form>

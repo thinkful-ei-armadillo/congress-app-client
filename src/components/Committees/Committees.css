@@ -21,7 +21,6 @@
   .committees-component ul {
     max-height: 550px;
     overflow-y: scroll;
-    border-top: 1px solid #ccc;
     padding-left: 0px;
     margin-bottom: 0px;
   }
@@ -49,7 +48,7 @@
   }
   
   .committee-info b {
-    color: #fc3c3c;
+    color: #D50000;
   }
   
   .committee-chair a, .committee-chair p, .committee-url a{
