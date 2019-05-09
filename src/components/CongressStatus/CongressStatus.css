@@ -7,22 +7,30 @@
   color: #0f4471;
 }
 
-.congress-status-component header > h2 {
+.congress-status-component > #bills-header > h2 {
   color: #f2f2f2;
   font-family: 'Julius Sans One', sans-serif;
   text-align: center;
-  width: 100%;
+  width: 50%;
   margin-top: 22px;
   word-wrap: break-word;
   font-size: 20px;
-  /* background-color: #0f4471; */
+}
+
+#bills-header{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #0f4471;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .bill-filter {
   margin-top: 15px;
   margin-left: 5px;
-  width: 150px;
-  height: 30px;
+  /* width: 150px;
+  height: 30px; */
   font-size: 16px;
   padding: 10px;
   background: #fff;
@@ -33,7 +41,6 @@
 .congress-status-component ul {
   max-height: 550px;
   overflow-y: scroll;
-  border-top: 1px solid #ccc;
   padding-left: 0px;
 }
 
@@ -70,18 +77,21 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .congress-status-component > header > h2{
+  .congress-status-component > #bills-header > h2{
     text-align: center;
     margin: 0 auto;
     margin-top: 5px;
-    margin-right: 5%;
-    margin-left: 10px;
-    width: 75%;
+    /* margin-right: 5%; */
+    /* margin-left: 10px; */
+    width: 30%;
+    font-size: 12px;
+  }
+  #bills-header{
+    padding-bottom: 10px;
   }
   .bill-filter{
-    font-size: 8px;
+    font-size: 12px;
     padding: 1.2%;
-    width: 70px;
   }
   .bill-info {
     padding: 15px;
@@ -89,34 +99,24 @@
   }
 }
 
-@media only screen and (max-width: 840px) {
-  .congress-status-component > header > h2 {
-    display: flexbox;
+@media only screen and (max-width: 800px) {
+  .congress-status-component > #bills-header > h2 {
+    /* display: flexbox; */
     align-items: center;
     font-size: 18px;
     margin-top: 15px;
-    margin-right: 20px;
-    margin-left: 15px;
+    /* margin-right: 20px; */
+    /* margin-left: 15px; */
     width: 50%;
     text-align: center;
   }
-}
-
-@media only screen and (min-width: 600px) {
-  .congress-status-component > header {
-    /* font-size: 14px; */
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-right: 20px;
-    margin-left: 10px;
-    width: 75%;
-  }
   .bill-filter{
-    font-size: 10px;
-    padding: 1.2%;
-    width: 100px;
-    position: relative;
-    left: 100px;
+    font-size: 14px;
+    padding:0.5em;
+    float:right;
+    /* position: relative; */
+    /* left: 100px; */
+   
+    margin-top: 10px;
   }
 }
