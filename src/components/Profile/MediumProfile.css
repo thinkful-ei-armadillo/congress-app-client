@@ -5,3 +5,7 @@
 .props-container > .med-profile-name-link {
   color: #0f4471;
 }
+
+.medium-profile-picture {
+  pointer-events: none;
+}

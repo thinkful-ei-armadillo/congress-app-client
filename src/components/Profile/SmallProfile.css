@@ -3,7 +3,7 @@
 }
 
 div.small-profile > img.small-profile-picture {
-  /* max-width: 4rem; */
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 600px) {

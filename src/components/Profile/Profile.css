@@ -9,6 +9,7 @@
 .main-profile > .profile-picture {
 	width: 200px;
 	box-shadow: 4px 4px 8px rgba(17, 17, 17, 0.3);
+	pointer-events: none;
 }
 
 h1#profile-page-name {

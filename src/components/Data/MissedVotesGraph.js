@@ -45,11 +45,11 @@ export default class MissedVotesGraph extends Component {
       })
       .attr('fill', function(d, i) {
         if (i === 0) {
-          return 'red';
+          return '#d50000';
         } else if (i === 1) {
-          return 'blue';
+          return '#0f4471';
         } else if (i === 2) {
-          return 'green';
+          return 'gray';
         }
       });
 
@@ -75,21 +75,21 @@ export default class MissedVotesGraph extends Component {
       .attr('x', 60)
       // .attr('y', 70)
       .attr('y', y(dataset[0]) - dataset[0] - 5 + 'px')
-      .attr('fill', 'red')
+      .attr('fill', '#d50000')
       .text(dataset[0].toFixed(2) + '%');
 
     d3.select('#graph')
       .append('text')
       .attr('x', 120)
       .attr('y', y(dataset[1]) - dataset[1] - 5 + 'px')
-      .attr('fill', 'blue')
+      .attr('fill', '#0f4471')
       .text(dataset[1].toFixed(2) + '%');
 
     d3.select('#graph')
       .append('text')
       .attr('x', 180)
       .attr('y', y(dataset[2]) - dataset[2] - 5 + 'px')
-      .attr('fill', 'green')
+      .attr('fill', '#333')
       .text(dataset[2].toFixed(2) + '%');
   }
 
