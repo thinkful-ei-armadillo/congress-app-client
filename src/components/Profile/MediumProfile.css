@@ -2,7 +2,11 @@
   color: #0f4471;
 }
 
-.props-container > .med-profile-name-link {
+.med-profile-name-link {
+  color: #f6f6f6;
+}
+
+.bill-sponsor .med-profile-name-link {
   color: #0f4471;
 }
 
