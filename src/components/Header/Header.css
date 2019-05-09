@@ -85,9 +85,6 @@ header > div > div > img {
   border: none;
 }
 
-.compare-button-link {
-}
-
 #logout-button {
   margin-left: 5px;
 }
@@ -210,7 +207,6 @@ header a {
   .title-container {
     margin-left: 15px;
     margin-top: 0px;
-    /* padding-bottom: 5px; */
   }
 }
 

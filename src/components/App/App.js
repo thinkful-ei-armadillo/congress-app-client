@@ -20,7 +20,6 @@ class App extends Component {
   state = { hasError: false };
 
   static getDerivedStateFromError(error) {
-    console.error(error);
     return { hasError: true };
   }
 

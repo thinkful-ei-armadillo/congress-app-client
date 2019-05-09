@@ -4,11 +4,6 @@ import AuthApiService from "../../services/auth-api-service";
 import "./RegistrationForm.css";
 
 export default class RegistrationForm extends Component {
-	// static defaultProps = {
-	//   onRegistrationSuccess: () => {
-	//     this.props.history.push(`/`);
-	//   }
-	// }
 
 	state = { error: null };
 

@@ -13,19 +13,9 @@ export default function CongressStatus(props) {
 			setBills(data);
 		});
 	}, [billFilter]);
-	/*
-   <b>Date:</b> <Moment format="YYYY/MM/DD">{event.date}</Moment>
-          </div>
-        </section>
-        <footer className="EventListItem__footer">
-          <b>Created:</b>{' '}
-          <Moment fromNow ago>
-            {event.date_created}
-          </Moment>{' '}*/
 
 	const renderBills = () => {
 		return bills.map(bill => {
-			// console.log(bill);
 			return (
 				<li className="bill-info" key={bill.bill_id}>
 					<h3 className="bill-title">

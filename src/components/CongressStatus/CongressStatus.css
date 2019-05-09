@@ -35,8 +35,6 @@
 }
 
 .congress-status-component ul {
-  /* max-height: 550px; */
-  /* overflow-y: scroll; */
   list-style: none;
   padding-left: 0px;
   scroll-behavior: smooth;

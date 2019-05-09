@@ -6,7 +6,6 @@ import "./LeaderBoard.css";
 export default function LeaderBoardMobile(props) {
 	let [top3, setTop3] = useState(null);
 	useEffect(() => {
-		// query members by one prop, show them sorted DESC
 		MemberApiService.getTop3s().then(res => setTop3(res));
 	}, []);
 	return top3 ? (

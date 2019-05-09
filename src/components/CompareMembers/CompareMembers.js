@@ -42,20 +42,6 @@ export default function CompareMembers(props) {
 						data-cy="compare-search"
 						aria-label="search"
 					/>
-					{/* <datalist id="members">
-						<option value="Nancy Pelosi" />
-						<option value="Adam Schiff" />
-						<option value="Mitch McConnell" />
-						<option value="Jerrold Nadler" />
-						<option value="Patrick Leahy" />
-						<option value="Chuck Grassley" />
-						<option value="Dianne Feinstein" />
-						<option value="Patty Murray" />
-						<option value="Susan Collins" />
-						<option value="Chuck Schumer" />
-						<option value="Mike Crapo" />
-						<option value="Debbie Stabenow" />
-					</datalist> */}
 					<Button type="submit" className="member-search-submit">
 						Submit
 					</Button>
@@ -86,20 +72,6 @@ export default function CompareMembers(props) {
 						data-cy="compare-search"
 						aria-label="search"
 					/>
-					{/* <datalist id="members">
-						<option value="Nancy Pelosi" />
-						<option value="Adam Schiff" />
-						<option value="Mitch McConnell" />
-						<option value="Jerrold Nadler" />
-						<option value="Patrick Leahy" />
-						<option value="Chuck Grassley" />
-						<option value="Dianne Feinstein" />
-						<option value="Patty Murray" />
-						<option value="Susan Collins" />
-						<option value="Chuck Schumer" />
-						<option value="Mike Crapo" />
-						<option value="Debbie Stabenow" />
-					</datalist> */}
 					<Button type="submit" className="member-search-submit">
 						Submit
 					</Button>

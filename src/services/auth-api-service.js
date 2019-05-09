@@ -59,7 +59,6 @@ const AuthApiService = {
         return res;
       })
       .catch(err => {
-        console.log('refresh token request error');
         console.error(err);
       });
   }

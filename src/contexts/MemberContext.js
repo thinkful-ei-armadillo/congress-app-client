@@ -18,16 +18,7 @@ export class MemberProvider extends Component {
     this.state = state;
   }
 
-  componentDidMount() {
-   
-  }
-
-  componentWillUnmount() {
-   
-  }
-
   setError = error => {
-    console.error(error)
     this.setState({ error })
   }
 

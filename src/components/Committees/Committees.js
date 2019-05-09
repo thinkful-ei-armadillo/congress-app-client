@@ -12,7 +12,6 @@ export default function Committees(props) {
 
   const renderCommittees = () =>{
     return committees.map(committee => {
-			// console.log(committee);
 			return (
 				<li className="committee-info" key={committee.committee_id}>
 					<h3 className="committee-name">
