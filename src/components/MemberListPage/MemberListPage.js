@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-// import MemberApiService from '../../services/member-api-service';
-// import { Link } from 'react-router-dom';
 import MemberListItem from "./MemberListItem";
 import "./MemberListPage.css";
 

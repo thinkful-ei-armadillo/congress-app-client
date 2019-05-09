@@ -1,6 +1,4 @@
-// import config from '../config';
 import MemberApiService from './member-api-service';
-// import CongressApiService from './congress-api-service';
 
 const graphData = {
   async getNumbers() {
@@ -21,10 +19,6 @@ const graphData = {
       }
     }
 
-    // let repubAvg = repubArr.reduce((a, b) => a + b / repubArr.length, []);
-    // let demAvg = demArr.reduce((a, b) => a + b / demArr.length, []);
-    // let indAvg = indArr.reduce((a, b) => a + b / indArr.length, []);
-
     let repubAvg = 0;
     let demAvg = 0;
     let indAvg = 0;
@@ -33,7 +27,6 @@ const graphData = {
       repubAvg += parseInt(repubArr[j], 10);
     }
 
-    // console.log('republican total ', repubAvg);
     if (repubAvg !== 0) {
       repubAvg = repubAvg / repubArr.length;
     }
@@ -42,7 +35,6 @@ const graphData = {
       demAvg += parseInt(demArr[k], 10);
     }
 
-    // console.log('democrat total ', demAvg);
     if (demAvg !== 0) {
       demAvg = demAvg / demArr.length;
     }
@@ -51,26 +43,13 @@ const graphData = {
       indAvg += parseInt(indArr[l], 10);
     }
 
-    // console.log('independent total ', indAvg);
-
     if (indAvg !== 0) {
       indAvg = indAvg / indArr.length;
     }
 
-    // if (demAvg === NaN) {
-    //   demAvg = 0;
-    // }
-
-    // if (repubAvg === NaN) {
-    //   repubAvg = 0;
-    // }
-
-    // console.log({ repub: repubAvg, dem: demAvg, ind: indAvg })
-
     const result = [repubAvg, demAvg, indAvg]
-    // return { repub: repubAvg, dem: demAvg, ind: indAvg };
     return result;
   }
 };
-// CongressApiService.getBills(),
+
 export default graphData;

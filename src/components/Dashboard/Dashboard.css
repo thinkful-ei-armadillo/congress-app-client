@@ -14,7 +14,7 @@
   border-radius: 5px;
   border: 1px solid #cccccc;
   text-align: center;
-  box-shadow: 5px 5px #a6a6a6;
+  box-shadow: 5px 5px 5px #a6a6a6;
 }
 
 .col1 {
@@ -27,8 +27,6 @@
 }
 
 .col2 {
-  /*width: 25%;
-  margin-left: 3%;*/
   width: 20%;
   margin-left: 5%;
 }
@@ -52,12 +50,6 @@
   }
   .dashboard {
     display: flex;
-    /* flex-direction: column-reverse; */
     flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .col1 {
   }
 }

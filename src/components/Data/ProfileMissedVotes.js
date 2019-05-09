@@ -6,9 +6,7 @@ export default class ProfileMissedVotes extends Component {
   componentDidMount() {
 
     const values = Object.values(this.props);
-    // console.log(values);
     values.push(1 - values[0]);
-    // console.log(values);
     const data = values.map(num => num * 100);
 
     const width = 100;
@@ -24,10 +22,6 @@ export default class ProfileMissedVotes extends Component {
       .outerRadius(radius - 10)
       .innerRadius(50);
 
-    // const labelArc = d3
-    //   .arc()
-    //   .outerRadius(radius)
-    //   .innerRadius(radius - 40);
     const svg = d3
       .select("#profile-missed-votes-graph")
       .append("svg")
@@ -49,7 +43,6 @@ export default class ProfileMissedVotes extends Component {
   }
 
   render() {
-    // let dataset = this.props;
     return <div id="profile-missed-votes-graph" />;
   }
 }

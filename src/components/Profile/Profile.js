@@ -6,8 +6,6 @@ import ProfileMissedVotes from "../Data/ProfileMissedVotes";
 import ProfilePartyVotes from "../Data/ProfilePartyVotes";
 import UserContext from "../../contexts/UserContext";
 import MemberApiService from "../../services/member-api-service";
-// import MemberContext from "../../contexts/MemberContext";
-// import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 function Profile(props) {
 	const user = useContext(UserContext);
@@ -18,15 +16,11 @@ function Profile(props) {
 	const followMember = () => {
 		MemberApiService.addFollowedMembers(props.member.id);
 		setFollowing(true);
-		// look at TJ's workshop, wk8 on hooks
-		// newMember.setMember();
-		//props.props.history.push('/dashboard');
 	};
 
 	const unFollowMember = () => {
 		MemberApiService.removeFollowedMembers(props.member.id);
 		setFollowing(false);
-		//props.props.history.push('/dashboard');
 	};
 
 	useEffect(() => {
@@ -38,11 +32,6 @@ function Profile(props) {
 						setFollowing(true);
 					}
 				});
-				/*followedMembers.forEach(e => {
-        if (e.member_id === props.member.id) {
-          setFollowing(true);
-        }
-      });*/
 			});
 		}
 	}, [props.member.id, user.user.id]);

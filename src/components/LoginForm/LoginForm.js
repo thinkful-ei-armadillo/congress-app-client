@@ -19,8 +19,6 @@ export default class LoginForm extends Component {
 
 		this.setState({ error: null });
 
-		// console.log('login form submitted');
-
 		AuthApiService.postLogin({
 			user_name: user_name.value,
 			password: password.value

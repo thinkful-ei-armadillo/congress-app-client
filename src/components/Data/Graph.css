@@ -1,5 +1,4 @@
 #graph {
-  /* border: 2px solid #777; */
   border-radius: 2px;
 }
 
@@ -30,10 +29,6 @@
 
 .legend-item {
   margin-right: 5px;
-}
-
-#profile-votes-graph {
-  /* width: 20%; */
 }
 
 #missed-votes-title {

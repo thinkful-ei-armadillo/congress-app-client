@@ -3,7 +3,7 @@
   border: 1px solid #cccccc;
   border-radius: 5px;
   background: #f2f2f2;
-  box-shadow: 5px 5px #a6a6a6;
+  box-shadow: 5px 5px 5px #a6a6a6;
   color: #0f4471;
 }
 
@@ -35,9 +35,9 @@
 }
 
 .congress-status-component ul {
-  max-height: 550px;
-  overflow-y: scroll;
+  list-style: none;
   padding-left: 0px;
+  scroll-behavior: smooth;
 }
 
 .bill-list li {
@@ -90,6 +90,12 @@
   .bill-info {
     padding: 15px;
     padding-top: 20px;
+  }
+}
+@media only screen and (min-width: 500px){
+  .congress-status-component ul {
+    max-height: 550px;
+    overflow-y: scroll;
   }
 }
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// not used:  Fragment, useState, useEffect,
 import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
 import PrivateRoute from '../Utils/PrivateRoute';
@@ -20,7 +19,6 @@ class App extends Component {
   state = { hasError: false };
 
   static getDerivedStateFromError(error) {
-    console.error(error);
     return { hasError: true };
   }
 

@@ -13,10 +13,8 @@ export default class Header extends Component {
 	};
 
 	renderLogoutLink() {
-		// console.log(this.context.user.username);
 		return (
 			<div className="logged-in-header">
-				{/* <p>Welcome, {this.context.user.username}</p> */}
 				{"  "}
 				<Link to="/compare">
 					<Button id="compare-button">Compare Members</Button>

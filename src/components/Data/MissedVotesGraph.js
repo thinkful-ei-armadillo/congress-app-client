@@ -6,7 +6,6 @@ import './Graph.css';
 export default class MissedVotesGraph extends Component {
   async componentDidMount() {
     let dataset = await graphData.getNumbers();
-    // console.log(dataset);
 
     const h = 200;
     const w = 250;
@@ -73,7 +72,6 @@ export default class MissedVotesGraph extends Component {
     d3.select('#graph')
       .append('text')
       .attr('x', 60)
-      // .attr('y', 70)
       .attr('y', y(dataset[0]) - dataset[0] - 5 + 'px')
       .attr('fill', '#d50000')
       .text(dataset[0].toFixed(2) + '%');

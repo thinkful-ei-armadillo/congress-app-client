@@ -3,14 +3,12 @@
     border: 1px solid #05004e;
     border-radius: 5px;
     background: #f2f2f2 ;
-    box-shadow: 5px 5px #a6a6a6;
+    box-shadow: 5px 5px 5px #a6a6a6;
     color: #0f4471;
   }
   
   .committees-component > header > h2 {
-    /* color: #0f4471;*/
     color: #f2f2f2; 
-    /* font-family: 'Julius Sans One', sans-serif; */ 
     text-align: center;
     width: 100%;
     margin-top: 22px;
@@ -19,10 +17,10 @@
   }
   
   .committees-component ul {
-    max-height: 550px;
-    overflow-y: scroll;
+    list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
+    scroll-behavior: smooth;
   }
   
   .committee-list li {
@@ -55,6 +53,13 @@
     color: #0f4471;
   }
 
+@media only screen and (min-width: 500px) {
+  .committees-component ul {
+    max-height: 550px;
+    overflow-y: scroll;
+    }
+}
+
 @media (min-width: 600px) {
   .committees-component > header > h2 {
     font-size: 22px;
@@ -62,8 +67,6 @@
     margin: 0 auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    /* margin-right: 5%;
-    margin-left: 10px; */
     padding: 2%;
     width: 75%;
   }
@@ -73,10 +76,8 @@
   .committees-component > header > h2 {
     display: flexbox;
     align-items: center;
-    font-size: 18px;
+    font-size: 24px;
     margin-top: 15px;
-    /* margin-right: 20px;
-    margin-left: 15px; */
     width: 50%;
     text-align: center;
   }
