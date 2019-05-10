@@ -52,24 +52,13 @@ nav {
 
 .logged-in-header > a,
 .logged-out-header > a {
-  border-right: 1px solid rgb(61, 94, 158);
-  padding: 5px;
-}
-
-.logged-out-header > a {
-  padding-right: 10px;
-}
-
-.logged-out-header > a:last-child {
-  border-right: none;
-}
-.logged-in-header > a:last-child {
-  border-right: none;
+  /* border: 1px solid rgb(61, 94, 158); */
+  padding: 9px 9px 8px 10px;
 }
 
 .logged-out-header > a:hover {
   background-color: rgb(61, 94, 158);
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .logged-in-header,
