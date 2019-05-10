@@ -5,7 +5,7 @@
   <span><b>MyCongress</b>: <span>An app that brings Congressional data to your fingertips.</span><br/>
   <a href="https://mycongress.now.sh/" target="_blank"><b>Live Version</b></a>
 </p>
-
+<hr>
 <p align="center">
   <img src="https://raw.githubusercontent.com/thinkful-ei-armadillo/congress-app-client/master/src/images/dashboard.png" alt="dashboard view" height="400" />
 </p>
