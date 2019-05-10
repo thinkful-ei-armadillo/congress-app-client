@@ -51,6 +51,8 @@ function Profile(props) {
 			);
 		}
 	};
+
+	document.title = `MyCongress - ${props.member.short_title} ${props.member.first_name} ${props.member.last_name}`;
 	return (
 		<div className="main-profile">
 			<img

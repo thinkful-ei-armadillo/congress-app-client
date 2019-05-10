@@ -18,6 +18,7 @@ export default class RegistrationPage extends Component {
   }
 
   render() {
+    document.title = 'MyCongress - Register';
     return (
       <Section className='RegistrationPage'>
         <h2 id="registration-header">Register</h2>

@@ -10,6 +10,7 @@ import "./Dashboard.css";
 import LeaderBoardMobile from "../LeaderBoard/LeaderBoardMobile";
 
 function PrivateDashboard(props) {
+	document.title = 'MyCongress - Dashboard';
 	return (
 		<div className="dashboard">
 			<div className="col1">

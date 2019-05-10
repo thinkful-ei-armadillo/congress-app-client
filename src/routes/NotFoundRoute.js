@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 class NotFoundRoute extends Component {
+  
   render() {
+    document.title = 'MyCongress - Page Not Found';
     return (
       <section>
         <h2>404 - Page not found</h2>
