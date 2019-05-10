@@ -52,11 +52,18 @@ nav {
 
 .logged-in-header > a,
 .logged-out-header > a {
-  font-size: 18px;
   border-right: 1px solid rgb(61, 94, 158);
   padding: 5px;
 }
+
+.logged-out-header > a {
+  padding-right: 10px;
+}
+
 .logged-out-header > a:last-child {
+  border-right: none;
+}
+.logged-in-header > a:last-child {
   border-right: none;
 }
 
@@ -78,7 +85,7 @@ nav {
   font-size: 16px;
   font-weight: 400;
   font-family: sans-serif;
-  border-radius: 5px;
+  padding-right: 5px;
   color: white;
   background-color: transparent;
   border: none;
@@ -129,16 +136,15 @@ header a {
     font-size: 18px;
     margin-top: 4%;
   }
-  #login-button,
-  #logout-button,
-  #compare-button,
-  #register-button {
+  .logged-in-header > a,
+  .logged-out-header > a {
     font-size: 12px;
   }
 
   .logged-in-header,
   .logged-out-header {
     margin-bottom: 5px;
+    margin-top: 5px;
   }
 
   .title-container {
@@ -157,7 +163,7 @@ header a {
 }
 
 @media (max-width: 500px) {
-  .compare-button-link {
+  .logged-out-header .compare-button-link {
     display: block;
   }
   #logo {
@@ -207,6 +213,9 @@ header a {
   .title-container {
     margin-left: 15px;
     margin-top: 0px;
+  }
+  header {
+    align-items: center;
   }
 }
 
