@@ -7,15 +7,15 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/thinkful-ei-armadillo/congress-app-client/master/src/images/dashboard.png" height="400" />
+  <img src="https://raw.githubusercontent.com/thinkful-ei-armadillo/congress-app-client/master/src/images/dashboard.png" alt="dashboard view" height="400" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/thinkful-ei-armadillo/congress-app-client/master/src/images/profile.png" height="400" />
+  <img src="https://raw.githubusercontent.com/thinkful-ei-armadillo/congress-app-client/master/src/images/profile.png" alt="profile page" height="400" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/thinkful-ei-armadillo/congress-app-client/master/src/images/compare.png" height="400" />
+  <img src="https://raw.githubusercontent.com/thinkful-ei-armadillo/congress-app-client/master/src/images/compare.png" alt="compare members page" height="400" />
 </p>
 
 ## Why
@@ -66,8 +66,12 @@ The Congress has a total of 535 members. It's hard to keep up to date on your re
 
 ## Team
 
-- Project Manager [Daniel Ors](https://github.com/danielors)
-- Product Manager [Ali Lahrime](https://github.com/lahrime)
-- Testing Lead [Owen Cyr](https://github.com/owencyr)
-- Design Lead [Secil Reel](https://github.com/secilreel)
-- Marketing Lead [Payman Kossari](https://github.com/paypay43)
+- Project Manager - [Daniel Ors](https://github.com/danielors)
+- Product Manager - [Ali Lahrime](https://github.com/lahrime)
+- Testing Lead - [Owen Cyr](https://github.com/owencyr)
+- Design Lead - [Secil Reel](https://github.com/secilreel)
+- Marketing Lead - [Payman Kossari](https://github.com/paypay43)
+
+## Twitter
+
+Follow us on [Twitter](https://twitter.com/mycongressio)!
