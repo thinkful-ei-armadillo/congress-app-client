@@ -14,9 +14,13 @@
   padding: 4px;
 }
 
+#compare-member-profile-container .med-profile-name-link {
+  color: #05004e !important;
+}
+
 #compare-member-profile-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 599px) {

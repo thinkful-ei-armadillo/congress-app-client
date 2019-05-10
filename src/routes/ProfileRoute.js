@@ -10,6 +10,7 @@ export default class ProfileRoute extends Component {
       member: null
     };
   }
+
   componentDidMount() {
     let memberID = this.props.match.params.id;
     MemberApiService.getMemberbyID(memberID).then(member =>
@@ -17,6 +18,7 @@ export default class ProfileRoute extends Component {
     );
   }
   render() {
+    document.title = 'MyCongress';
     return !this.state.member ? (
       "Now Loading..."
     ) : (

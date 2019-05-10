@@ -49,6 +49,7 @@ class App extends Component {
   };
 
   render() {
+    document.title = 'MyCongress';
     return (
       <div className="App">
         <Header />

@@ -37,7 +37,7 @@ export default function Following(props) {
 			) : (
 				<div>
 					<p>
-						<b>Not following anyone yet</b>
+						<b>Not following anyone yet...</b>
 					</p>
 				</div>
 			)}

@@ -18,6 +18,7 @@ export default class LoginPage extends Component {
   }
 
   render() {
+    document.title = 'MyCongress - Login';
     return (
       <Section className='LoginPage'>
         <h2 id="login-header">Login</h2>
