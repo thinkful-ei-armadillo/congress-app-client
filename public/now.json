@@ -1,6 +1,6 @@
 {
 	"version": 2,
-	"alias": "congress",
+	"alias": "mycongress.now.sh",
 	"name": "mycongress",
 	"routes": [
 		{
