@@ -2,8 +2,8 @@
   <img src="https://user-images.githubusercontent.com/45650065/57548986-5862b880-7330-11e9-86f8-49cb7cb586b1.png" height="100" />
 </p>
 <p align="center">
-  <span><b>MyCongress.io</b>: <span>An app that aims to bring the information of the Congress to your fingertips, to keep you in the know</span><br/>
-  <a href="https://mycongress-io.rocketpowerwins.now.sh/" target="_blank">Live Version</a>
+  <span><b>MyCongress</b>: <span>An app that aims to bring the information of the Congress to your fingertips.</span><br/>
+  <a href="https://mycongress.now.sh/" target="_blank"><b>Live Version</b></a>
 </p>
 
 <p align="center">
@@ -39,6 +39,7 @@ The Congress has a total of 535 members. It's hard to keep up to date on your re
 
 ## Tech Stack
 
+### Client
 - [Create React App](https://github.com/facebook/create-react-app)
 - [React](https://github.com/facebook/react)
 - [React Context](https://reactjs.org/docs/context.html)
@@ -48,13 +49,17 @@ The Congress has a total of 535 members. It's hard to keep up to date on your re
 - [D3.js](https://d3js.org/)
 - [Cypress - Testing](https://www.cypress.io/)
 
+### Server
 - [Node](https://github.com/nodejs/node)
 - [NPM](https://www.npmjs.com/)
 - [Express](https://github.com/expressjs/express)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Knex](https://knexjs.org/)
 
+
+## Server
 [Server repo](https://github.com/thinkful-ei-armadillo/congress-app-server)
+
 
 ## Team
 
