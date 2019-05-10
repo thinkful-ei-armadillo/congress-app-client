@@ -3,9 +3,10 @@
   <a href="https://mycongress-io.rocketpowerwins.now.sh/" target="_blank">Live Version</a>
 </p>
   
+![Screen Shot 2019-05-10 at 2 25 34 PM](https://user-images.githubusercontent.com/45650065/57548708-a3c89700-732f-11e9-8448-76660486dccf.png)  
 
 ![Screen Shot 2019-05-10 at 2 25 57 PM](https://user-images.githubusercontent.com/45650065/57548687-98756b80-732f-11e9-8a63-9cda0d9b8e0d.png)
-![Screen Shot 2019-05-10 at 2 25 34 PM](https://user-images.githubusercontent.com/45650065/57548708-a3c89700-732f-11e9-8448-76660486dccf.png)
+
 ![Screen Shot 2019-05-10 at 2 26 08 PM](https://user-images.githubusercontent.com/45650065/57548715-aa570e80-732f-11e9-96ab-80fd527ea570.png)
 
 
