@@ -61,7 +61,7 @@ The Congress has a total of 535 members. It's hard to keep up to date on your re
 
 
 ## Server
-[Server repo](https://github.com/thinkful-ei-armadillo/congress-app-server)
+[Server Repository](https://github.com/thinkful-ei-armadillo/congress-app-server)
 
 
 ## Team
