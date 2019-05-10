@@ -3,8 +3,6 @@
   <a href="https://mycongress-io.rocketpowerwins.now.sh/" target="_blank">Live Version</a>
 </p>
 
-![Screen Shot 2019-05-10 at 2 15 39 PM](https://user-images.githubusercontent.com/45650065/57548421-e178f000-732e-11e9-89e5-512ffdbe1562.png)
-
 ## Why
 
 The Congress has a total of 535 members. It's hard to keep up to date on your representatives as well as the bills they are introducing and voting on. This app aims to put that information readily available to ensure your representatives are held accountable!
