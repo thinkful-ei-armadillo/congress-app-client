@@ -4,7 +4,6 @@ import AuthApiService from "../../services/auth-api-service";
 import "./RegistrationForm.css";
 
 export default class RegistrationForm extends Component {
-
 	state = { error: null };
 
 	handleSubmit = ev => {
@@ -66,7 +65,8 @@ export default class RegistrationForm extends Component {
 				</div>
 				<div className="password">
 					<label htmlFor="RegistrationForm__password">
-						Password <Required />
+						Password <Required /> (must be greater than 8 characters long and
+						include at least one uppercase, lowercase, and symbol)
 					</label>
 					<br />
 					<Input

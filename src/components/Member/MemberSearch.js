@@ -14,6 +14,7 @@ export default function MemberSearch(props) {
 		MemberApiService.getMembers(params).then(members => {
 			setMembers(members);
 		});
+		// set focus to results pane, to read error or search results
 	};
 
 	return (
