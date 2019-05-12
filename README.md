@@ -1,6 +1,21 @@
 <p align="center">
-  <span><b>MyCongress.io</b>: <span>An app that aims to bring the information of the Congress to your fingertips, to keep you in the know</span><br/>
-  <a href="https://mycongress-io.rocketpowerwins.now.sh/" target="_blank">Live Version</a>
+  <img src="https://user-images.githubusercontent.com/45650065/57548986-5862b880-7330-11e9-86f8-49cb7cb586b1.png" height="100" />
+</p>
+<p align="center">
+  <span><b>MyCongress</b>: <span>An app that brings Congressional data to your fingertips.</span><br/>
+  <a href="https://mycongress.now.sh/" target="_blank"><b>Live Version</b></a>
+</p>
+<hr>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/thinkful-ei-armadillo/congress-app-client/master/src/images/dashboard.png" alt="dashboard view" height="400" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/thinkful-ei-armadillo/congress-app-client/master/src/images/profile.png" alt="profile page" height="400" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/thinkful-ei-armadillo/congress-app-client/master/src/images/compare.png" alt="compare members page" height="400" />
 </p>
 
 ## Why
@@ -24,6 +39,7 @@ The Congress has a total of 535 members. It's hard to keep up to date on your re
 
 ## Tech Stack
 
+### Client
 - [Create React App](https://github.com/facebook/create-react-app)
 - [React](https://github.com/facebook/react)
 - [React Context](https://reactjs.org/docs/context.html)
@@ -31,20 +47,31 @@ The Congress has a total of 535 members. It's hard to keep up to date on your re
 - [Moment](https://momentjs.com/)
 - [React Moment](https://github.com/headzoo/react-moment)
 - [D3.js](https://d3js.org/)
-- [Cypress - Testing](https://www.cypress.io/)
+- [Cypress](https://www.cypress.io/) - Testing
 
+### Server
 - [Node](https://github.com/nodejs/node)
 - [NPM](https://www.npmjs.com/)
 - [Express](https://github.com/expressjs/express)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Knex](https://knexjs.org/)
+- [Mocha](https://mochajs.org/) - Testing
+- [Chai](https://www.chaijs.com/) - Testing
+- [Supertest](https://www.npmjs.com/package/supertest) - Testing
 
-[Server repo](https://github.com/thinkful-ei-armadillo/congress-app-server)
+
+## Server
+[Server Repository](https://github.com/thinkful-ei-armadillo/congress-app-server)
+
 
 ## Team
 
-- Project Manager [Daniel Ors](https://github.com/danielors)
-- Product Manager [Ali Lahrime](https://github.com/lahrime)
-- Testing Lead [Owen Cyr](https://github.com/owencyr)
-- Design Lead [Secil Reel](https://github.com/secilreel)
-- Marketing Lead [Payman Kossari](https://github.com/paypay43)
+- Project Manager - [Daniel Ors](https://github.com/danielors)
+- Product Manager - [Ali Lahrime](https://github.com/lahrime)
+- Testing Lead - [Owen Cyr](https://github.com/owencyr)
+- Design Lead - [Secil Reel](https://github.com/secilreel)
+- Marketing Lead - [Payman Kossari](https://github.com/paypay43)
+
+## Twitter
+
+Follow us on [Twitter](https://twitter.com/mycongressio)!
