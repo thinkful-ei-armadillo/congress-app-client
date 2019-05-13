@@ -65,8 +65,7 @@ export default class RegistrationForm extends Component {
 				</div>
 				<div className="password">
 					<label htmlFor="RegistrationForm__password">
-						Password <Required /> (must be greater than 8 characters long and
-						include at least one uppercase, lowercase, and symbol)
+						Password <Required />
 					</label>
 					<br />
 					<Input
@@ -76,7 +75,9 @@ export default class RegistrationForm extends Component {
 						id="RegistrationForm__password"
 						data-cy="password"
 						aria-required="true"
-					/>
+					/><br />
+					Minimum <b>8</b> characters long.<br />
+					Include at least one <b>uppercase</b> character, one <b>lowercase</b> character,<br /> one <b>number</b>, and one <b>symbol</b>.
 				</div>
 				<br />
 				<Button type="submit" id="register-submit">

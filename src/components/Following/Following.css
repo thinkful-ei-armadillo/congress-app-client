@@ -1,12 +1,18 @@
+.followed-members-section {
+  margin: 0 auto;
+}
+
 .following-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 0px;
 }
 
 .followed-member {
   list-style: none;
   margin-left: 15px;
+  margin-top: 10px;
   background-color: #0f4471;
   border-radius: 10px;
   border: 3px solid #A6A6A6;

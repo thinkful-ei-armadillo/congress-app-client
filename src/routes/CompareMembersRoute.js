@@ -5,7 +5,7 @@ import "./CompareMembersRoute.css";
 export default function CompareMembersRoute(props) {
   document.title = 'MyCongress - Compare Members';
   return (
-    <section id="compare-member-profile-container">
+    <section id="compare-member-profile-container" aria-live='polite'>
       {props.location.state && (
         <CompareMembers member={props.location.state.member} />
       )}

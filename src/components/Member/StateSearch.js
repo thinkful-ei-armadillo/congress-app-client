@@ -16,7 +16,7 @@ export default function StateSearch(props) {
 	};
 
 	return (
-		<section className="state-reps">
+		<section className="state-reps" aria-live='polite'>
 			<div className="search">
 				<form className="state-search-form" data-cy="state_search_form">
 					<br />

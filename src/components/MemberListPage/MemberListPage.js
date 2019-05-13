@@ -5,22 +5,22 @@ import "./MemberListPage.css";
 export default class MemberListPage extends Component {
 	renderMembers() {
 		if (this.props.members === null) {
-			return <div className="no-search-feedback" />;
+			return <p className="no-search-feedback" />;
 		} else if (this.props.members.length === 0) {
 			return (
-				<div className="no-results-feedback">
+				<p className="no-results-feedback">
 					No Results. Please Retry With a New Search.
-				</div>
+				</p>
 			);
 		} else {
 			return this.props.members.map(member => (
-				<div key={member.id} className="search-results">
+				<p key={member.id} className="search-results">
 					<MemberListItem key={member.id} member={member} />
-				</div>
+				</p>
 			));
 		}
 	}
 	render() {
-		return <div className="search-results-container" data-cy="search-result">{this.renderMembers()}</div>;
+		return <section className="search-results-container" data-cy="search-result" aria-live='polite'>{this.renderMembers()}</section>;
 	}
 }

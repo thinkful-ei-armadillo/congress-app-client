@@ -26,7 +26,7 @@ function SmallProfile(props) {
 				} ${props.member.last_name}'s Profile Page`}>
 				<p className="name">
 					{props.member.short_title} {firstInitial}
-					{"."}
+					{". "}
 					{props.member.last_name}
 					{props.member.suffix} ({props.member.party})
 				</p>

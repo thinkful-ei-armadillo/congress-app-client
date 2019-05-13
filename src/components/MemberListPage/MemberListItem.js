@@ -5,7 +5,7 @@ export default class MemberListItem extends Component {
   render() {
     let { member } = this.props;
     return (
-        <Link to={`/profile/${member.id}`}>
+        <Link to={`/profile/${member.id}`} >
           {member.short_title}{' '}
           {member.first_name} {member.last_name}
         </Link>
