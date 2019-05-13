@@ -7,13 +7,13 @@ function CompareMemberListPage(props) {
 		return <div className="no-search-feedback" />;
 	} else if (props.members.length === 0) {
 		return (
-			<div id="no-results-feedback">
+			<div id="no-results-feedback" aria-live='assertive'>
 				No Results. Please Retry With a New Search.
 			</div>
 		);
 	} else {
 		return props.members.map(member => (
-			<div className="search-results-container" data-cy="search-result">
+			<section className="search-results-container" data-cy="search-result">
 				<div key={member.id} className="search-results">
 					<CompareMemberListItem
 						key={member.id}
@@ -21,7 +21,7 @@ function CompareMemberListPage(props) {
 						setDisplay={props.setDisplay}
 					/>
 				</div>
-			</div>
+			</section>
 		));
 	}
 }

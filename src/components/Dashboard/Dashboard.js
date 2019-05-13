@@ -11,8 +11,8 @@ import LeaderBoardMobile from "../LeaderBoard/LeaderBoardMobile";
 function Dashboard(props) {
   return (
     <div className="dashboard">
-      <div className="col1">
-        <div className="members-status">
+      <section className="col1">
+        <section className="members-status">
           <MemberSearch />
           <br />
           <br />
@@ -22,7 +22,7 @@ function Dashboard(props) {
           <MissedVotesGraph className="graph"/>
           <br />
           <br />
-        </div>
+        </section>
         <LeaderBoardMobile />
         <br />
         <br />
@@ -32,12 +32,12 @@ function Dashboard(props) {
         <Committees />
         <br />
         <br />
-      </div>
-      <div className="col2">
+      </section>
+      <section className="col2">
         <LeaderBoard />
         <br />
         <br />
-      </div>
+      </section>
     </div>
   );
 }

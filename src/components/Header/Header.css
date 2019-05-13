@@ -56,7 +56,7 @@ nav {
   padding: 9px 9px 8px 10px;
 }
 
-.logged-out-header > a:hover {
+.logged-out-header > a:hover, .logged-in-header > a:hover {
   background-color: rgb(61, 94, 158);
   border-radius: 6px;
 }

@@ -8,7 +8,7 @@ describe("Following", function() {
 	it("renders following on dashboard when logged in", function() {
 		cy.login();
 		cy.visit("/dashboard");
-		cy.get(".following-wrapper > :nth-child(1) > :nth-child(1) > b")
+		cy.get(".followed-members-section > :nth-child(1) > :nth-child(1) > b")
 			.wait(400)
 			.should("contain", "Congress Members I am following:");
 	});
@@ -18,7 +18,7 @@ describe("Following", function() {
 		cy.visit("/profile/B001282").wait(500);
 		cy.get(".add-member-following").click();
 		cy.visit("/dashboard");
-		cy.get(".following-wrapper > :nth-child(1) > :nth-child(1) > b")
+		cy.get(".followed-members-section > :nth-child(1) > :nth-child(1) > b")
 			.wait(400)
 			.should("contain", "Not following anyone yet");
 	});

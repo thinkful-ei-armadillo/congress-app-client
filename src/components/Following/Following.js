@@ -26,7 +26,7 @@ export default function Following(props) {
 		});
 	};
 	return (
-		<div className="following-wrapper">
+		<section className="followed-members-section" aria-live='polite'>
 			{members.length > 0 ? (
 				<div>
 					<p>
@@ -41,6 +41,6 @@ export default function Following(props) {
 					</p>
 				</div>
 			)}
-		</div>
+		</section>
 	);
 }
