@@ -6,8 +6,8 @@ import Following from "../Following/Following";
 import CongressStatus from '../CongressStatus/CongressStatus';
 import MissedVotesGraph from "../Data/MissedVotesGraph";
 import Committees from "../Committees/Committees";
-import "./Dashboard.css";
 import LeaderBoardMobile from "../LeaderBoard/LeaderBoardMobile";
+import "./Dashboard.css";
 
 function PrivateDashboard(props) {
 	document.title = 'MyCongress - Dashboard';
