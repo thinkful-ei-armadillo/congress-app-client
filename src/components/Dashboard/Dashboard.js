@@ -12,10 +12,13 @@ function Dashboard(props) {
   return (
     <div className="dashboard">
       <section className="col1">
-        Welcome to MyCongress! Below you may search for congress members by name
-        or state that you may also compare. You may also see information on
-        recently introduced or active bills on the floor. Additionally there is
-        information on committees and a leadership board based on missed votes.
+        Welcome to MyCongress! You can access information on congress members' efficiency 
+        with their bill sponsorship and vote frequency. Below you may search for congress 
+        members by name or state. You can also compare two congress members either through
+        compare link on the navigation bar or on the bottom of each member's page.
+        You can easily find information on recently introduced or active bills on the floor.
+        Additional information on committees are at the bottom of this page. The side bar,
+        the leadership board lists the members based on missed votes.
         <section className="members-status">
           <MemberSearch />
           <br />
