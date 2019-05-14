@@ -13,8 +13,8 @@ export default function HomePage() {
           efficiency with their bill sponsorship and vote frequency.
         </p>
         <p>
-          On the dashboard linked below, you may search for congress members by
-          name or state. You can also compare two Congressmembers either through
+          On the dashboard linked below, you may search for Congressmembers by
+          name or state. You can also compare two members either through
           the 'Compare Members' link in the navigation bar or on the bottom of
           each member's page.
         </p>
