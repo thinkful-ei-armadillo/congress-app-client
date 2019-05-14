@@ -12,6 +12,13 @@ function Dashboard(props) {
   return (
     <div className="dashboard">
       <section className="col1">
+        <div>
+          Welcome to MyCongress! Below you may search for congress members by
+          name or state that you may also compare. You may also see information
+          on recently introduced or active bills on the floor. Additionally
+          there is information on committees and a leadership board based on
+          missed votes.
+        </div>
         <section className="members-status">
           <MemberSearch />
           <br />
@@ -19,7 +26,7 @@ function Dashboard(props) {
           <StateSearch />
           <br />
           <br />
-          <MissedVotesGraph className="graph"/>
+          <MissedVotesGraph className="graph" />
           <br />
           <br />
         </section>
