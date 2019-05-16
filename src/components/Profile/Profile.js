@@ -115,7 +115,7 @@ function Profile(props) {
 				)}
 			</section>
 			<section className="stats">
-				<p className="seniority"> Years in Senate: {props.member.seniority}</p>
+				<p className="seniority"> Years in Office: {props.member.seniority}</p>
 				<p className="next_election">
 					{" "}
 					Next Election: {props.member.next_election}
